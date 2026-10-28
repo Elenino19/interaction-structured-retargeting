@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "variants": {
+    "full_without_position": {
+      "robots_from": "data/exports/touch_ladder_demo/experiments/ablation/event_semantics",
+      "ball_correction": true,
+      "lane_correction": true,
+      "position_correction": false,
+      "preview": "data/exports/touch_ladder_demo/paper_eval/position_ablation/full_without_position/preview.mp4"
+    },
+    "full": {
+      "source": "data/exports/touch_ladder_demo/experiments/ablation/full",
+      "position_correction": true,
+      "preview": "data/exports/touch_ladder_demo/paper_eval/position_ablation/full.mp4"
+    }
+  },
+  "comparison": "data/exports/touch_ladder_demo/paper_eval/position_ablation/comparison.mp4",
+  "full_sha256": "c904d2ed28760466df36261f35f6fd281049faf9618a1f266c51cad3dd46039e"
+}

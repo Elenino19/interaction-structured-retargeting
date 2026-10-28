@@ -1,0 +1,2985 @@
+{
+  "schema_version": "1.0.0",
+  "sequence_id": "touch_ladder_demo",
+  "fps": 24.0,
+  "timing_window_radius_frames": 4,
+  "support_interval": {
+    "frames_before_kick": 8,
+    "frames_after_kick": 2
+  },
+  "claim_boundary": "Single-sequence internal kinematic/geometric evaluation from monocular pseudo-labels and prescribed ball paths.",
+  "variants": {
+    "basic_ik": {
+      "interaction": {
+        "definition": {
+          "predicted_interaction": "Earliest frame with minimum ball-center to annotated target-toe distance in the fixed annotated_frame +/- 4 frame window.",
+          "correct_foot_association": "Target foot is strictly closer to the ball than the opposite foot at the annotated frame."
+        },
+        "receive": {
+          "count": 6,
+          "target_foot_distance_mean_m": 0.13781416488232776,
+          "wrong_foot_distance_mean_m": 0.4385625284139105,
+          "contact_surface_error_mean_m": 0.03589751946134805,
+          "correct_foot_association_rate": 1.0,
+          "timing_error_mean_frames": 0.0,
+          "timing_error_mean_seconds": 0.0,
+          "timing_error_p95_frames": 0.0
+        },
+        "kick": {
+          "count": 7,
+          "target_foot_distance_mean_m": 0.26948790989140653,
+          "wrong_foot_distance_mean_m": 0.3841943156548192,
+          "contact_surface_error_mean_m": 0.15948790989140646,
+          "correct_foot_association_rate": 0.5714285714285714,
+          "timing_error_mean_frames": 1.0,
+          "timing_error_mean_seconds": 0.041666666666666664,
+          "timing_error_p95_frames": 3.6999999999999993
+        },
+        "overall": {
+          "count": 13,
+          "target_foot_distance_mean_m": 0.2087154121949086,
+          "wrong_foot_distance_mean_m": 0.40928733692824587,
+          "contact_surface_error_mean_m": 0.1024461912313795,
+          "correct_foot_association_rate": 0.7692307692307693,
+          "timing_error_mean_frames": 0.5384615384615384,
+          "timing_error_mean_seconds": 0.022435897435897433,
+          "timing_error_p95_frames": 3.3999999999999986
+        },
+        "samples": [
+          {
+            "phase": "kick",
+            "player": "a",
+            "frame": 0,
+            "foot": "right",
+            "predicted_interaction_frame": 0,
+            "timing_window_start": 0,
+            "timing_window_end_inclusive": 4,
+            "timing_error_frames": 0,
+            "timing_error_seconds": 0.0,
+            "target_foot_distance_m": 0.3843443077286634,
+            "wrong_foot_distance_m": 0.09962651418578157,
+            "contact_surface_error_m": 0.2743443077286634,
+            "correct_foot_association": false
+          },
+          {
+            "phase": "receive",
+            "player": "b",
+            "frame": 15,
+            "foot": "right",
+            "predicted_interaction_frame": 15,
+            "timing_window_start": 11,
+            "timing_window_end_inclusive": 19,
+            "timing_error_frames": 0,
+            "timing_error_seconds": 0.0,
+            "target_foot_distance_m": 0.08574993626293904,
+            "wrong_foot_distance_m": 0.4733140948862807,
+            "contact_surface_error_m": 0.024250063737060956,
+            "correct_foot_association": true
+          },
+          {
+            "phase": "kick",
+            "player": "b",
+            "frame": 21,
+            "foot": "left",
+            "predicted_interaction_frame": 17,
+            "timing_window_start": 17,
+            "timing_window_end_inclusive": 25,
+            "timing_error_frames": 4,
+            "timing_error_seconds": 0.16666666666666666,
+            "target_foot_distance_m": 0.665903601238243,
+            "wrong_foot_distance_m": 0.6043648420288846,
+            "contact_surface_error_m": 0.555903601238243,
+            "correct_foot_association": false
+          },
+          {
+            "phase": "receive",
+            "player": "a",
+            "frame": 42,
+            "foot": "right",
+            "predicted_interaction_frame": 42,
+            "timing_window_start": 38,
+            "timing_window_end_inclusive": 46,
+            "timing_error_frames": 0,
+            "timing_error_seconds": 0.0,
+            "target_foot_distance_m": 0.12312967501830081,
+            "wrong_foot_distance_m": 0.27274691804018414,
+            "contact_surface_error_m": 0.013129675018300813,
+            "correct_foot_association": true
+          },
+          {
+            "phase": "kick",
+            "player": "a",
+            "frame": 45,
+            "foot": "right",
+            "predicted_interaction_frame": 42,
+            "timing_window_start": 41,
+            "timing_window_end_inclusive": 49,
+            "timing_error_frames": 3,
+            "timing_error_seconds": 0.125,
+            "target_foot_distance_m": 0.2181620822602124,
+            "wrong_foot_distance_m": 0.1000546958120698,
+            "contact_surface_error_m": 0.10816208226021239,
+            "correct_foot_association": false
+          },
+          {
+            "phase": "receive",
+            "player": "b",
+            "frame": 71,
+            "foot": "right",
+            "predicted_interaction_frame": 71,
+            "timing_window_start": 67,
+            "timing_window_end_inclusive": 75,
+            "timing_error_frames": 0,
+            "timing_error_seconds": 0.0,
+            "target_foot_distance_m": 0.14224429259563098,
+            "wrong_foot_distance_m": 0.7609856516650747,
+            "contact_surface_error_m": 0.03224429259563098,
+            "correct_foot_association": true
+          },
+          {
+            "phase": "kick",
+            "player": "b",
+            "frame": 71,
+            "foot": "right",
+            "predicted_interaction_frame": 71,
+            "timing_window_start": 67,
+            "timing_window_end_inclusive": 75,
+            "timing_error_frames": 0,
+            "timing_error_seconds": 0.0,
+            "target_foot_distance_m": 0.14224429259563098,
+            "wrong_foot_distance_m": 0.7609856516650747,
+            "contact_surface_error_m": 0.03224429259563098,
+            "correct_foot_association": true
+          },
+          {
+            "phase": "receive",
+            "player": "a",
+            "frame": 90,
+            "foot": "left",
+            "predicted_interaction_frame": 90,
+            "timing_window_start": 86,
+            "timing_window_end_inclusive": 94,
+            "timing_error_frames": 0,
+            "timing_error_seconds": 0.0,
+            "target_foot_distance_m": 0.1718937461134571,
+            "wrong_foot_distance_m": 0.38290367556380817,
+            "contact_surface_error_m": 0.06189374611345709,
+            "correct_foot_association": true
+          },
+          {
+            "phase": "kick",
+            "player": "a",
+            "frame": 90,
+            "foot": "left",
+            "predicted_interaction_frame": 90,
+            "timing_window_start": 86,
+            "timing_window_end_inclusive": 94,
+            "timing_error_frames": 0,
+            "timing_error_seconds": 0.0,
+            "target_foot_distance_m": 0.1718937461134571,
+            "wrong_foot_distance_m": 0.38290367556380817,
+            "contact_surface_error_m": 0.06189374611345709,
+            "correct_foot_association": true
+          },
+          {
+            "phase": "receive",
+            "player": "b",
+            "frame": 110,
+            "foot": "right",
+            "predicted_interaction_frame": 110,
+            "timing_window_start": 106,
+            "timing_window_end_inclusive": 114,
+            "timing_error_frames": 0,
+            "timing_error_seconds": 0.0,
+            "target_foot_distance_m": 0.13065809251025662,
+            "wrong_foot_distance_m": 0.36041493369342714,
+            "contact_surface_error_m": 0.020658092510256618,
+            "correct_foot_association": true
+          },
+          {
+            "phase": "kick",
+            "player": "b",
+            "frame": 110,
+            "foot": "right",
+            "predicted_interaction_frame": 110,
+            "timing_window_start": 106,
+            "timing_window_end_inclusive": 114,
+            "timing_error_frames": 0,
+            "timing_error_seconds": 0.0,
+            "target_foot_distance_m": 0.13065809251025662,
+            "wrong_foot_distance_m": 0.36041493369342714,
+            "contact_surface_error_m": 0.020658092510256618,
+            "correct_foot_association": true
+          },
+          {
+            "phase": "receive",
+            "player": "a",
+            "frame": 132,
+            "foot": "left",
+            "predicted_interaction_frame": 132,
+            "timing_window_start": 128,
+            "timing_window_end_inclusive": 136,
+            "timing_error_frames": 0,
+            "timing_error_seconds": 0.0,
+            "target_foot_distance_m": 0.17320924679338187,
+            "wrong_foot_distance_m": 0.38100989663468837,
+            "contact_surface_error_m": 0.06320924679338187,
+            "correct_foot_association": true
+          },
+          {
+            "phase": "kick",
+            "player": "a",
+            "frame": 132,
+            "foot": "left",
+            "predicted_interaction_frame": 132,
+            "timing_window_start": 128,
+            "timing_window_end_inclusive": 136,
+            "timing_error_frames": 0,
+            "timing_error_seconds": 0.0,
+            "target_foot_distance_m": 0.17320924679338187,
+            "wrong_foot_distance_m": 0.38100989663468837,
+            "contact_surface_error_m": 0.06320924679338187,
+            "correct_foot_association": true
+          }
+        ]
+      },
+      "support": {
+        "definition": {
+          "support_interval": "Annotated kick frame - 8 through kick frame + 2.",
+          "support_foot": "Foot opposite the annotated kick foot.",
+          "floor_proxy": "Depth of ankle/toe keypoint below the fixed 0.012 m threshold."
+        },
+        "stance_foot_horizontal_displacement_mean_m": 0.49405148934299337,
+        "stance_foot_horizontal_displacement_p95_m": 0.6516464719626504,
+        "stance_foot_speed_mean_m_per_s": 1.338720164671337,
+        "stance_foot_speed_p50_m_per_s": 1.1682421814415729,
+        "stance_foot_speed_p95_m_per_s": 3.1110926055202235,
+        "stance_foot_speed_max_m_per_s": 3.3176419234828596,
+        "floor_penetration_keypoint_mean_m": 0.00014023145839644262,
+        "floor_penetration_keypoint_max_m": 0.012938032933789912,
+        "floor_penetration_keypoint_fraction": 0.0234375,
+        "samples": [
+          {
+            "player": "a",
+            "kick_frame": 0,
+            "support_foot": "left",
+            "interval_start": 0,
+            "interval_end_inclusive": 2,
+            "horizontal_displacement_m": 0.04194920351746387,
+            "speed_mean_m_per_s": 0.5033904422095664,
+            "speed_max_m_per_s": 0.8627358476963458
+          },
+          {
+            "player": "a",
+            "kick_frame": 45,
+            "support_foot": "left",
+            "interval_start": 37,
+            "interval_end_inclusive": 47,
+            "horizontal_displacement_m": 0.5658197489864762,
+            "speed_mean_m_per_s": 1.3579673975675426,
+            "speed_max_m_per_s": 2.9304411194222877
+          },
+          {
+            "player": "a",
+            "kick_frame": 90,
+            "support_foot": "right",
+            "interval_start": 82,
+            "interval_end_inclusive": 92,
+            "horizontal_displacement_m": 0.6659996093592307,
+            "speed_mean_m_per_s": 1.5983990624621536,
+            "speed_max_m_per_s": 3.3176419234828596
+          },
+          {
+            "player": "a",
+            "kick_frame": 132,
+            "support_foot": "right",
+            "interval_start": 124,
+            "interval_end_inclusive": 134,
+            "horizontal_displacement_m": 0.5982749472716343,
+            "speed_mean_m_per_s": 1.4358598734519226,
+            "speed_max_m_per_s": 3.2102203181601765
+          },
+          {
+            "player": "b",
+            "kick_frame": 21,
+            "support_foot": "right",
+            "interval_start": 13,
+            "interval_end_inclusive": 23,
+            "horizontal_displacement_m": 0.4247537480530653,
+            "speed_mean_m_per_s": 1.0194089953273566,
+            "speed_max_m_per_s": 2.1545756649185086
+          },
+          {
+            "player": "b",
+            "kick_frame": 71,
+            "support_foot": "left",
+            "interval_start": 63,
+            "interval_end_inclusive": 73,
+            "horizontal_displacement_m": 0.5434073501757868,
+            "speed_mean_m_per_s": 1.3041776404218886,
+            "speed_max_m_per_s": 3.1299578085445177
+          },
+          {
+            "player": "b",
+            "kick_frame": 110,
+            "support_foot": "left",
+            "interval_start": 102,
+            "interval_end_inclusive": 112,
+            "horizontal_displacement_m": 0.6181558180372964,
+            "speed_mean_m_per_s": 1.483573963289511,
+            "speed_max_m_per_s": 2.710669408903185
+          }
+        ]
+      },
+      "smoothness": {
+        "definition": "Forward finite difference of order n multiplied by fps^n; root RMS uses Euclidean XYZ magnitude, joint RMS pools all frames and 29 DoF.",
+        "root_velocity_rms_m_per_s": 0.7970305567215222,
+        "root_acceleration_rms_m_per_s2": 8.431794936044614,
+        "root_jerk_rms_m_per_s3": 259.6312019326244,
+        "joint_velocity_rms_rad_per_s": 1.163582414787467,
+        "joint_acceleration_rms_rad_per_s2": 17.82029824029593,
+        "joint_jerk_rms_rad_per_s3": 407.6957217398562
+      },
+      "passes": {
+        "pass_curvature_path_excess_mean": 0.0,
+        "pass_heading_change_mean_deg": 1.8155666306687575e-13,
+        "cone_center_clearance_min_m": 0.03792214823031251,
+        "cone_surface_clearance_min_m": -0.1320778517696875,
+        "lane_crossing_error_mean_m": 0.7037901835271482,
+        "contact_foot_lane_error_mean_m": 0.6440176431434578,
+        "samples": [
+          {
+            "pass": 1,
+            "start_frame": 0,
+            "end_frame": 15,
+            "lane_index": 3,
+            "lane_y_m": -0.25,
+            "crossing_y_m": 0.3146100918451945,
+            "crossing_error_m": 0.5646100918451945,
+            "cone_center_clearance_m": 0.19748823841774038,
+            "cone_surface_clearance_m": 0.027488238417740382
+          },
+          {
+            "pass": 2,
+            "start_frame": 21,
+            "end_frame": 42,
+            "lane_index": 4,
+            "lane_y_m": -0.75,
+            "crossing_y_m": -0.2405513260099623,
+            "crossing_error_m": 0.5094486739900377,
+            "cone_center_clearance_m": 0.2349023536248168,
+            "cone_surface_clearance_m": 0.06490235362481679
+          },
+          {
+            "pass": 3,
+            "start_frame": 45,
+            "end_frame": 71,
+            "lane_index": 5,
+            "lane_y_m": -1.25,
+            "crossing_y_m": -0.34663849863512763,
+            "crossing_error_m": 0.9033615013648724,
+            "cone_center_clearance_m": 0.1533875901796828,
+            "cone_surface_clearance_m": -0.01661240982031721
+          },
+          {
+            "pass": 4,
+            "start_frame": 71,
+            "end_frame": 90,
+            "lane_index": 4,
+            "lane_y_m": -0.75,
+            "crossing_y_m": 0.009679890776935368,
+            "crossing_error_m": 0.7596798907769353,
+            "cone_center_clearance_m": 0.03792214823031251,
+            "cone_surface_clearance_m": -0.1320778517696875
+          },
+          {
+            "pass": 5,
+            "start_frame": 90,
+            "end_frame": 110,
+            "lane_index": 3,
+            "lane_y_m": -0.25,
+            "crossing_y_m": 0.4541310235857964,
+            "crossing_error_m": 0.7041310235857964,
+            "cone_center_clearance_m": 0.04633070558560537,
+            "cone_surface_clearance_m": -0.12366929441439463
+          },
+          {
+            "pass": 6,
+            "start_frame": 110,
+            "end_frame": 132,
+            "lane_index": 2,
+            "lane_y_m": 0.25,
+            "crossing_y_m": 1.0315099196000532,
+            "crossing_error_m": 0.7815099196000532,
+            "cone_center_clearance_m": 0.06290526821910282,
+            "cone_surface_clearance_m": -0.10709473178089718
+          }
+        ]
+      },
+      "legacy_compatibility": {
+        "contact": {
+          "target_foot_distance_mean_m": 0.2087154121949086,
+          "target_foot_distance_p95_m": 0.49696802513249483,
+          "wrong_foot_distance_mean_m": 0.40928733692824587,
+          "contact_surface_error_mean_m": 0.1024461912313795,
+          "wrong_minus_target_margin_mean_m": 0.20057192473333735,
+          "wrong_foot_farther_fraction": 0.7692307692307693,
+          "samples": [
+            {
+              "player": "a",
+              "phase": "kick",
+              "frame": 0,
+              "foot": "right",
+              "target_distance_m": 0.3843443077286634,
+              "wrong_foot_distance_m": 0.09962651418578157,
+              "surface_error_m": 0.2743443077286634,
+              "wrong_minus_target_margin_m": -0.28471779354288185
+            },
+            {
+              "player": "b",
+              "phase": "receive",
+              "frame": 15,
+              "foot": "right",
+              "target_distance_m": 0.08574993626293904,
+              "wrong_foot_distance_m": 0.4733140948862807,
+              "surface_error_m": 0.024250063737060956,
+              "wrong_minus_target_margin_m": 0.38756415862334165
+            },
+            {
+              "player": "b",
+              "phase": "kick",
+              "frame": 21,
+              "foot": "left",
+              "target_distance_m": 0.665903601238243,
+              "wrong_foot_distance_m": 0.6043648420288846,
+              "surface_error_m": 0.555903601238243,
+              "wrong_minus_target_margin_m": -0.06153875920935836
+            },
+            {
+              "player": "a",
+              "phase": "receive",
+              "frame": 42,
+              "foot": "right",
+              "target_distance_m": 0.12312967501830081,
+              "wrong_foot_distance_m": 0.27274691804018414,
+              "surface_error_m": 0.013129675018300813,
+              "wrong_minus_target_margin_m": 0.14961724302188334
+            },
+            {
+              "player": "a",
+              "phase": "kick",
+              "frame": 45,
+              "foot": "right",
+              "target_distance_m": 0.2181620822602124,
+              "wrong_foot_distance_m": 0.1000546958120698,
+              "surface_error_m": 0.10816208226021239,
+              "wrong_minus_target_margin_m": -0.11810738644814259
+            },
+            {
+              "player": "b",
+              "phase": "receive",
+              "frame": 71,
+              "foot": "right",
+              "target_distance_m": 0.14224429259563098,
+              "wrong_foot_distance_m": 0.7609856516650747,
+              "surface_error_m": 0.03224429259563098,
+              "wrong_minus_target_margin_m": 0.6187413590694437
+            },
+            {
+              "player": "b",
+              "phase": "kick",
+              "frame": 71,
+              "foot": "right",
+              "target_distance_m": 0.14224429259563098,
+              "wrong_foot_distance_m": 0.7609856516650747,
+              "surface_error_m": 0.03224429259563098,
+              "wrong_minus_target_margin_m": 0.6187413590694437
+            },
+            {
+              "player": "a",
+              "phase": "receive",
+              "frame": 90,
+              "foot": "left",
+              "target_distance_m": 0.1718937461134571,
+              "wrong_foot_distance_m": 0.38290367556380817,
+              "surface_error_m": 0.06189374611345709,
+              "wrong_minus_target_margin_m": 0.21100992945035107
+            },
+            {
+              "player": "a",
+              "phase": "kick",
+              "frame": 90,
+              "foot": "left",
+              "target_distance_m": 0.1718937461134571,
+              "wrong_foot_distance_m": 0.38290367556380817,
+              "surface_error_m": 0.06189374611345709,
+              "wrong_minus_target_margin_m": 0.21100992945035107
+            },
+            {
+              "player": "b",
+              "phase": "receive",
+              "frame": 110,
+              "foot": "right",
+              "target_distance_m": 0.13065809251025662,
+              "wrong_foot_distance_m": 0.36041493369342714,
+              "surface_error_m": 0.020658092510256618,
+              "wrong_minus_target_margin_m": 0.22975684118317052
+            },
+            {
+              "player": "b",
+              "phase": "kick",
+              "frame": 110,
+              "foot": "right",
+              "target_distance_m": 0.13065809251025662,
+              "wrong_foot_distance_m": 0.36041493369342714,
+              "surface_error_m": 0.020658092510256618,
+              "wrong_minus_target_margin_m": 0.22975684118317052
+            },
+            {
+              "player": "a",
+              "phase": "receive",
+              "frame": 132,
+              "foot": "left",
+              "target_distance_m": 0.17320924679338187,
+              "wrong_foot_distance_m": 0.38100989663468837,
+              "surface_error_m": 0.06320924679338187,
+              "wrong_minus_target_margin_m": 0.2078006498413065
+            },
+            {
+              "player": "a",
+              "phase": "kick",
+              "frame": 132,
+              "foot": "left",
+              "target_distance_m": 0.17320924679338187,
+              "wrong_foot_distance_m": 0.38100989663468837,
+              "surface_error_m": 0.06320924679338187,
+              "wrong_minus_target_margin_m": 0.2078006498413065
+            }
+          ]
+        },
+        "robot_motion": {
+          "support_foot_sliding_mean_m_per_event": 0.10989054200316493,
+          "support_foot_sliding_p95_m_per_event": 0.1829368195991248,
+          "floor_penetration_proxy_mean_m": 0.00014023145839644262,
+          "floor_penetration_proxy_max_m": 0.012938032933789912,
+          "floor_penetration_proxy_fraction": 0.0234375,
+          "pelvis_vertical_acceleration_rms_m_per_s2": 6.517395200106103
+        },
+        "passes": {
+          "pass_curvature_path_excess_mean": 0.0,
+          "pass_heading_change_mean_deg": 1.8155666306687575e-13,
+          "cone_center_clearance_min_m": 0.03792214823031251,
+          "cone_surface_clearance_min_m": -0.1320778517696875,
+          "lane_crossing_error_mean_m": 0.7037901835271482,
+          "contact_foot_lane_error_mean_m": 0.6440176431434578,
+          "samples": [
+            {
+              "pass": 1,
+              "start_frame": 0,
+              "end_frame": 15,
+              "lane_index": 3,
+              "lane_y_m": -0.25,
+              "crossing_y_m": 0.3146100918451945,
+              "crossing_error_m": 0.5646100918451945,
+              "cone_center_clearance_m": 0.19748823841774038,
+              "cone_surface_clearance_m": 0.027488238417740382
+            },
+            {
+              "pass": 2,
+              "start_frame": 21,
+              "end_frame": 42,
+              "lane_index": 4,
+              "lane_y_m": -0.75,
+              "crossing_y_m": -0.2405513260099623,
+              "crossing_error_m": 0.5094486739900377,
+              "cone_center_clearance_m": 0.2349023536248168,
+              "cone_surface_clearance_m": 0.06490235362481679
+            },
+            {
+              "pass": 3,
+              "start_frame": 45,
+              "end_frame": 71,
+              "lane_index": 5,
+              "lane_y_m": -1.25,
+              "crossing_y_m": -0.34663849863512763,
+              "crossing_error_m": 0.9033615013648724,
+              "cone_center_clearance_m": 0.1533875901796828,
+              "cone_surface_clearance_m": -0.01661240982031721
+            },
+            {
+              "pass": 4,
+              "start_frame": 71,
+              "end_frame": 90,
+              "lane_index": 4,
+              "lane_y_m": -0.75,
+              "crossing_y_m": 0.009679890776935368,
+              "crossing_error_m": 0.7596798907769353,
+              "cone_center_clearance_m": 0.03792214823031251,
+              "cone_surface_clearance_m": -0.1320778517696875
+            },
+            {
+              "pass": 5,
+              "start_frame": 90,
+              "end_frame": 110,
+              "lane_index": 3,
+              "lane_y_m": -0.25,
+              "crossing_y_m": 0.4541310235857964,
+              "crossing_error_m": 0.7041310235857964,
+              "cone_center_clearance_m": 0.04633070558560537,
+              "cone_surface_clearance_m": -0.12366929441439463
+            },
+            {
+              "pass": 6,
+              "start_frame": 110,
+              "end_frame": 132,
+              "lane_index": 2,
+              "lane_y_m": 0.25,
+              "crossing_y_m": 1.0315099196000532,
+              "crossing_error_m": 0.7815099196000532,
+              "cone_center_clearance_m": 0.06290526821910282,
+              "cone_surface_clearance_m": -0.10709473178089718
+            }
+          ]
+        }
+      },
+      "mesh_geometry": {
+        "available": true,
+        "definition": {
+          "ground": "Maximum depth of transformed G1 foot-mesh vertices below Z=0.",
+          "ball_foot": "Nearest transformed target-foot mesh vertex to ball center minus 0.11 m radius; vertex-sampled proxy, not exact triangle distance."
+        },
+        "foot_ground_penetration_mesh_mean_m": 0.0006238648116864777,
+        "foot_ground_penetration_mesh_max_m": 0.021175394847939483,
+        "foot_ground_penetration_mesh_fraction": 0.06597222222222222,
+        "ball_target_foot_mesh_vertex_gap_mean_m": 0.06500084846523786,
+        "ball_target_foot_mesh_vertex_gap_abs_mean_m": 0.0763361662582711,
+        "self_collision": {
+          "available": false,
+          "reason": "The rendering scene disables/filters relevant collision pairs; no robust non-adjacent mesh self-distance implementation is present."
+        },
+        "samples": [
+          {
+            "phase": "kick",
+            "player": "a",
+            "frame": 0,
+            "foot": "right",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": 0.21518311371227994
+          },
+          {
+            "phase": "receive",
+            "player": "b",
+            "frame": 15,
+            "foot": "right",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": -0.04622141437065623
+          },
+          {
+            "phase": "kick",
+            "player": "b",
+            "frame": 21,
+            "foot": "left",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": 0.5257664298135982
+          },
+          {
+            "phase": "receive",
+            "player": "a",
+            "frame": 42,
+            "foot": "right",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": -0.014551841741872615
+          },
+          {
+            "phase": "kick",
+            "player": "a",
+            "frame": 45,
+            "foot": "right",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": 0.028754006461016432
+          },
+          {
+            "phase": "receive",
+            "player": "b",
+            "frame": 71,
+            "foot": "right",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": 0.006344081240657398
+          },
+          {
+            "phase": "kick",
+            "player": "b",
+            "frame": 71,
+            "foot": "right",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": 0.006344081240657398
+          },
+          {
+            "phase": "receive",
+            "player": "a",
+            "frame": 90,
+            "foot": "left",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": 0.0350721531100794
+          },
+          {
+            "phase": "kick",
+            "player": "a",
+            "frame": 90,
+            "foot": "left",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": 0.0350721531100794
+          },
+          {
+            "phase": "receive",
+            "player": "b",
+            "frame": 110,
+            "foot": "right",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": -0.0064531547710935805
+          },
+          {
+            "phase": "kick",
+            "player": "b",
+            "frame": 110,
+            "foot": "right",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": -0.0064531547710935805
+          },
+          {
+            "phase": "receive",
+            "player": "a",
+            "frame": 132,
+            "foot": "left",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": 0.03307728850722007
+          },
+          {
+            "phase": "kick",
+            "player": "a",
+            "frame": 132,
+            "foot": "left",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": 0.03307728850722007
+          }
+        ]
+      }
+    },
+    "support": {
+      "interaction": {
+        "definition": {
+          "predicted_interaction": "Earliest frame with minimum ball-center to annotated target-toe distance in the fixed annotated_frame +/- 4 frame window.",
+          "correct_foot_association": "Target foot is strictly closer to the ball than the opposite foot at the annotated frame."
+        },
+        "receive": {
+          "count": 6,
+          "target_foot_distance_mean_m": 0.13852343303126996,
+          "wrong_foot_distance_mean_m": 0.43732203476233283,
+          "contact_surface_error_mean_m": 0.03586563454512722,
+          "correct_foot_association_rate": 1.0,
+          "timing_error_mean_frames": 0.0,
+          "timing_error_mean_seconds": 0.0,
+          "timing_error_p95_frames": 0.0
+        },
+        "kick": {
+          "count": 7,
+          "target_foot_distance_mean_m": 0.2698387219954474,
+          "wrong_foot_distance_mean_m": 0.3833263371915887,
+          "contact_surface_error_mean_m": 0.1598387219954474,
+          "correct_foot_association_rate": 0.5714285714285714,
+          "timing_error_mean_frames": 1.0,
+          "timing_error_mean_seconds": 0.041666666666666664,
+          "timing_error_p95_frames": 3.6999999999999993
+        },
+        "overall": {
+          "count": 13,
+          "target_foot_distance_mean_m": 0.20923166555044242,
+          "wrong_foot_distance_mean_m": 0.40824742837808603,
+          "contact_surface_error_mean_m": 0.10262037394145349,
+          "correct_foot_association_rate": 0.7692307692307693,
+          "timing_error_mean_frames": 0.5384615384615384,
+          "timing_error_mean_seconds": 0.022435897435897433,
+          "timing_error_p95_frames": 3.3999999999999986
+        },
+        "samples": [
+          {
+            "phase": "kick",
+            "player": "a",
+            "frame": 0,
+            "foot": "right",
+            "predicted_interaction_frame": 0,
+            "timing_window_start": 0,
+            "timing_window_end_inclusive": 4,
+            "timing_error_frames": 0,
+            "timing_error_seconds": 0.0,
+            "target_foot_distance_m": 0.3847487034729205,
+            "wrong_foot_distance_m": 0.10024885280021385,
+            "contact_surface_error_m": 0.2747487034729205,
+            "correct_foot_association": false
+          },
+          {
+            "phase": "receive",
+            "player": "b",
+            "frame": 15,
+            "foot": "right",
+            "predicted_interaction_frame": 15,
+            "timing_window_start": 11,
+            "timing_window_end_inclusive": 19,
+            "timing_error_frames": 0,
+            "timing_error_seconds": 0.0,
+            "target_foot_distance_m": 0.08797339545842818,
+            "wrong_foot_distance_m": 0.4732748081259869,
+            "contact_surface_error_m": 0.02202660454157182,
+            "correct_foot_association": true
+          },
+          {
+            "phase": "kick",
+            "player": "b",
+            "frame": 21,
+            "foot": "left",
+            "predicted_interaction_frame": 17,
+            "timing_window_start": 17,
+            "timing_window_end_inclusive": 25,
+            "timing_error_frames": 4,
+            "timing_error_seconds": 0.16666666666666666,
+            "target_foot_distance_m": 0.6640677204197899,
+            "wrong_foot_distance_m": 0.6101894115372604,
+            "contact_surface_error_m": 0.5540677204197899,
+            "correct_foot_association": false
+          },
+          {
+            "phase": "receive",
+            "player": "a",
+            "frame": 42,
+            "foot": "right",
+            "predicted_interaction_frame": 42,
+            "timing_window_start": 38,
+            "timing_window_end_inclusive": 46,
+            "timing_error_frames": 0,
+            "timing_error_seconds": 0.0,
+            "target_foot_distance_m": 0.12407952644174848,
+            "wrong_foot_distance_m": 0.2724900414454643,
+            "contact_surface_error_m": 0.01407952644174848,
+            "correct_foot_association": true
+          },
+          {
+            "phase": "kick",
+            "player": "a",
+            "frame": 45,
+            "foot": "right",
+            "predicted_interaction_frame": 42,
+            "timing_window_start": 41,
+            "timing_window_end_inclusive": 49,
+            "timing_error_frames": 3,
+            "timing_error_seconds": 0.125,
+            "target_foot_distance_m": 0.2209669537879783,
+            "wrong_foot_distance_m": 0.09467873700110042,
+            "contact_surface_error_m": 0.11096695378797829,
+            "correct_foot_association": false
+          },
+          {
+            "phase": "receive",
+            "player": "b",
+            "frame": 71,
+            "foot": "right",
+            "predicted_interaction_frame": 71,
+            "timing_window_start": 67,
+            "timing_window_end_inclusive": 75,
+            "timing_error_frames": 0,
+            "timing_error_seconds": 0.0,
+            "target_foot_distance_m": 0.14239813671370477,
+            "wrong_foot_distance_m": 0.7605660564739171,
+            "contact_surface_error_m": 0.03239813671370477,
+            "correct_foot_association": true
+          },
+          {
+            "phase": "kick",
+            "player": "b",
+            "frame": 71,
+            "foot": "right",
+            "predicted_interaction_frame": 71,
+            "timing_window_start": 67,
+            "timing_window_end_inclusive": 75,
+            "timing_error_frames": 0,
+            "timing_error_seconds": 0.0,
+            "target_foot_distance_m": 0.14239813671370477,
+            "wrong_foot_distance_m": 0.7605660564739171,
+            "contact_surface_error_m": 0.03239813671370477,
+            "correct_foot_association": true
+          },
+          {
+            "phase": "receive",
+            "player": "a",
+            "frame": 90,
+            "foot": "left",
+            "predicted_interaction_frame": 90,
+            "timing_window_start": 86,
+            "timing_window_end_inclusive": 94,
+            "timing_error_frames": 0,
+            "timing_error_seconds": 0.0,
+            "target_foot_distance_m": 0.1722984430538446,
+            "wrong_foot_distance_m": 0.3830204581008996,
+            "contact_surface_error_m": 0.06229844305384459,
+            "correct_foot_association": true
+          },
+          {
+            "phase": "kick",
+            "player": "a",
+            "frame": 90,
+            "foot": "left",
+            "predicted_interaction_frame": 90,
+            "timing_window_start": 86,
+            "timing_window_end_inclusive": 94,
+            "timing_error_frames": 0,
+            "timing_error_seconds": 0.0,
+            "target_foot_distance_m": 0.1722984430538446,
+            "wrong_foot_distance_m": 0.3830204581008996,
+            "contact_surface_error_m": 0.06229844305384459,
+            "correct_foot_association": true
+          },
+          {
+            "phase": "receive",
+            "player": "b",
+            "frame": 110,
+            "foot": "right",
+            "predicted_interaction_frame": 110,
+            "timing_window_start": 106,
+            "timing_window_end_inclusive": 114,
+            "timing_error_frames": 0,
+            "timing_error_seconds": 0.0,
+            "target_foot_distance_m": 0.1311582985491036,
+            "wrong_foot_distance_m": 0.3604744710777834,
+            "contact_surface_error_m": 0.021158298549103602,
+            "correct_foot_association": true
+          },
+          {
+            "phase": "kick",
+            "player": "b",
+            "frame": 110,
+            "foot": "right",
+            "predicted_interaction_frame": 110,
+            "timing_window_start": 106,
+            "timing_window_end_inclusive": 114,
+            "timing_error_frames": 0,
+            "timing_error_seconds": 0.0,
+            "target_foot_distance_m": 0.1311582985491036,
+            "wrong_foot_distance_m": 0.3604744710777834,
+            "contact_surface_error_m": 0.021158298549103602,
+            "correct_foot_association": true
+          },
+          {
+            "phase": "receive",
+            "player": "a",
+            "frame": 132,
+            "foot": "left",
+            "predicted_interaction_frame": 132,
+            "timing_window_start": 128,
+            "timing_window_end_inclusive": 136,
+            "timing_error_frames": 0,
+            "timing_error_seconds": 0.0,
+            "target_foot_distance_m": 0.17323279797079008,
+            "wrong_foot_distance_m": 0.3741063733499461,
+            "contact_surface_error_m": 0.06323279797079008,
+            "correct_foot_association": true
+          },
+          {
+            "phase": "kick",
+            "player": "a",
+            "frame": 132,
+            "foot": "left",
+            "predicted_interaction_frame": 132,
+            "timing_window_start": 128,
+            "timing_window_end_inclusive": 136,
+            "timing_error_frames": 0,
+            "timing_error_seconds": 0.0,
+            "target_foot_distance_m": 0.17323279797079008,
+            "wrong_foot_distance_m": 0.3741063733499461,
+            "contact_surface_error_m": 0.06323279797079008,
+            "correct_foot_association": true
+          }
+        ]
+      },
+      "support": {
+        "definition": {
+          "support_interval": "Annotated kick frame - 8 through kick frame + 2.",
+          "support_foot": "Foot opposite the annotated kick foot.",
+          "floor_proxy": "Depth of ankle/toe keypoint below the fixed 0.012 m threshold."
+        },
+        "stance_foot_horizontal_displacement_mean_m": 0.48983573855757717,
+        "stance_foot_horizontal_displacement_p95_m": 0.6498242152141235,
+        "stance_foot_speed_mean_m_per_s": 1.3272968399624674,
+        "stance_foot_speed_p50_m_per_s": 1.1209702395566268,
+        "stance_foot_speed_p95_m_per_s": 3.1331574212047064,
+        "stance_foot_speed_max_m_per_s": 3.317344275549943,
+        "floor_penetration_keypoint_mean_m": 0.0001274633854236735,
+        "floor_penetration_keypoint_max_m": 0.013097442457071996,
+        "floor_penetration_keypoint_fraction": 0.021701388888888888,
+        "samples": [
+          {
+            "player": "a",
+            "kick_frame": 0,
+            "support_foot": "left",
+            "interval_start": 0,
+            "interval_end_inclusive": 2,
+            "horizontal_displacement_m": 0.04801295712001867,
+            "speed_mean_m_per_s": 0.576155485440224,
+            "speed_max_m_per_s": 1.054133987632648
+          },
+          {
+            "player": "a",
+            "kick_frame": 45,
+            "support_foot": "left",
+            "interval_start": 37,
+            "interval_end_inclusive": 47,
+            "horizontal_displacement_m": 0.5701737037310456,
+            "speed_mean_m_per_s": 1.3684168889545092,
+            "speed_max_m_per_s": 2.926857094853675
+          },
+          {
+            "player": "a",
+            "kick_frame": 90,
+            "support_foot": "right",
+            "interval_start": 82,
+            "interval_end_inclusive": 92,
+            "horizontal_displacement_m": 0.6648583663219461,
+            "speed_mean_m_per_s": 1.5956600791726705,
+            "speed_max_m_per_s": 3.317344275549943
+          },
+          {
+            "player": "a",
+            "kick_frame": 132,
+            "support_foot": "right",
+            "interval_start": 124,
+            "interval_end_inclusive": 134,
+            "horizontal_displacement_m": 0.5887529949658427,
+            "speed_mean_m_per_s": 1.4130071879180224,
+            "speed_max_m_per_s": 3.2474967085705804
+          },
+          {
+            "player": "b",
+            "kick_frame": 21,
+            "support_foot": "right",
+            "interval_start": 13,
+            "interval_end_inclusive": 23,
+            "horizontal_displacement_m": 0.4060793451850999,
+            "speed_mean_m_per_s": 0.9745904284442399,
+            "speed_max_m_per_s": 2.101489250297643
+          },
+          {
+            "player": "b",
+            "kick_frame": 71,
+            "support_foot": "left",
+            "interval_start": 63,
+            "interval_end_inclusive": 73,
+            "horizontal_displacement_m": 0.5362282732832171,
+            "speed_mean_m_per_s": 1.286947855879721,
+            "speed_max_m_per_s": 3.1440153331179195
+          },
+          {
+            "player": "b",
+            "kick_frame": 110,
+            "support_foot": "left",
+            "interval_start": 102,
+            "interval_end_inclusive": 112,
+            "horizontal_displacement_m": 0.6147445292958708,
+            "speed_mean_m_per_s": 1.4753868703100896,
+            "speed_max_m_per_s": 2.695257804661455
+          }
+        ]
+      },
+      "smoothness": {
+        "definition": "Forward finite difference of order n multiplied by fps^n; root RMS uses Euclidean XYZ magnitude, joint RMS pools all frames and 29 DoF.",
+        "root_velocity_rms_m_per_s": 0.7962702918807107,
+        "root_acceleration_rms_m_per_s2": 8.415168131308914,
+        "root_jerk_rms_m_per_s3": 259.19346050187704,
+        "joint_velocity_rms_rad_per_s": 1.1851339098385274,
+        "joint_acceleration_rms_rad_per_s2": 19.420436545222753,
+        "joint_jerk_rms_rad_per_s3": 507.5641244873297
+      },
+      "passes": {
+        "pass_curvature_path_excess_mean": 0.0,
+        "pass_heading_change_mean_deg": 1.8155666306687575e-13,
+        "cone_center_clearance_min_m": 0.03792214823031251,
+        "cone_surface_clearance_min_m": -0.1320778517696875,
+        "lane_crossing_error_mean_m": 0.7037901835271482,
+        "contact_foot_lane_error_mean_m": 0.6440807514127078,
+        "samples": [
+          {
+            "pass": 1,
+            "start_frame": 0,
+            "end_frame": 15,
+            "lane_index": 3,
+            "lane_y_m": -0.25,
+            "crossing_y_m": 0.3146100918451945,
+            "crossing_error_m": 0.5646100918451945,
+            "cone_center_clearance_m": 0.19748823841774038,
+            "cone_surface_clearance_m": 0.027488238417740382
+          },
+          {
+            "pass": 2,
+            "start_frame": 21,
+            "end_frame": 42,
+            "lane_index": 4,
+            "lane_y_m": -0.75,
+            "crossing_y_m": -0.2405513260099623,
+            "crossing_error_m": 0.5094486739900377,
+            "cone_center_clearance_m": 0.2349023536248168,
+            "cone_surface_clearance_m": 0.06490235362481679
+          },
+          {
+            "pass": 3,
+            "start_frame": 45,
+            "end_frame": 71,
+            "lane_index": 5,
+            "lane_y_m": -1.25,
+            "crossing_y_m": -0.34663849863512763,
+            "crossing_error_m": 0.9033615013648724,
+            "cone_center_clearance_m": 0.1533875901796828,
+            "cone_surface_clearance_m": -0.01661240982031721
+          },
+          {
+            "pass": 4,
+            "start_frame": 71,
+            "end_frame": 90,
+            "lane_index": 4,
+            "lane_y_m": -0.75,
+            "crossing_y_m": 0.009679890776935368,
+            "crossing_error_m": 0.7596798907769353,
+            "cone_center_clearance_m": 0.03792214823031251,
+            "cone_surface_clearance_m": -0.1320778517696875
+          },
+          {
+            "pass": 5,
+            "start_frame": 90,
+            "end_frame": 110,
+            "lane_index": 3,
+            "lane_y_m": -0.25,
+            "crossing_y_m": 0.4541310235857964,
+            "crossing_error_m": 0.7041310235857964,
+            "cone_center_clearance_m": 0.04633070558560537,
+            "cone_surface_clearance_m": -0.12366929441439463
+          },
+          {
+            "pass": 6,
+            "start_frame": 110,
+            "end_frame": 132,
+            "lane_index": 2,
+            "lane_y_m": 0.25,
+            "crossing_y_m": 1.0315099196000532,
+            "crossing_error_m": 0.7815099196000532,
+            "cone_center_clearance_m": 0.06290526821910282,
+            "cone_surface_clearance_m": -0.10709473178089718
+          }
+        ]
+      },
+      "legacy_compatibility": {
+        "contact": {
+          "target_foot_distance_mean_m": 0.20923166555044242,
+          "target_foot_distance_p95_m": 0.4964763102516679,
+          "wrong_foot_distance_mean_m": 0.40824742837808603,
+          "contact_surface_error_mean_m": 0.10262037394145349,
+          "wrong_minus_target_margin_mean_m": 0.1990157628276436,
+          "wrong_foot_farther_fraction": 0.7692307692307693,
+          "samples": [
+            {
+              "player": "a",
+              "phase": "kick",
+              "frame": 0,
+              "foot": "right",
+              "target_distance_m": 0.3847487034729205,
+              "wrong_foot_distance_m": 0.10024885280021385,
+              "surface_error_m": 0.2747487034729205,
+              "wrong_minus_target_margin_m": -0.28449985067270667
+            },
+            {
+              "player": "b",
+              "phase": "receive",
+              "frame": 15,
+              "foot": "right",
+              "target_distance_m": 0.08797339545842818,
+              "wrong_foot_distance_m": 0.4732748081259869,
+              "surface_error_m": 0.02202660454157182,
+              "wrong_minus_target_margin_m": 0.3853014126675587
+            },
+            {
+              "player": "b",
+              "phase": "kick",
+              "frame": 21,
+              "foot": "left",
+              "target_distance_m": 0.6640677204197899,
+              "wrong_foot_distance_m": 0.6101894115372604,
+              "surface_error_m": 0.5540677204197899,
+              "wrong_minus_target_margin_m": -0.053878308882529535
+            },
+            {
+              "player": "a",
+              "phase": "receive",
+              "frame": 42,
+              "foot": "right",
+              "target_distance_m": 0.12407952644174848,
+              "wrong_foot_distance_m": 0.2724900414454643,
+              "surface_error_m": 0.01407952644174848,
+              "wrong_minus_target_margin_m": 0.14841051500371583
+            },
+            {
+              "player": "a",
+              "phase": "kick",
+              "frame": 45,
+              "foot": "right",
+              "target_distance_m": 0.2209669537879783,
+              "wrong_foot_distance_m": 0.09467873700110042,
+              "surface_error_m": 0.11096695378797829,
+              "wrong_minus_target_margin_m": -0.12628821678687785
+            },
+            {
+              "player": "b",
+              "phase": "receive",
+              "frame": 71,
+              "foot": "right",
+              "target_distance_m": 0.14239813671370477,
+              "wrong_foot_distance_m": 0.7605660564739171,
+              "surface_error_m": 0.03239813671370477,
+              "wrong_minus_target_margin_m": 0.6181679197602123
+            },
+            {
+              "player": "b",
+              "phase": "kick",
+              "frame": 71,
+              "foot": "right",
+              "target_distance_m": 0.14239813671370477,
+              "wrong_foot_distance_m": 0.7605660564739171,
+              "surface_error_m": 0.03239813671370477,
+              "wrong_minus_target_margin_m": 0.6181679197602123
+            },
+            {
+              "player": "a",
+              "phase": "receive",
+              "frame": 90,
+              "foot": "left",
+              "target_distance_m": 0.1722984430538446,
+              "wrong_foot_distance_m": 0.3830204581008996,
+              "surface_error_m": 0.06229844305384459,
+              "wrong_minus_target_margin_m": 0.21072201504705498
+            },
+            {
+              "player": "a",
+              "phase": "kick",
+              "frame": 90,
+              "foot": "left",
+              "target_distance_m": 0.1722984430538446,
+              "wrong_foot_distance_m": 0.3830204581008996,
+              "surface_error_m": 0.06229844305384459,
+              "wrong_minus_target_margin_m": 0.21072201504705498
+            },
+            {
+              "player": "b",
+              "phase": "receive",
+              "frame": 110,
+              "foot": "right",
+              "target_distance_m": 0.1311582985491036,
+              "wrong_foot_distance_m": 0.3604744710777834,
+              "surface_error_m": 0.021158298549103602,
+              "wrong_minus_target_margin_m": 0.2293161725286798
+            },
+            {
+              "player": "b",
+              "phase": "kick",
+              "frame": 110,
+              "foot": "right",
+              "target_distance_m": 0.1311582985491036,
+              "wrong_foot_distance_m": 0.3604744710777834,
+              "surface_error_m": 0.021158298549103602,
+              "wrong_minus_target_margin_m": 0.2293161725286798
+            },
+            {
+              "player": "a",
+              "phase": "receive",
+              "frame": 132,
+              "foot": "left",
+              "target_distance_m": 0.17323279797079008,
+              "wrong_foot_distance_m": 0.3741063733499461,
+              "surface_error_m": 0.06323279797079008,
+              "wrong_minus_target_margin_m": 0.20087357537915604
+            },
+            {
+              "player": "a",
+              "phase": "kick",
+              "frame": 132,
+              "foot": "left",
+              "target_distance_m": 0.17323279797079008,
+              "wrong_foot_distance_m": 0.3741063733499461,
+              "surface_error_m": 0.06323279797079008,
+              "wrong_minus_target_margin_m": 0.20087357537915604
+            }
+          ]
+        },
+        "robot_motion": {
+          "support_foot_sliding_mean_m_per_event": 0.10602806018073803,
+          "support_foot_sliding_p95_m_per_event": 0.18229026476463733,
+          "floor_penetration_proxy_mean_m": 0.0001274633854236735,
+          "floor_penetration_proxy_max_m": 0.013097442457071996,
+          "floor_penetration_proxy_fraction": 0.021701388888888888,
+          "pelvis_vertical_acceleration_rms_m_per_s2": 6.491472942884592
+        },
+        "passes": {
+          "pass_curvature_path_excess_mean": 0.0,
+          "pass_heading_change_mean_deg": 1.8155666306687575e-13,
+          "cone_center_clearance_min_m": 0.03792214823031251,
+          "cone_surface_clearance_min_m": -0.1320778517696875,
+          "lane_crossing_error_mean_m": 0.7037901835271482,
+          "contact_foot_lane_error_mean_m": 0.6440807514127078,
+          "samples": [
+            {
+              "pass": 1,
+              "start_frame": 0,
+              "end_frame": 15,
+              "lane_index": 3,
+              "lane_y_m": -0.25,
+              "crossing_y_m": 0.3146100918451945,
+              "crossing_error_m": 0.5646100918451945,
+              "cone_center_clearance_m": 0.19748823841774038,
+              "cone_surface_clearance_m": 0.027488238417740382
+            },
+            {
+              "pass": 2,
+              "start_frame": 21,
+              "end_frame": 42,
+              "lane_index": 4,
+              "lane_y_m": -0.75,
+              "crossing_y_m": -0.2405513260099623,
+              "crossing_error_m": 0.5094486739900377,
+              "cone_center_clearance_m": 0.2349023536248168,
+              "cone_surface_clearance_m": 0.06490235362481679
+            },
+            {
+              "pass": 3,
+              "start_frame": 45,
+              "end_frame": 71,
+              "lane_index": 5,
+              "lane_y_m": -1.25,
+              "crossing_y_m": -0.34663849863512763,
+              "crossing_error_m": 0.9033615013648724,
+              "cone_center_clearance_m": 0.1533875901796828,
+              "cone_surface_clearance_m": -0.01661240982031721
+            },
+            {
+              "pass": 4,
+              "start_frame": 71,
+              "end_frame": 90,
+              "lane_index": 4,
+              "lane_y_m": -0.75,
+              "crossing_y_m": 0.009679890776935368,
+              "crossing_error_m": 0.7596798907769353,
+              "cone_center_clearance_m": 0.03792214823031251,
+              "cone_surface_clearance_m": -0.1320778517696875
+            },
+            {
+              "pass": 5,
+              "start_frame": 90,
+              "end_frame": 110,
+              "lane_index": 3,
+              "lane_y_m": -0.25,
+              "crossing_y_m": 0.4541310235857964,
+              "crossing_error_m": 0.7041310235857964,
+              "cone_center_clearance_m": 0.04633070558560537,
+              "cone_surface_clearance_m": -0.12366929441439463
+            },
+            {
+              "pass": 6,
+              "start_frame": 110,
+              "end_frame": 132,
+              "lane_index": 2,
+              "lane_y_m": 0.25,
+              "crossing_y_m": 1.0315099196000532,
+              "crossing_error_m": 0.7815099196000532,
+              "cone_center_clearance_m": 0.06290526821910282,
+              "cone_surface_clearance_m": -0.10709473178089718
+            }
+          ]
+        }
+      },
+      "mesh_geometry": {
+        "available": true,
+        "definition": {
+          "ground": "Maximum depth of transformed G1 foot-mesh vertices below Z=0.",
+          "ball_foot": "Nearest transformed target-foot mesh vertex to ball center minus 0.11 m radius; vertex-sampled proxy, not exact triangle distance."
+        },
+        "foot_ground_penetration_mesh_mean_m": 0.000613273194926019,
+        "foot_ground_penetration_mesh_max_m": 0.019705446703661145,
+        "foot_ground_penetration_mesh_fraction": 0.06597222222222222,
+        "ball_target_foot_mesh_vertex_gap_mean_m": 0.06542323703422666,
+        "ball_target_foot_mesh_vertex_gap_abs_mean_m": 0.07613262923679545,
+        "self_collision": {
+          "available": false,
+          "reason": "The rendering scene disables/filters relevant collision pairs; no robust non-adjacent mesh self-distance implementation is present."
+        },
+        "samples": [
+          {
+            "phase": "kick",
+            "player": "a",
+            "frame": 0,
+            "foot": "right",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": 0.21559885116180716
+          },
+          {
+            "phase": "receive",
+            "player": "b",
+            "frame": 15,
+            "foot": "right",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": -0.044291408724768264
+          },
+          {
+            "phase": "kick",
+            "player": "b",
+            "frame": 21,
+            "foot": "left",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": 0.5240200201819232
+          },
+          {
+            "phase": "receive",
+            "player": "a",
+            "frame": 42,
+            "foot": "right",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": -0.013414576475960796
+          },
+          {
+            "phase": "kick",
+            "player": "a",
+            "frame": 45,
+            "foot": "right",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": 0.030123325157679667
+          },
+          {
+            "phase": "receive",
+            "player": "b",
+            "frame": 71,
+            "foot": "right",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": 0.006481517468017645
+          },
+          {
+            "phase": "kick",
+            "player": "b",
+            "frame": 71,
+            "foot": "right",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": 0.006481517468017645
+          },
+          {
+            "phase": "receive",
+            "player": "a",
+            "frame": 90,
+            "foot": "left",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": 0.03557384097212353
+          },
+          {
+            "phase": "kick",
+            "player": "a",
+            "frame": 90,
+            "foot": "left",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": 0.03557384097212353
+          },
+          {
+            "phase": "receive",
+            "player": "b",
+            "frame": 110,
+            "foot": "right",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": -0.005952532057984086
+          },
+          {
+            "phase": "kick",
+            "player": "b",
+            "frame": 110,
+            "foot": "right",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": -0.005952532057984086
+          },
+          {
+            "phase": "receive",
+            "player": "a",
+            "frame": 132,
+            "foot": "left",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": 0.03313010868997569
+          },
+          {
+            "phase": "kick",
+            "player": "a",
+            "frame": 132,
+            "foot": "left",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": 0.03313010868997569
+          }
+        ]
+      }
+    },
+    "event_semantics": {
+      "interaction": {
+        "definition": {
+          "predicted_interaction": "Earliest frame with minimum ball-center to annotated target-toe distance in the fixed annotated_frame +/- 4 frame window.",
+          "correct_foot_association": "Target foot is strictly closer to the ball than the opposite foot at the annotated frame."
+        },
+        "receive": {
+          "count": 6,
+          "target_foot_distance_mean_m": 0.12948833793127787,
+          "wrong_foot_distance_mean_m": 0.4430303897820897,
+          "contact_surface_error_mean_m": 0.026412857077926732,
+          "correct_foot_association_rate": 1.0,
+          "timing_error_mean_frames": 0.0,
+          "timing_error_mean_seconds": 0.0,
+          "timing_error_p95_frames": 0.0
+        },
+        "kick": {
+          "count": 7,
+          "target_foot_distance_mean_m": 0.2620447939303247,
+          "wrong_foot_distance_mean_m": 0.39153434911019636,
+          "contact_surface_error_mean_m": 0.15204479393032472,
+          "correct_foot_association_rate": 0.5714285714285714,
+          "timing_error_mean_frames": 1.2857142857142858,
+          "timing_error_mean_seconds": 0.05357142857142857,
+          "timing_error_p95_frames": 3.6999999999999993
+        },
+        "overall": {
+          "count": 13,
+          "target_foot_distance_mean_m": 0.2008648911615339,
+          "wrong_foot_distance_mean_m": 0.41530175249722395,
+          "contact_surface_error_mean_m": 0.09406082307537181,
+          "correct_foot_association_rate": 0.7692307692307693,
+          "timing_error_mean_frames": 0.6923076923076923,
+          "timing_error_mean_seconds": 0.028846153846153848,
+          "timing_error_p95_frames": 3.3999999999999986
+        },
+        "samples": [
+          {
+            "phase": "kick",
+            "player": "a",
+            "frame": 0,
+            "foot": "right",
+            "predicted_interaction_frame": 2,
+            "timing_window_start": 0,
+            "timing_window_end_inclusive": 4,
+            "timing_error_frames": 2,
+            "timing_error_seconds": 0.08333333333333333,
+            "target_foot_distance_m": 0.3991011234385592,
+            "wrong_foot_distance_m": 0.10368452047375018,
+            "contact_surface_error_m": 0.2891011234385592,
+            "correct_foot_association": false
+          },
+          {
+            "phase": "receive",
+            "player": "b",
+            "frame": 15,
+            "foot": "right",
+            "predicted_interaction_frame": 15,
+            "timing_window_start": 11,
+            "timing_window_end_inclusive": 19,
+            "timing_error_frames": 0,
+            "timing_error_seconds": 0.0,
+            "target_foot_distance_m": 0.0892264425600534,
+            "wrong_foot_distance_m": 0.46612191860964136,
+            "contact_surface_error_m": 0.020773557439946605,
+            "correct_foot_association": true
+          },
+          {
+            "phase": "kick",
+            "player": "b",
+            "frame": 21,
+            "foot": "left",
+            "predicted_interaction_frame": 17,
+            "timing_window_start": 17,
+            "timing_window_end_inclusive": 25,
+            "timing_error_frames": 4,
+            "timing_error_seconds": 0.16666666666666666,
+            "target_foot_distance_m": 0.6532461467636326,
+            "wrong_foot_distance_m": 0.6097559250138195,
+            "contact_surface_error_m": 0.5432461467636326,
+            "correct_foot_association": false
+          },
+          {
+            "phase": "receive",
+            "player": "a",
+            "frame": 42,
+            "foot": "right",
+            "predicted_interaction_frame": 42,
+            "timing_window_start": 38,
+            "timing_window_end_inclusive": 46,
+            "timing_error_frames": 0,
+            "timing_error_seconds": 0.0,
+            "target_foot_distance_m": 0.13053791127607176,
+            "wrong_foot_distance_m": 0.2727012768898874,
+            "contact_surface_error_m": 0.020537911276071755,
+            "correct_foot_association": true
+          },
+          {
+            "phase": "kick",
+            "player": "a",
+            "frame": 45,
+            "foot": "right",
+            "predicted_interaction_frame": 42,
+            "timing_window_start": 41,
+            "timing_window_end_inclusive": 49,
+            "timing_error_frames": 3,
+            "timing_error_seconds": 0.125,
+            "target_foot_distance_m": 0.22480061355853925,
+            "wrong_foot_distance_m": 0.10794085509079575,
+            "contact_surface_error_m": 0.11480061355853925,
+            "correct_foot_association": false
+          },
+          {
+            "phase": "receive",
+            "player": "b",
+            "frame": 71,
+            "foot": "right",
+            "predicted_interaction_frame": 71,
+            "timing_window_start": 67,
+            "timing_window_end_inclusive": 75,
+            "timing_error_frames": 0,
+            "timing_error_seconds": 0.0,
+            "target_foot_distance_m": 0.1211946630215465,
+            "wrong_foot_distance_m": 0.7697486860971963,
+            "contact_surface_error_m": 0.011194663021546494,
+            "correct_foot_association": true
+          },
+          {
+            "phase": "kick",
+            "player": "b",
+            "frame": 71,
+            "foot": "right",
+            "predicted_interaction_frame": 71,
+            "timing_window_start": 67,
+            "timing_window_end_inclusive": 75,
+            "timing_error_frames": 0,
+            "timing_error_seconds": 0.0,
+            "target_foot_distance_m": 0.1211946630215465,
+            "wrong_foot_distance_m": 0.7697486860971963,
+            "contact_surface_error_m": 0.011194663021546494,
+            "correct_foot_association": true
+          },
+          {
+            "phase": "receive",
+            "player": "a",
+            "frame": 90,
+            "foot": "left",
+            "predicted_interaction_frame": 90,
+            "timing_window_start": 86,
+            "timing_window_end_inclusive": 94,
+            "timing_error_frames": 0,
+            "timing_error_seconds": 0.0,
+            "target_foot_distance_m": 0.15401224493211738,
+            "wrong_foot_distance_m": 0.3852371015526432,
+            "contact_surface_error_m": 0.044012244932117375,
+            "correct_foot_association": true
+          },
+          {
+            "phase": "kick",
+            "player": "a",
+            "frame": 90,
+            "foot": "left",
+            "predicted_interaction_frame": 90,
+            "timing_window_start": 86,
+            "timing_window_end_inclusive": 94,
+            "timing_error_frames": 0,
+            "timing_error_seconds": 0.0,
+            "target_foot_distance_m": 0.15401224493211738,
+            "wrong_foot_distance_m": 0.3852371015526432,
+            "contact_surface_error_m": 0.044012244932117375,
+            "correct_foot_association": true
+          },
+          {
+            "phase": "receive",
+            "player": "b",
+            "frame": 110,
+            "foot": "right",
+            "predicted_interaction_frame": 110,
+            "timing_window_start": 106,
+            "timing_window_end_inclusive": 114,
+            "timing_error_frames": 0,
+            "timing_error_seconds": 0.0,
+            "target_foot_distance_m": 0.11695223856085359,
+            "wrong_foot_distance_m": 0.37407078556210227,
+            "contact_surface_error_m": 0.006952238560853585,
+            "correct_foot_association": true
+          },
+          {
+            "phase": "kick",
+            "player": "b",
+            "frame": 110,
+            "foot": "right",
+            "predicted_interaction_frame": 110,
+            "timing_window_start": 106,
+            "timing_window_end_inclusive": 114,
+            "timing_error_frames": 0,
+            "timing_error_seconds": 0.0,
+            "target_foot_distance_m": 0.11695223856085359,
+            "wrong_foot_distance_m": 0.37407078556210227,
+            "contact_surface_error_m": 0.006952238560853585,
+            "correct_foot_association": true
+          },
+          {
+            "phase": "receive",
+            "player": "a",
+            "frame": 132,
+            "foot": "left",
+            "predicted_interaction_frame": 132,
+            "timing_window_start": 128,
+            "timing_window_end_inclusive": 136,
+            "timing_error_frames": 0,
+            "timing_error_seconds": 0.0,
+            "target_foot_distance_m": 0.16500652723702458,
+            "wrong_foot_distance_m": 0.39030256998106727,
+            "contact_surface_error_m": 0.05500652723702458,
+            "correct_foot_association": true
+          },
+          {
+            "phase": "kick",
+            "player": "a",
+            "frame": 132,
+            "foot": "left",
+            "predicted_interaction_frame": 132,
+            "timing_window_start": 128,
+            "timing_window_end_inclusive": 136,
+            "timing_error_frames": 0,
+            "timing_error_seconds": 0.0,
+            "target_foot_distance_m": 0.16500652723702458,
+            "wrong_foot_distance_m": 0.39030256998106727,
+            "contact_surface_error_m": 0.05500652723702458,
+            "correct_foot_association": true
+          }
+        ]
+      },
+      "support": {
+        "definition": {
+          "support_interval": "Annotated kick frame - 8 through kick frame + 2.",
+          "support_foot": "Foot opposite the annotated kick foot.",
+          "floor_proxy": "Depth of ankle/toe keypoint below the fixed 0.012 m threshold."
+        },
+        "stance_foot_horizontal_displacement_mean_m": 0.48266286694376287,
+        "stance_foot_horizontal_displacement_p95_m": 0.6438793102995243,
+        "stance_foot_speed_mean_m_per_s": 1.3078606717185832,
+        "stance_foot_speed_p50_m_per_s": 0.79886665485678,
+        "stance_foot_speed_p95_m_per_s": 3.2438133698523006,
+        "stance_foot_speed_max_m_per_s": 4.991083659119898,
+        "floor_penetration_keypoint_mean_m": 9.98847150509759e-05,
+        "floor_penetration_keypoint_max_m": 0.015651426613951903,
+        "floor_penetration_keypoint_fraction": 0.019965277777777776,
+        "samples": [
+          {
+            "player": "a",
+            "kick_frame": 0,
+            "support_foot": "left",
+            "interval_start": 0,
+            "interval_end_inclusive": 2,
+            "horizontal_displacement_m": 0.053328748905902924,
+            "speed_mean_m_per_s": 0.6399449868708351,
+            "speed_max_m_per_s": 1.061565743549107
+          },
+          {
+            "player": "a",
+            "kick_frame": 45,
+            "support_foot": "left",
+            "interval_start": 37,
+            "interval_end_inclusive": 47,
+            "horizontal_displacement_m": 0.5526501727279337,
+            "speed_mean_m_per_s": 1.326360414547041,
+            "speed_max_m_per_s": 4.991083659119898
+          },
+          {
+            "player": "a",
+            "kick_frame": 90,
+            "support_foot": "right",
+            "interval_start": 82,
+            "interval_end_inclusive": 92,
+            "horizontal_displacement_m": 0.6566150969777532,
+            "speed_mean_m_per_s": 1.5758762327466076,
+            "speed_max_m_per_s": 4.90065238603125
+          },
+          {
+            "player": "a",
+            "kick_frame": 132,
+            "support_foot": "right",
+            "interval_start": 124,
+            "interval_end_inclusive": 134,
+            "horizontal_displacement_m": 0.5875464626020065,
+            "speed_mean_m_per_s": 1.4101115102448154,
+            "speed_max_m_per_s": 3.2468073463452662
+          },
+          {
+            "player": "b",
+            "kick_frame": 21,
+            "support_foot": "right",
+            "interval_start": 13,
+            "interval_end_inclusive": 23,
+            "horizontal_displacement_m": 0.3986330214089981,
+            "speed_mean_m_per_s": 0.9567192513815957,
+            "speed_max_m_per_s": 2.2304861945063212
+          },
+          {
+            "player": "b",
+            "kick_frame": 71,
+            "support_foot": "left",
+            "interval_start": 63,
+            "interval_end_inclusive": 73,
+            "horizontal_displacement_m": 0.5157040912667559,
+            "speed_mean_m_per_s": 1.2376898190402137,
+            "speed_max_m_per_s": 3.071322522218134
+          },
+          {
+            "player": "b",
+            "kick_frame": 110,
+            "support_foot": "left",
+            "interval_start": 102,
+            "interval_end_inclusive": 112,
+            "horizontal_displacement_m": 0.61416247471699,
+            "speed_mean_m_per_s": 1.4739899393207763,
+            "speed_max_m_per_s": 4.217390032630115
+          }
+        ]
+      },
+      "smoothness": {
+        "definition": "Forward finite difference of order n multiplied by fps^n; root RMS uses Euclidean XYZ magnitude, joint RMS pools all frames and 29 DoF.",
+        "root_velocity_rms_m_per_s": 0.8326220268704478,
+        "root_acceleration_rms_m_per_s2": 11.4498838527719,
+        "root_jerk_rms_m_per_s3": 395.38123912410043,
+        "joint_velocity_rms_rad_per_s": 1.428549162688971,
+        "joint_acceleration_rms_rad_per_s2": 31.503878698813722,
+        "joint_jerk_rms_rad_per_s3": 1086.826333556823
+      },
+      "passes": {
+        "pass_curvature_path_excess_mean": 0.0,
+        "pass_heading_change_mean_deg": 1.8155666306687575e-13,
+        "cone_center_clearance_min_m": 0.03792214823031251,
+        "cone_surface_clearance_min_m": -0.1320778517696875,
+        "lane_crossing_error_mean_m": 0.7037901835271482,
+        "contact_foot_lane_error_mean_m": 0.6474678630309624,
+        "samples": [
+          {
+            "pass": 1,
+            "start_frame": 0,
+            "end_frame": 15,
+            "lane_index": 3,
+            "lane_y_m": -0.25,
+            "crossing_y_m": 0.3146100918451945,
+            "crossing_error_m": 0.5646100918451945,
+            "cone_center_clearance_m": 0.19748823841774038,
+            "cone_surface_clearance_m": 0.027488238417740382
+          },
+          {
+            "pass": 2,
+            "start_frame": 21,
+            "end_frame": 42,
+            "lane_index": 4,
+            "lane_y_m": -0.75,
+            "crossing_y_m": -0.2405513260099623,
+            "crossing_error_m": 0.5094486739900377,
+            "cone_center_clearance_m": 0.2349023536248168,
+            "cone_surface_clearance_m": 0.06490235362481679
+          },
+          {
+            "pass": 3,
+            "start_frame": 45,
+            "end_frame": 71,
+            "lane_index": 5,
+            "lane_y_m": -1.25,
+            "crossing_y_m": -0.34663849863512763,
+            "crossing_error_m": 0.9033615013648724,
+            "cone_center_clearance_m": 0.1533875901796828,
+            "cone_surface_clearance_m": -0.01661240982031721
+          },
+          {
+            "pass": 4,
+            "start_frame": 71,
+            "end_frame": 90,
+            "lane_index": 4,
+            "lane_y_m": -0.75,
+            "crossing_y_m": 0.009679890776935368,
+            "crossing_error_m": 0.7596798907769353,
+            "cone_center_clearance_m": 0.03792214823031251,
+            "cone_surface_clearance_m": -0.1320778517696875
+          },
+          {
+            "pass": 5,
+            "start_frame": 90,
+            "end_frame": 110,
+            "lane_index": 3,
+            "lane_y_m": -0.25,
+            "crossing_y_m": 0.4541310235857964,
+            "crossing_error_m": 0.7041310235857964,
+            "cone_center_clearance_m": 0.04633070558560537,
+            "cone_surface_clearance_m": -0.12366929441439463
+          },
+          {
+            "pass": 6,
+            "start_frame": 110,
+            "end_frame": 132,
+            "lane_index": 2,
+            "lane_y_m": 0.25,
+            "crossing_y_m": 1.0315099196000532,
+            "crossing_error_m": 0.7815099196000532,
+            "cone_center_clearance_m": 0.06290526821910282,
+            "cone_surface_clearance_m": -0.10709473178089718
+          }
+        ]
+      },
+      "legacy_compatibility": {
+        "contact": {
+          "target_foot_distance_mean_m": 0.2008648911615339,
+          "target_foot_distance_p95_m": 0.5007591327685882,
+          "wrong_foot_distance_mean_m": 0.41530175249722395,
+          "contact_surface_error_mean_m": 0.09406082307537181,
+          "wrong_minus_target_margin_mean_m": 0.21443686133569015,
+          "wrong_foot_farther_fraction": 0.7692307692307693,
+          "samples": [
+            {
+              "player": "a",
+              "phase": "kick",
+              "frame": 0,
+              "foot": "right",
+              "target_distance_m": 0.3991011234385592,
+              "wrong_foot_distance_m": 0.10368452047375018,
+              "surface_error_m": 0.2891011234385592,
+              "wrong_minus_target_margin_m": -0.295416602964809
+            },
+            {
+              "player": "b",
+              "phase": "receive",
+              "frame": 15,
+              "foot": "right",
+              "target_distance_m": 0.0892264425600534,
+              "wrong_foot_distance_m": 0.46612191860964136,
+              "surface_error_m": 0.020773557439946605,
+              "wrong_minus_target_margin_m": 0.37689547604958795
+            },
+            {
+              "player": "b",
+              "phase": "kick",
+              "frame": 21,
+              "foot": "left",
+              "target_distance_m": 0.6532461467636326,
+              "wrong_foot_distance_m": 0.6097559250138195,
+              "surface_error_m": 0.5432461467636326,
+              "wrong_minus_target_margin_m": -0.043490221749813096
+            },
+            {
+              "player": "a",
+              "phase": "receive",
+              "frame": 42,
+              "foot": "right",
+              "target_distance_m": 0.13053791127607176,
+              "wrong_foot_distance_m": 0.2727012768898874,
+              "surface_error_m": 0.020537911276071755,
+              "wrong_minus_target_margin_m": 0.14216336561381562
+            },
+            {
+              "player": "a",
+              "phase": "kick",
+              "frame": 45,
+              "foot": "right",
+              "target_distance_m": 0.22480061355853925,
+              "wrong_foot_distance_m": 0.10794085509079575,
+              "surface_error_m": 0.11480061355853925,
+              "wrong_minus_target_margin_m": -0.1168597584677435
+            },
+            {
+              "player": "b",
+              "phase": "receive",
+              "frame": 71,
+              "foot": "right",
+              "target_distance_m": 0.1211946630215465,
+              "wrong_foot_distance_m": 0.7697486860971963,
+              "surface_error_m": 0.011194663021546494,
+              "wrong_minus_target_margin_m": 0.6485540230756498
+            },
+            {
+              "player": "b",
+              "phase": "kick",
+              "frame": 71,
+              "foot": "right",
+              "target_distance_m": 0.1211946630215465,
+              "wrong_foot_distance_m": 0.7697486860971963,
+              "surface_error_m": 0.011194663021546494,
+              "wrong_minus_target_margin_m": 0.6485540230756498
+            },
+            {
+              "player": "a",
+              "phase": "receive",
+              "frame": 90,
+              "foot": "left",
+              "target_distance_m": 0.15401224493211738,
+              "wrong_foot_distance_m": 0.3852371015526432,
+              "surface_error_m": 0.044012244932117375,
+              "wrong_minus_target_margin_m": 0.2312248566205258
+            },
+            {
+              "player": "a",
+              "phase": "kick",
+              "frame": 90,
+              "foot": "left",
+              "target_distance_m": 0.15401224493211738,
+              "wrong_foot_distance_m": 0.3852371015526432,
+              "surface_error_m": 0.044012244932117375,
+              "wrong_minus_target_margin_m": 0.2312248566205258
+            },
+            {
+              "player": "b",
+              "phase": "receive",
+              "frame": 110,
+              "foot": "right",
+              "target_distance_m": 0.11695223856085359,
+              "wrong_foot_distance_m": 0.37407078556210227,
+              "surface_error_m": 0.006952238560853585,
+              "wrong_minus_target_margin_m": 0.2571185470012487
+            },
+            {
+              "player": "b",
+              "phase": "kick",
+              "frame": 110,
+              "foot": "right",
+              "target_distance_m": 0.11695223856085359,
+              "wrong_foot_distance_m": 0.37407078556210227,
+              "surface_error_m": 0.006952238560853585,
+              "wrong_minus_target_margin_m": 0.2571185470012487
+            },
+            {
+              "player": "a",
+              "phase": "receive",
+              "frame": 132,
+              "foot": "left",
+              "target_distance_m": 0.16500652723702458,
+              "wrong_foot_distance_m": 0.39030256998106727,
+              "surface_error_m": 0.05500652723702458,
+              "wrong_minus_target_margin_m": 0.2252960427440427
+            },
+            {
+              "player": "a",
+              "phase": "kick",
+              "frame": 132,
+              "foot": "left",
+              "target_distance_m": 0.16500652723702458,
+              "wrong_foot_distance_m": 0.39030256998106727,
+              "surface_error_m": 0.05500652723702458,
+              "wrong_minus_target_margin_m": 0.2252960427440427
+            }
+          ]
+        },
+        "robot_motion": {
+          "support_foot_sliding_mean_m_per_event": 0.07163137865051718,
+          "support_foot_sliding_p95_m_per_event": 0.11286199014343008,
+          "floor_penetration_proxy_mean_m": 9.98847150509759e-05,
+          "floor_penetration_proxy_max_m": 0.015651426613951903,
+          "floor_penetration_proxy_fraction": 0.019965277777777776,
+          "pelvis_vertical_acceleration_rms_m_per_s2": 7.043359096532999
+        },
+        "passes": {
+          "pass_curvature_path_excess_mean": 0.0,
+          "pass_heading_change_mean_deg": 1.8155666306687575e-13,
+          "cone_center_clearance_min_m": 0.03792214823031251,
+          "cone_surface_clearance_min_m": -0.1320778517696875,
+          "lane_crossing_error_mean_m": 0.7037901835271482,
+          "contact_foot_lane_error_mean_m": 0.6474678630309624,
+          "samples": [
+            {
+              "pass": 1,
+              "start_frame": 0,
+              "end_frame": 15,
+              "lane_index": 3,
+              "lane_y_m": -0.25,
+              "crossing_y_m": 0.3146100918451945,
+              "crossing_error_m": 0.5646100918451945,
+              "cone_center_clearance_m": 0.19748823841774038,
+              "cone_surface_clearance_m": 0.027488238417740382
+            },
+            {
+              "pass": 2,
+              "start_frame": 21,
+              "end_frame": 42,
+              "lane_index": 4,
+              "lane_y_m": -0.75,
+              "crossing_y_m": -0.2405513260099623,
+              "crossing_error_m": 0.5094486739900377,
+              "cone_center_clearance_m": 0.2349023536248168,
+              "cone_surface_clearance_m": 0.06490235362481679
+            },
+            {
+              "pass": 3,
+              "start_frame": 45,
+              "end_frame": 71,
+              "lane_index": 5,
+              "lane_y_m": -1.25,
+              "crossing_y_m": -0.34663849863512763,
+              "crossing_error_m": 0.9033615013648724,
+              "cone_center_clearance_m": 0.1533875901796828,
+              "cone_surface_clearance_m": -0.01661240982031721
+            },
+            {
+              "pass": 4,
+              "start_frame": 71,
+              "end_frame": 90,
+              "lane_index": 4,
+              "lane_y_m": -0.75,
+              "crossing_y_m": 0.009679890776935368,
+              "crossing_error_m": 0.7596798907769353,
+              "cone_center_clearance_m": 0.03792214823031251,
+              "cone_surface_clearance_m": -0.1320778517696875
+            },
+            {
+              "pass": 5,
+              "start_frame": 90,
+              "end_frame": 110,
+              "lane_index": 3,
+              "lane_y_m": -0.25,
+              "crossing_y_m": 0.4541310235857964,
+              "crossing_error_m": 0.7041310235857964,
+              "cone_center_clearance_m": 0.04633070558560537,
+              "cone_surface_clearance_m": -0.12366929441439463
+            },
+            {
+              "pass": 6,
+              "start_frame": 110,
+              "end_frame": 132,
+              "lane_index": 2,
+              "lane_y_m": 0.25,
+              "crossing_y_m": 1.0315099196000532,
+              "crossing_error_m": 0.7815099196000532,
+              "cone_center_clearance_m": 0.06290526821910282,
+              "cone_surface_clearance_m": -0.10709473178089718
+            }
+          ]
+        }
+      },
+      "mesh_geometry": {
+        "available": true,
+        "definition": {
+          "ground": "Maximum depth of transformed G1 foot-mesh vertices below Z=0.",
+          "ball_foot": "Nearest transformed target-foot mesh vertex to ball center minus 0.11 m radius; vertex-sampled proxy, not exact triangle distance."
+        },
+        "foot_ground_penetration_mesh_mean_m": 0.0005274685816640532,
+        "foot_ground_penetration_mesh_max_m": 0.022321627929130623,
+        "foot_ground_penetration_mesh_fraction": 0.06770833333333333,
+        "ball_target_foot_mesh_vertex_gap_mean_m": 0.04887228633603498,
+        "ball_target_foot_mesh_vertex_gap_abs_mean_m": 0.07273705516685568,
+        "self_collision": {
+          "available": false,
+          "reason": "The rendering scene disables/filters relevant collision pairs; no robust non-adjacent mesh self-distance implementation is present."
+        },
+        "samples": [
+          {
+            "phase": "kick",
+            "player": "a",
+            "frame": 0,
+            "foot": "right",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": 0.20286341828382887
+          },
+          {
+            "phase": "receive",
+            "player": "b",
+            "frame": 15,
+            "foot": "right",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": -0.04257083013355513
+          },
+          {
+            "phase": "kick",
+            "player": "b",
+            "frame": 21,
+            "foot": "left",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": 0.513772874127825
+          },
+          {
+            "phase": "receive",
+            "player": "a",
+            "frame": 42,
+            "foot": "right",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": -0.007092992345453186
+          },
+          {
+            "phase": "kick",
+            "player": "a",
+            "frame": 45,
+            "foot": "right",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": -0.028931891852627387
+          },
+          {
+            "phase": "receive",
+            "player": "b",
+            "frame": 71,
+            "foot": "right",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": -0.016803921873504754
+          },
+          {
+            "phase": "kick",
+            "player": "b",
+            "frame": 71,
+            "foot": "right",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": -0.016803921873504754
+          },
+          {
+            "phase": "receive",
+            "player": "a",
+            "frame": 90,
+            "foot": "left",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": 0.01769031971463668
+          },
+          {
+            "phase": "kick",
+            "player": "a",
+            "frame": 90,
+            "foot": "left",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": 0.01769031971463668
+          },
+          {
+            "phase": "receive",
+            "player": "b",
+            "frame": 110,
+            "foot": "right",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": -0.0214587196608447
+          },
+          {
+            "phase": "kick",
+            "player": "b",
+            "frame": 110,
+            "foot": "right",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": -0.0214587196608447
+          },
+          {
+            "phase": "receive",
+            "player": "a",
+            "frame": 132,
+            "foot": "left",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": 0.01922189396393105
+          },
+          {
+            "phase": "kick",
+            "player": "a",
+            "frame": 132,
+            "foot": "left",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": 0.01922189396393105
+          }
+        ]
+      }
+    },
+    "full": {
+      "interaction": {
+        "definition": {
+          "predicted_interaction": "Earliest frame with minimum ball-center to annotated target-toe distance in the fixed annotated_frame +/- 4 frame window.",
+          "correct_foot_association": "Target foot is strictly closer to the ball than the opposite foot at the annotated frame."
+        },
+        "receive": {
+          "count": 6,
+          "target_foot_distance_mean_m": 0.08666558658068783,
+          "wrong_foot_distance_mean_m": 0.49194367398515837,
+          "contact_surface_error_mean_m": 0.02333441341931218,
+          "correct_foot_association_rate": 1.0,
+          "timing_error_mean_frames": 0.16666666666666666,
+          "timing_error_mean_seconds": 0.006944444444444444,
+          "timing_error_p95_frames": 0.75
+        },
+        "kick": {
+          "count": 7,
+          "target_foot_distance_mean_m": 0.09241451647597358,
+          "wrong_foot_distance_mean_m": 0.4812794791749883,
+          "contact_surface_error_mean_m": 0.020769440667291146,
+          "correct_foot_association_rate": 1.0,
+          "timing_error_mean_frames": 0.5714285714285714,
+          "timing_error_mean_seconds": 0.023809523809523808,
+          "timing_error_p95_frames": 2.3999999999999986
+        },
+        "overall": {
+          "count": 13,
+          "target_foot_distance_mean_m": 0.08976116421661093,
+          "wrong_foot_distance_mean_m": 0.4862014152412207,
+          "contact_surface_error_mean_m": 0.021953274245147012,
+          "correct_foot_association_rate": 1.0,
+          "timing_error_mean_frames": 0.38461538461538464,
+          "timing_error_mean_seconds": 0.016025641025641024,
+          "timing_error_p95_frames": 1.7999999999999972
+        },
+        "samples": [
+          {
+            "phase": "kick",
+            "player": "a",
+            "frame": 0,
+            "foot": "right",
+            "predicted_interaction_frame": 0,
+            "timing_window_start": 0,
+            "timing_window_end_inclusive": 4,
+            "timing_error_frames": 0,
+            "timing_error_seconds": 0.0,
+            "target_foot_distance_m": 0.12114385000142659,
+            "wrong_foot_distance_m": 0.38349983958366546,
+            "contact_surface_error_m": 0.011143850001426592,
+            "correct_foot_association": true
+          },
+          {
+            "phase": "receive",
+            "player": "b",
+            "frame": 15,
+            "foot": "right",
+            "predicted_interaction_frame": 15,
+            "timing_window_start": 11,
+            "timing_window_end_inclusive": 19,
+            "timing_error_frames": 0,
+            "timing_error_seconds": 0.0,
+            "target_foot_distance_m": 0.1080166642778345,
+            "wrong_foot_distance_m": 0.47933275885342697,
+            "contact_surface_error_m": 0.001983335722165497,
+            "correct_foot_association": true
+          },
+          {
+            "phase": "kick",
+            "player": "b",
+            "frame": 21,
+            "foot": "left",
+            "predicted_interaction_frame": 21,
+            "timing_window_start": 17,
+            "timing_window_end_inclusive": 25,
+            "timing_error_frames": 0,
+            "timing_error_seconds": 0.0,
+            "target_foot_distance_m": 0.09510437487820042,
+            "wrong_foot_distance_m": 0.5386697100996917,
+            "contact_surface_error_m": 0.01489562512179958,
+            "correct_foot_association": true
+          },
+          {
+            "phase": "receive",
+            "player": "a",
+            "frame": 42,
+            "foot": "right",
+            "predicted_interaction_frame": 42,
+            "timing_window_start": 38,
+            "timing_window_end_inclusive": 46,
+            "timing_error_frames": 0,
+            "timing_error_seconds": 0.0,
+            "target_foot_distance_m": 0.08189064812503286,
+            "wrong_foot_distance_m": 0.33934988771075913,
+            "contact_surface_error_m": 0.028109351874967145,
+            "correct_foot_association": true
+          },
+          {
+            "phase": "kick",
+            "player": "a",
+            "frame": 45,
+            "foot": "right",
+            "predicted_interaction_frame": 42,
+            "timing_window_start": 41,
+            "timing_window_end_inclusive": 49,
+            "timing_error_frames": 3,
+            "timing_error_seconds": 0.125,
+            "target_foot_distance_m": 0.10056718337092857,
+            "wrong_foot_distance_m": 0.3138074071947972,
+            "contact_surface_error_m": 0.00943281662907143,
+            "correct_foot_association": true
+          },
+          {
+            "phase": "receive",
+            "player": "b",
+            "frame": 71,
+            "foot": "right",
+            "predicted_interaction_frame": 71,
+            "timing_window_start": 67,
+            "timing_window_end_inclusive": 75,
+            "timing_error_frames": 0,
+            "timing_error_seconds": 0.0,
+            "target_foot_distance_m": 0.08906846791323811,
+            "wrong_foot_distance_m": 0.7922603984236279,
+            "contact_surface_error_m": 0.020931532086761892,
+            "correct_foot_association": true
+          },
+          {
+            "phase": "kick",
+            "player": "b",
+            "frame": 71,
+            "foot": "right",
+            "predicted_interaction_frame": 71,
+            "timing_window_start": 67,
+            "timing_window_end_inclusive": 75,
+            "timing_error_frames": 0,
+            "timing_error_seconds": 0.0,
+            "target_foot_distance_m": 0.08906846791323811,
+            "wrong_foot_distance_m": 0.7922603984236279,
+            "contact_surface_error_m": 0.020931532086761892,
+            "correct_foot_association": true
+          },
+          {
+            "phase": "receive",
+            "player": "a",
+            "frame": 90,
+            "foot": "left",
+            "predicted_interaction_frame": 90,
+            "timing_window_start": 86,
+            "timing_window_end_inclusive": 94,
+            "timing_error_frames": 0,
+            "timing_error_seconds": 0.0,
+            "target_foot_distance_m": 0.07843526742736452,
+            "wrong_foot_distance_m": 0.47110898575881627,
+            "contact_surface_error_m": 0.03156473257263548,
+            "correct_foot_association": true
+          },
+          {
+            "phase": "kick",
+            "player": "a",
+            "frame": 90,
+            "foot": "left",
+            "predicted_interaction_frame": 90,
+            "timing_window_start": 86,
+            "timing_window_end_inclusive": 94,
+            "timing_error_frames": 0,
+            "timing_error_seconds": 0.0,
+            "target_foot_distance_m": 0.07843526742736452,
+            "wrong_foot_distance_m": 0.47110898575881627,
+            "contact_surface_error_m": 0.03156473257263548,
+            "correct_foot_association": true
+          },
+          {
+            "phase": "receive",
+            "player": "b",
+            "frame": 110,
+            "foot": "right",
+            "predicted_interaction_frame": 110,
+            "timing_window_start": 106,
+            "timing_window_end_inclusive": 114,
+            "timing_error_frames": 0,
+            "timing_error_seconds": 0.0,
+            "target_foot_distance_m": 0.08309665870483023,
+            "wrong_foot_distance_m": 0.4340181183267191,
+            "contact_surface_error_m": 0.026903341295169775,
+            "correct_foot_association": true
+          },
+          {
+            "phase": "kick",
+            "player": "b",
+            "frame": 110,
+            "foot": "right",
+            "predicted_interaction_frame": 110,
+            "timing_window_start": 106,
+            "timing_window_end_inclusive": 114,
+            "timing_error_frames": 0,
+            "timing_error_seconds": 0.0,
+            "target_foot_distance_m": 0.08309665870483023,
+            "wrong_foot_distance_m": 0.4340181183267191,
+            "contact_surface_error_m": 0.026903341295169775,
+            "correct_foot_association": true
+          },
+          {
+            "phase": "receive",
+            "player": "a",
+            "frame": 132,
+            "foot": "left",
+            "predicted_interaction_frame": 133,
+            "timing_window_start": 128,
+            "timing_window_end_inclusive": 136,
+            "timing_error_frames": 1,
+            "timing_error_seconds": 0.041666666666666664,
+            "target_foot_distance_m": 0.0794858130358267,
+            "wrong_foot_distance_m": 0.4355918948376007,
+            "contact_surface_error_m": 0.030514186964173295,
+            "correct_foot_association": true
+          },
+          {
+            "phase": "kick",
+            "player": "a",
+            "frame": 132,
+            "foot": "left",
+            "predicted_interaction_frame": 133,
+            "timing_window_start": 128,
+            "timing_window_end_inclusive": 136,
+            "timing_error_frames": 1,
+            "timing_error_seconds": 0.041666666666666664,
+            "target_foot_distance_m": 0.0794858130358267,
+            "wrong_foot_distance_m": 0.4355918948376007,
+            "contact_surface_error_m": 0.030514186964173295,
+            "correct_foot_association": true
+          }
+        ]
+      },
+      "support": {
+        "definition": {
+          "support_interval": "Annotated kick frame - 8 through kick frame + 2.",
+          "support_foot": "Foot opposite the annotated kick foot.",
+          "floor_proxy": "Depth of ankle/toe keypoint below the fixed 0.012 m threshold."
+        },
+        "stance_foot_horizontal_displacement_mean_m": 0.4606642535442889,
+        "stance_foot_horizontal_displacement_p95_m": 0.6476228953962246,
+        "stance_foot_speed_mean_m_per_s": 1.2482515257329119,
+        "stance_foot_speed_p50_m_per_s": 0.9013783743759812,
+        "stance_foot_speed_p95_m_per_s": 3.1305299894636884,
+        "stance_foot_speed_max_m_per_s": 5.236788869669722,
+        "floor_penetration_keypoint_mean_m": 0.0001583040311258515,
+        "floor_penetration_keypoint_max_m": 0.013547731983952194,
+        "floor_penetration_keypoint_fraction": 0.0234375,
+        "samples": [
+          {
+            "player": "a",
+            "kick_frame": 0,
+            "support_foot": "left",
+            "interval_start": 0,
+            "interval_end_inclusive": 2,
+            "horizontal_displacement_m": 0.02370655116878208,
+            "speed_mean_m_per_s": 0.284478614025385,
+            "speed_max_m_per_s": 0.4525123243716447
+          },
+          {
+            "player": "a",
+            "kick_frame": 45,
+            "support_foot": "left",
+            "interval_start": 37,
+            "interval_end_inclusive": 47,
+            "horizontal_displacement_m": 0.662676476273408,
+            "speed_mean_m_per_s": 1.590423543056179,
+            "speed_max_m_per_s": 3.132949596589481
+          },
+          {
+            "player": "a",
+            "kick_frame": 90,
+            "support_foot": "right",
+            "interval_start": 82,
+            "interval_end_inclusive": 92,
+            "horizontal_displacement_m": 0.6124978733494636,
+            "speed_mean_m_per_s": 1.4699948960387128,
+            "speed_max_m_per_s": 5.236788869669722
+          },
+          {
+            "player": "a",
+            "kick_frame": 132,
+            "support_foot": "right",
+            "interval_start": 124,
+            "interval_end_inclusive": 134,
+            "horizontal_displacement_m": 0.5706705184765297,
+            "speed_mean_m_per_s": 1.3696092443436716,
+            "speed_max_m_per_s": 3.2621142504668064
+          },
+          {
+            "player": "b",
+            "kick_frame": 21,
+            "support_foot": "right",
+            "interval_start": 13,
+            "interval_end_inclusive": 23,
+            "horizontal_displacement_m": 0.48452509834120905,
+            "speed_mean_m_per_s": 1.1628602360189018,
+            "speed_max_m_per_s": 2.3518970655957134
+          },
+          {
+            "player": "b",
+            "kick_frame": 71,
+            "support_foot": "left",
+            "interval_start": 63,
+            "interval_end_inclusive": 73,
+            "horizontal_displacement_m": 0.2806838032751378,
+            "speed_mean_m_per_s": 0.6736411278603307,
+            "speed_max_m_per_s": 1.0368034163185837
+          },
+          {
+            "player": "b",
+            "kick_frame": 110,
+            "support_foot": "left",
+            "interval_start": 102,
+            "interval_end_inclusive": 112,
+            "horizontal_displacement_m": 0.5898894539254919,
+            "speed_mean_m_per_s": 1.4157346894211806,
+            "speed_max_m_per_s": 4.289600187685526
+          }
+        ]
+      },
+      "smoothness": {
+        "definition": "Forward finite difference of order n multiplied by fps^n; root RMS uses Euclidean XYZ magnitude, joint RMS pools all frames and 29 DoF.",
+        "root_velocity_rms_m_per_s": 1.2607819528087854,
+        "root_acceleration_rms_m_per_s2": 22.187153845238363,
+        "root_jerk_rms_m_per_s3": 784.3240509518538,
+        "joint_velocity_rms_rad_per_s": 1.5630068907331638,
+        "joint_acceleration_rms_rad_per_s2": 35.57391793246407,
+        "joint_jerk_rms_rad_per_s3": 1241.5896103258328
+      },
+      "passes": {
+        "pass_curvature_path_excess_mean": 3.700743415417188e-17,
+        "pass_heading_change_mean_deg": 2.1607893367192767e-13,
+        "cone_center_clearance_min_m": 0.18520481140315279,
+        "cone_surface_clearance_min_m": 0.015204811403152788,
+        "lane_crossing_error_mean_m": 0.01544962979891365,
+        "contact_foot_lane_error_mean_m": 0.2244474277814296,
+        "samples": [
+          {
+            "pass": 1,
+            "start_frame": 0,
+            "end_frame": 15,
+            "lane_index": 3,
+            "lane_y_m": -0.25,
+            "crossing_y_m": -0.2826885347623808,
+            "crossing_error_m": 0.032688534762380816,
+            "cone_center_clearance_m": 0.22099313924094183,
+            "cone_surface_clearance_m": 0.05099313924094183
+          },
+          {
+            "pass": 2,
+            "start_frame": 21,
+            "end_frame": 42,
+            "lane_index": 4,
+            "lane_y_m": -0.75,
+            "crossing_y_m": -0.75,
+            "crossing_error_m": 0.0,
+            "cone_center_clearance_m": 0.2500191597512979,
+            "cone_surface_clearance_m": 0.08001915975129792
+          },
+          {
+            "pass": 3,
+            "start_frame": 45,
+            "end_frame": 71,
+            "lane_index": 5,
+            "lane_y_m": -1.25,
+            "crossing_y_m": -1.189990755968899,
+            "crossing_error_m": 0.06000924403110108,
+            "cone_center_clearance_m": 0.18520481140315279,
+            "cone_surface_clearance_m": 0.015204811403152788
+          },
+          {
+            "pass": 4,
+            "start_frame": 71,
+            "end_frame": 90,
+            "lane_index": 4,
+            "lane_y_m": -0.75,
+            "crossing_y_m": -0.75,
+            "crossing_error_m": 0.0,
+            "cone_center_clearance_m": 0.260147550770762,
+            "cone_surface_clearance_m": 0.09014755077076203
+          },
+          {
+            "pass": 5,
+            "start_frame": 90,
+            "end_frame": 110,
+            "lane_index": 3,
+            "lane_y_m": -0.25,
+            "crossing_y_m": -0.25,
+            "crossing_error_m": 0.0,
+            "cone_center_clearance_m": 0.26424443216460886,
+            "cone_surface_clearance_m": 0.09424443216460887
+          },
+          {
+            "pass": 6,
+            "start_frame": 110,
+            "end_frame": 132,
+            "lane_index": 2,
+            "lane_y_m": 0.25,
+            "crossing_y_m": 0.25,
+            "crossing_error_m": 0.0,
+            "cone_center_clearance_m": 0.2569637212238064,
+            "cone_surface_clearance_m": 0.08696372122380641
+          }
+        ]
+      },
+      "legacy_compatibility": {
+        "contact": {
+          "target_foot_distance_mean_m": 0.08976116421661093,
+          "target_foot_distance_p95_m": 0.11326753856727131,
+          "wrong_foot_distance_mean_m": 0.4862014152412207,
+          "contact_surface_error_mean_m": 0.021953274245147012,
+          "wrong_minus_target_margin_mean_m": 0.3964402510246097,
+          "wrong_foot_farther_fraction": 1.0,
+          "samples": [
+            {
+              "player": "a",
+              "phase": "kick",
+              "frame": 0,
+              "foot": "right",
+              "target_distance_m": 0.12114385000142659,
+              "wrong_foot_distance_m": 0.38349983958366546,
+              "surface_error_m": 0.011143850001426592,
+              "wrong_minus_target_margin_m": 0.2623559895822389
+            },
+            {
+              "player": "b",
+              "phase": "receive",
+              "frame": 15,
+              "foot": "right",
+              "target_distance_m": 0.1080166642778345,
+              "wrong_foot_distance_m": 0.47933275885342697,
+              "surface_error_m": 0.001983335722165497,
+              "wrong_minus_target_margin_m": 0.37131609457559245
+            },
+            {
+              "player": "b",
+              "phase": "kick",
+              "frame": 21,
+              "foot": "left",
+              "target_distance_m": 0.09510437487820042,
+              "wrong_foot_distance_m": 0.5386697100996917,
+              "surface_error_m": 0.01489562512179958,
+              "wrong_minus_target_margin_m": 0.4435653352214912
+            },
+            {
+              "player": "a",
+              "phase": "receive",
+              "frame": 42,
+              "foot": "right",
+              "target_distance_m": 0.08189064812503286,
+              "wrong_foot_distance_m": 0.33934988771075913,
+              "surface_error_m": 0.028109351874967145,
+              "wrong_minus_target_margin_m": 0.25745923958572625
+            },
+            {
+              "player": "a",
+              "phase": "kick",
+              "frame": 45,
+              "foot": "right",
+              "target_distance_m": 0.10056718337092857,
+              "wrong_foot_distance_m": 0.3138074071947972,
+              "surface_error_m": 0.00943281662907143,
+              "wrong_minus_target_margin_m": 0.21324022382386865
+            },
+            {
+              "player": "b",
+              "phase": "receive",
+              "frame": 71,
+              "foot": "right",
+              "target_distance_m": 0.08906846791323811,
+              "wrong_foot_distance_m": 0.7922603984236279,
+              "surface_error_m": 0.020931532086761892,
+              "wrong_minus_target_margin_m": 0.7031919305103899
+            },
+            {
+              "player": "b",
+              "phase": "kick",
+              "frame": 71,
+              "foot": "right",
+              "target_distance_m": 0.08906846791323811,
+              "wrong_foot_distance_m": 0.7922603984236279,
+              "surface_error_m": 0.020931532086761892,
+              "wrong_minus_target_margin_m": 0.7031919305103899
+            },
+            {
+              "player": "a",
+              "phase": "receive",
+              "frame": 90,
+              "foot": "left",
+              "target_distance_m": 0.07843526742736452,
+              "wrong_foot_distance_m": 0.47110898575881627,
+              "surface_error_m": 0.03156473257263548,
+              "wrong_minus_target_margin_m": 0.39267371833145176
+            },
+            {
+              "player": "a",
+              "phase": "kick",
+              "frame": 90,
+              "foot": "left",
+              "target_distance_m": 0.07843526742736452,
+              "wrong_foot_distance_m": 0.47110898575881627,
+              "surface_error_m": 0.03156473257263548,
+              "wrong_minus_target_margin_m": 0.39267371833145176
+            },
+            {
+              "player": "b",
+              "phase": "receive",
+              "frame": 110,
+              "foot": "right",
+              "target_distance_m": 0.08309665870483023,
+              "wrong_foot_distance_m": 0.4340181183267191,
+              "surface_error_m": 0.026903341295169775,
+              "wrong_minus_target_margin_m": 0.35092145962188886
+            },
+            {
+              "player": "b",
+              "phase": "kick",
+              "frame": 110,
+              "foot": "right",
+              "target_distance_m": 0.08309665870483023,
+              "wrong_foot_distance_m": 0.4340181183267191,
+              "surface_error_m": 0.026903341295169775,
+              "wrong_minus_target_margin_m": 0.35092145962188886
+            },
+            {
+              "player": "a",
+              "phase": "receive",
+              "frame": 132,
+              "foot": "left",
+              "target_distance_m": 0.0794858130358267,
+              "wrong_foot_distance_m": 0.4355918948376007,
+              "surface_error_m": 0.030514186964173295,
+              "wrong_minus_target_margin_m": 0.356106081801774
+            },
+            {
+              "player": "a",
+              "phase": "kick",
+              "frame": 132,
+              "foot": "left",
+              "target_distance_m": 0.0794858130358267,
+              "wrong_foot_distance_m": 0.4355918948376007,
+              "surface_error_m": 0.030514186964173295,
+              "wrong_minus_target_margin_m": 0.356106081801774
+            }
+          ]
+        },
+        "robot_motion": {
+          "support_foot_sliding_mean_m_per_event": 0.09635784226917463,
+          "support_foot_sliding_p95_m_per_event": 0.1790552244729532,
+          "floor_penetration_proxy_mean_m": 0.0001583040311258515,
+          "floor_penetration_proxy_max_m": 0.013547731983952194,
+          "floor_penetration_proxy_fraction": 0.0234375,
+          "pelvis_vertical_acceleration_rms_m_per_s2": 7.2127603960833815
+        },
+        "passes": {
+          "pass_curvature_path_excess_mean": 3.700743415417188e-17,
+          "pass_heading_change_mean_deg": 2.1607893367192767e-13,
+          "cone_center_clearance_min_m": 0.18520481140315279,
+          "cone_surface_clearance_min_m": 0.015204811403152788,
+          "lane_crossing_error_mean_m": 0.01544962979891365,
+          "contact_foot_lane_error_mean_m": 0.2244474277814296,
+          "samples": [
+            {
+              "pass": 1,
+              "start_frame": 0,
+              "end_frame": 15,
+              "lane_index": 3,
+              "lane_y_m": -0.25,
+              "crossing_y_m": -0.2826885347623808,
+              "crossing_error_m": 0.032688534762380816,
+              "cone_center_clearance_m": 0.22099313924094183,
+              "cone_surface_clearance_m": 0.05099313924094183
+            },
+            {
+              "pass": 2,
+              "start_frame": 21,
+              "end_frame": 42,
+              "lane_index": 4,
+              "lane_y_m": -0.75,
+              "crossing_y_m": -0.75,
+              "crossing_error_m": 0.0,
+              "cone_center_clearance_m": 0.2500191597512979,
+              "cone_surface_clearance_m": 0.08001915975129792
+            },
+            {
+              "pass": 3,
+              "start_frame": 45,
+              "end_frame": 71,
+              "lane_index": 5,
+              "lane_y_m": -1.25,
+              "crossing_y_m": -1.189990755968899,
+              "crossing_error_m": 0.06000924403110108,
+              "cone_center_clearance_m": 0.18520481140315279,
+              "cone_surface_clearance_m": 0.015204811403152788
+            },
+            {
+              "pass": 4,
+              "start_frame": 71,
+              "end_frame": 90,
+              "lane_index": 4,
+              "lane_y_m": -0.75,
+              "crossing_y_m": -0.75,
+              "crossing_error_m": 0.0,
+              "cone_center_clearance_m": 0.260147550770762,
+              "cone_surface_clearance_m": 0.09014755077076203
+            },
+            {
+              "pass": 5,
+              "start_frame": 90,
+              "end_frame": 110,
+              "lane_index": 3,
+              "lane_y_m": -0.25,
+              "crossing_y_m": -0.25,
+              "crossing_error_m": 0.0,
+              "cone_center_clearance_m": 0.26424443216460886,
+              "cone_surface_clearance_m": 0.09424443216460887
+            },
+            {
+              "pass": 6,
+              "start_frame": 110,
+              "end_frame": 132,
+              "lane_index": 2,
+              "lane_y_m": 0.25,
+              "crossing_y_m": 0.25,
+              "crossing_error_m": 0.0,
+              "cone_center_clearance_m": 0.2569637212238064,
+              "cone_surface_clearance_m": 0.08696372122380641
+            }
+          ]
+        }
+      },
+      "mesh_geometry": {
+        "available": true,
+        "definition": {
+          "ground": "Maximum depth of transformed G1 foot-mesh vertices below Z=0.",
+          "ball_foot": "Nearest transformed target-foot mesh vertex to ball center minus 0.11 m radius; vertex-sampled proxy, not exact triangle distance."
+        },
+        "foot_ground_penetration_mesh_mean_m": 0.000713435496863912,
+        "foot_ground_penetration_mesh_max_m": 0.026990985434154176,
+        "foot_ground_penetration_mesh_fraction": 0.06770833333333333,
+        "ball_target_foot_mesh_vertex_gap_mean_m": -0.042752676045836505,
+        "ball_target_foot_mesh_vertex_gap_abs_mean_m": 0.042752676045836505,
+        "self_collision": {
+          "available": false,
+          "reason": "The rendering scene disables/filters relevant collision pairs; no robust non-adjacent mesh self-distance implementation is present."
+        },
+        "samples": [
+          {
+            "phase": "kick",
+            "player": "a",
+            "frame": 0,
+            "foot": "right",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": -0.01465867603336131
+          },
+          {
+            "phase": "receive",
+            "player": "b",
+            "frame": 15,
+            "foot": "right",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": -0.021481319185269104
+          },
+          {
+            "phase": "kick",
+            "player": "b",
+            "frame": 21,
+            "foot": "left",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": -0.03944604158718494
+          },
+          {
+            "phase": "receive",
+            "player": "a",
+            "frame": 42,
+            "foot": "right",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": -0.0463852037314966
+          },
+          {
+            "phase": "kick",
+            "player": "a",
+            "frame": 45,
+            "foot": "right",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": -0.03398199481956668
+          },
+          {
+            "phase": "receive",
+            "player": "b",
+            "frame": 71,
+            "foot": "right",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": -0.04319887078291844
+          },
+          {
+            "phase": "kick",
+            "player": "b",
+            "frame": 71,
+            "foot": "right",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": -0.04319887078291844
+          },
+          {
+            "phase": "receive",
+            "player": "a",
+            "frame": 90,
+            "foot": "left",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": -0.054779038650380446
+          },
+          {
+            "phase": "kick",
+            "player": "a",
+            "frame": 90,
+            "foot": "left",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": -0.054779038650380446
+          },
+          {
+            "phase": "receive",
+            "player": "b",
+            "frame": 110,
+            "foot": "right",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": -0.04767077159430871
+          },
+          {
+            "phase": "kick",
+            "player": "b",
+            "frame": 110,
+            "foot": "right",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": -0.04767077159430871
+          },
+          {
+            "phase": "receive",
+            "player": "a",
+            "frame": 132,
+            "foot": "left",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": -0.05426709559189036
+          },
+          {
+            "phase": "kick",
+            "player": "a",
+            "frame": 132,
+            "foot": "left",
+            "nearest_mesh_vertex_to_ball_surface_gap_m": -0.05426709559189036
+          }
+        ]
+      }
+    }
+  }
+}

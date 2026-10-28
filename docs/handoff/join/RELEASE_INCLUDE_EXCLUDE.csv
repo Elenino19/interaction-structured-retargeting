@@ -1,0 +1,63 @@
+path,action,reason
+src/core4d_dual_retarget/,copy,"Own Join code. No project license chosen yet; copy into the candidate tree, do not publish until THIRD_PARTY_ASSETS_JOIN.md is resolved."
+tests/,copy,"Unit tests, including tests/test_oa_extension.py."
+pyproject.toml,copy,Package metadata.
+uv.lock,copy,Lockfile matching the tested environment. Not a fresh-install proof.
+data/README.md,copy,Data layout and the SMPL-X non-redistribution note.
+scripts/ext_jc_postprocess.py,copy,Method F repair.
+scripts/ext_jc_evaluate.py,copy,Frozen-metric evaluation for EXT-JC.
+scripts/ext_jc_visual.py,copy,Comparison renders.
+scripts/ext_jc_demo.py,copy,Single-method demo render.
+scripts/ext_jc_provenance.py,copy,Hash manifest for frozen inputs.
+scripts/ext_jc_cross_gradient_report.py,copy,Formats the cross-gradient report.
+scripts/oa_separability_probe.py,copy,Separability probe.
+scripts/oa_run_evaluation.py,copy,OA evaluation driver.
+scripts/oa_make_deliverables.py,copy,OA tables.
+scripts/run_oa_queue.sh,copy,Job runner. Do not point it at runs_dev.
+scripts/run_join_paper_experiments.sh,copy,J0-J4 ablation driver. Does not regenerate frozen v41.
+release_handoff/join/*.md,copy,This handoff.
+release_handoff/join/*.csv,copy,Manifests.
+outputs/balanced_clearance_v41/,copy-private-bundle,Frozen v41 raw. Needed to reproduce metrics and as the unrepaired side of the diagnosis. Not cleared for public upload.
+outputs/balanced_clearance_v41_smooth/,copy-private-bundle,Frozen v41 publication trajectories.
+outputs/balanced_clearance_v40_smooth/,copy-private-bundle,"Warm start for 018 of methods C, D, E. Initialization only."
+outputs/balanced_clearance_v20_smooth/,copy-private-bundle,"Warm start for 019-110 of methods C, D, E."
+outputs/independent/,copy-private-bundle,Method A and the J0 source.
+"outputs/contact_analysis/20231108_{018,019,020,108,109,110}.*",copy-private-bundle,Phase labels derived from CORE4D. Hold with the dataset.
+outputs/paper_eval/object_aware_baseline_extension/runs_multiseq/oaind_v41_staged/,copy-private-bundle,Method C for 019-110.
+outputs/paper_eval/object_aware_baseline_extension/runs_018/oaind_v41_staged/,copy-private-bundle,Method C for 018.
+outputs/paper_eval/object_aware_baseline_extension/runs_multiseq/ext_jc_w10_staged/,copy-private-bundle,"Method E for 019-110, raw and smooth. Repair reads both."
+outputs/paper_eval/object_aware_baseline_extension/runs_multiseq/ext_jc_w10_surrogate_staged/,copy-private-bundle,Method D unrepaired for 019-110.
+outputs/paper_eval/ext_jc_visual_refinement/reference_runs_018/,copy-private-bundle,Methods D and E for 018.
+outputs/paper_eval/ext_jc_visual_refinement/postprocess/ext_jc_w10/,copy-private-bundle,Method F motions.
+outputs/paper_eval/ext_jc_visual_refinement/postprocess/ext_jc_w10_surrogate/,copy-private-bundle,Repaired surrogate motions.
+outputs/paper_eval/ext_jc_visual_refinement/postprocess/postprocess_metrics.csv,copy-private-bundle,Selected numeric table.
+outputs/paper_eval/ext_jc_visual_refinement/postprocess/DECISION.md,copy-private-bundle,Selection note.
+outputs/paper_eval/ext_jc_visual_refinement/postprocess/demo_018_ext_jc_repaired.mp4,hold,Shows CORE4D geometry.
+outputs/paper_eval/ext_jc_visual_refinement/postprocess/demo_020_ext_jc_repaired.mp4,hold,Shows CORE4D geometry.
+outputs/paper_eval/ext_jc_visual_refinement/postprocess/videos/,hold,Comparison videos. Same asset issue.
+outputs/paper_eval/ext_jc_visual_refinement/FINAL_MATH_AUDIT.md,copy,Completed math audit. Own text.
+outputs/paper_eval/object_aware_baseline_extension/paper_ready_results_table.csv,copy,Unrepaired aggregate. Label it as unrepaired.
+outputs/paper_eval/object_aware_baseline_extension/all_variant_metrics.csv,copy,Per-take unrepaired metrics.
+outputs/paper_eval/object_aware_baseline_extension/final_research_conclusions.md,copy,Separability conclusions.
+outputs/paper_eval/object_aware_baseline_extension/objective_separability_audit.md,copy,v41 separability writeup.
+outputs/paper_eval/ext_jc_visual_refinement/cross_gradient_verification.md,copy,Product-term gradient check.
+outputs/paper_release_join_v2/tables/,copy,v41 paper tables. Identical aggregate to paper_release_join.
+outputs/paper_release_join_v2/figures/,hold,Figures include source_018.gif and object renders.
+"videos/retarget/{018,019,020,108,109,110}_clearance_v41.mp4",hold,Method B videos. CORE4D object in frame.
+data/core4d/,external-download,"CORE4D motions, SMPL-X parameters, object meshes. No dataset license in tree."
+third_party/unitree_ros/,external-download,G1 URDF and STL. No LICENSE file in this checkout.
+third_party/CORE4D-Instructions/,external-link,CC BY 4.0 instructions repo. Link upstream instead of vendoring benchmarks.
+"outputs/balanced_clearance_v9/ through v39 and v41 raw siblings other than v20_smooth, v40_smooth, v41, v41_smooth",exclude,Obsolete tuning trajectories.
+outputs/paper_eval/ext_jc_visual_refinement/runs_dev/,exclude,Rejected refinement sweep.
+outputs/controller_probe/,exclude,Physics dumps. Negative result lives in docs/paper_claims.md.
+outputs/coupled/,exclude,"Early coupled runs, pre-v41."
+outputs/balanced/,exclude,Pre-clearance balanced runs.
+outputs/balanced_smooth/,exclude,Older quality-gate release. Different numbers from v41.
+videos/retarget/*_clearance_v{2..40}.mp4 and other non-v41 clips,exclude,Tuning videos.
+.venv/,exclude,Local environment.
+.git/,exclude,No commits; do not ship this git dir.
+.pytest_cache/ .ruff_cache/ **/__pycache__/,exclude,Caches.
+MUJOCO_LOG.TXT,exclude,Local simulator log.
+outputs/**/config.json,exclude-or-redact,Contains absolute $HOME paths in the command field.
+outputs/**/term_log_*.csv,exclude,"Optimizer logs, not paper results. Large and path-bearing."
+release_handoff/join/public_export/,candidate-only,Sanitized code export. Not a release.

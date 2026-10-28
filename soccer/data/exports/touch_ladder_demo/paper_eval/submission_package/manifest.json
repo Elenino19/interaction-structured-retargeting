@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "package": "soccer_submission_figures",
+  "created_at": "2026-10-27T17:36:46.118787+00:00",
+  "ik_rerun": false,
+  "frozen_inputs_unchanged": {
+    "accepted_preview": true,
+    "accepted_robot_a": true,
+    "accepted_robot_b": true,
+    "accepted_ball": true
+  },
+  "source_redistribution": false,
+  "frame_rate_conversion": "none",
+  "artifacts": {
+    "CHINESE_SUMMARY.md": {
+      "sha256": "6f98f9adfedda30acf8bd40dc838c035dff1ad0fd4cc1890975d7b6ed37ab22e",
+      "bytes": 2258
+    },
+    "README.md": {
+      "sha256": "2a9234504c3b38da9677efa8f834aa5dd0307c1a15a4b4626f3a32bf59b17ab0",
+      "bytes": 1105
+    },
+    "event_metadata.json": {
+      "sha256": "e7a20d488b48a46443ef1bd2d2e4e0a59136d5ba34d1247468ed8076d0a65d7b",
+      "bytes": 6477
+    },
+    "fig_interaction_timeline.pdf": {
+      "sha256": "2237089df1c44c1b99195a65a95766d30e904284145ff4afaf1259c105b823c6",
+      "bytes": 25599
+    },
+    "fig_interaction_timeline.png": {
+      "sha256": "26f9a6f42567d4c73d1b17ce0e28cbc7aaeb4488ba58f50300fbc339bc9d5293",
+      "bytes": 210528
+    },
+    "fig_results_reuse.pdf": {
+      "sha256": "e2d1d81f6caad9d789d784fa5411bd90c4db8803ef61af2e28a40ed22549ae6c",
+      "bytes": 26565
+    },
+    "fig_results_reuse.png": {
+      "sha256": "38cc40f4bbcb646fd05fda60bb6458a56b8730cdc48e0ae557740e78a5d4b60b",
+      "bytes": 204536
+    },
+    "fig_robot_events.pdf": {
+      "sha256": "570af6192ef44bcb74529aa10a5c1e5b9719aff820a7d4d7ad1b7e211e64315f",
+      "bytes": 1452616
+    },
+    "fig_robot_events.png": {
+      "sha256": "d0eea859acf7a74e00a4075a4dc01b9c1e10c6fd098b5201fc7a59ada8525dac",
+      "bytes": 838318
+    },
+    "local_only/fig_source_to_robot.pdf": {
+      "sha256": "393e03460c48034bd7feb1c085ac773ea15f32b9421f968f601d3f8df5092def",
+      "bytes": 2885566
+    },
+    "local_only/fig_source_to_robot.png": {
+      "sha256": "785f595c9ac1831e33618f04083dc317ad5e9b74ad3d876061e2d2e2d4172945",
+      "bytes": 1965155
+    },
+    "local_only/fig_source_to_robot_watermarked.pdf": {
+      "sha256": "a59418c39ac102711bc419b81aeb8d0a0cb1d14981ea3e8059b8ff62737c42e7",
+      "bytes": 2886185
+    },
+    "local_only/fig_source_to_robot_watermarked.png": {
+      "sha256": "bbf6ff67ba1c594cce0f418820a68b9ae4cd88228d28bb94583481475cb61886",
+      "bytes": 1974521
+    },
+    "local_only/source_robot_side_by_side.mp4": {
+      "sha256": "f938553abeacb66bbf7d1b0763da3de7a3f3fffa33668d84f116cd439acd4aea",
+      "bytes": 2412891
+    },
+    "paper_description.md": {
+      "sha256": "805d4e2b3f329c9fddb169932f209db8a33ab29e84c444797464e215f46c0f62",
+      "bytes": 4889
+    },
+    "video_paths.json": {
+      "sha256": "5942f83744b69c0d0269046f556aea9d47e9cad8752cc42783a7567bc4ccf785",
+      "bytes": 1486
+    }
+  }
+}

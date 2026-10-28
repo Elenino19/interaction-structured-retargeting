@@ -1,0 +1,18 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.pyc
+MUJOCO_LOG.TXT
+
+# External assets. Obtain them locally; do not commit them.
+join/data/core4d/
+join/data/smplx/
+join/third_party/
+join/outputs/
+soccer/data/clips/
+soccer/data/gvhmr/
+soccer/data/raw/
+soccer/data/review/
+# GVHMR/SMPL-X joints. Redistribution is pending. See docs/smplx_joints_provenance.md.
+soccer/data/exports/touch_ladder_demo/smplx_joints.npz

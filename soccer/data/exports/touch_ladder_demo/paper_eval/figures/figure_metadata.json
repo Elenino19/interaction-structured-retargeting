@@ -1,0 +1,34 @@
+{
+  "publication_safe_figure": "data/exports/touch_ladder_demo/paper_eval/figures/soccer_ablation_qualitative.png",
+  "local_only_source_comparison": "data/exports/touch_ladder_demo/paper_eval/figures/soccer_ablation_qualitative_local_only.png",
+  "frames": [
+    {
+      "frame": 15,
+      "phase": "receive",
+      "player": "b",
+      "foot": "right",
+      "label": "B receives\nright foot (f15)"
+    },
+    {
+      "frame": 21,
+      "phase": "kick",
+      "player": "b",
+      "foot": "left",
+      "label": "B kicks\nleft foot (f21)"
+    },
+    {
+      "frame": 26,
+      "phase": "lane",
+      "label": "Pass crosses\ntarget lane (f26)"
+    },
+    {
+      "frame": 42,
+      "phase": "receive",
+      "player": "a",
+      "foot": "right",
+      "label": "A receives\nright foot (f42)"
+    }
+  ],
+  "caption": "Selected interaction frames are shown for qualitative comparison; per-frame annotations are not aggregate scores. The event-aware variant includes support constraints.",
+  "license_note": "The publication-safe figure excludes source frames because current source redistribution permission is not granted."
+}

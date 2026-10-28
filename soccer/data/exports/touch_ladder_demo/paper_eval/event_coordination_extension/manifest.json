@@ -1,0 +1,341 @@
+{
+  "schema_version": "1.0.0",
+  "experiment": "event_coordination_extension",
+  "created_at": "2026-10-22T14:21:07.367189+00:00",
+  "sequence_id": "touch_ladder_demo",
+  "frozen_inputs_sha256": {
+    "data/exports/touch_ladder_demo/ball_cones.json": "cad51d649d353ad0918834fb0f03c89aafdbb1fbdb8c42b6d25f60be85bb2156",
+    "data/exports/touch_ladder_demo/ball_cones.npz": "b608f0a9ea049d33067bdb421a0c24a0f0cdc8ee55cf454444f0de9c56fef47f",
+    "data/exports/touch_ladder_demo/smplx_joints.npz": "f03a8c5bb6e3e658c92b6ac7dc3915754100c07ef5cbfb010fc149cdb0ae3b4b",
+    "data/exports/touch_ladder_demo/g1/robot_a.npz": "ef5277f2db390ef8119a3bcc1fe21f801e8b72e4a3843fd3b2fa9a3b9f80d96b",
+    "data/exports/touch_ladder_demo/g1/robot_b.npz": "eb5646a331064c83772351a74cc3dc951618ee69ff00e4130ebe6c212a54568b",
+    "data/exports/touch_ladder_demo/comparison/current_hop_timed_lateral.mp4": "c904d2ed28760466df36261f35f6fd281049faf9618a1f266c51cad3dd46039e"
+  },
+  "frozen_inputs_match_paper_eval_frozen_inputs_json": {
+    "accepted_preview": true,
+    "accepted_robot_a": true,
+    "accepted_robot_b": true,
+    "accepted_ball": true
+  },
+  "all_fixed_ball_copies_equal_frozen_ball": true,
+  "scripts": [
+    "scripts/run_fixed_ball_event_ablation.py",
+    "scripts/evaluate_event_chain.py",
+    "scripts/make_event_chain_figures.py",
+    "scripts/retarget_dual_g1_soccer.py (added optional precomputed_targets to retarget_soccer; defaults unchanged)",
+    "tests/test_event_chain.py"
+  ],
+  "primary_comparison": "fixed_ball_ablation/frozen_reference/event_off vs event_on (shared accepted IK targets, frozen ball, same init, 340 iterations)",
+  "secondary_comparison": "fixed_ball_ablation/current_code/* (current stationing code; documents stationing dependency only)",
+  "claim_boundary": "Kinematic event-consistency metrics on a prescribed event/scene-conditioned ball path from one monocular sequence. Not physics, not task success, not mocap ground truth, not real-robot execution. Shared reference carries event-timed stationing and event-frame foot grounding; the fixed-ball comparison isolates IK-side event terms only.",
+  "sample_size": {
+    "sequences": 1,
+    "frames": 144,
+    "receive_events": 6,
+    "kick_events": 7,
+    "distinct_event_frames": 9,
+    "transfer_pairs": 6
+  },
+  "artifacts": {
+    "REPRODUCE.md": {
+      "sha256": "9dbfd8d59a3ab3d84592fa638e4b57012eb137689d4e43b7c38e1b170623a8f9",
+      "bytes": 2784
+    },
+    "evaluation_report.md": {
+      "sha256": "2b15d3dfa8f5438aea117dda6dc69140e985f90f5f22671159a8542a01fb95ef",
+      "bytes": 19607
+    },
+    "event_chain_metrics.json": {
+      "sha256": "e01820bb5346314e384399e7a863207359195695c1d20a0b13f8d71fc955afa0",
+      "bytes": 672516
+    },
+    "event_chain_summary.csv": {
+      "sha256": "acf2d2bb0bf02dbe30da29d8324a9596fc29413af9b69ce0c0aea7ffd0f2ab3c",
+      "bytes": 11529
+    },
+    "event_metrics.csv": {
+      "sha256": "e1c3d383c0ffa4a63e88faf6ba7db01a4008079e09d03e96706942dcb2155f7a",
+      "bytes": 53440
+    },
+    "figure_metadata.json": {
+      "sha256": "45830f57d32b3e1eb94a82d507f58975f2caac5e105824d7e56052b0c429cc9f",
+      "bytes": 1095
+    },
+    "fixed_ball_ablation/current_code/event_off/ball_cones.npz": {
+      "sha256": "b608f0a9ea049d33067bdb421a0c24a0f0cdc8ee55cf454444f0de9c56fef47f",
+      "bytes": 14891
+    },
+    "fixed_ball_ablation/current_code/event_off/experiment.json": {
+      "sha256": "dfeb02e2cbeba5730e1be977ae487fa998d0704df3633bb8e33955a3859f2809",
+      "bytes": 5772
+    },
+    "fixed_ball_ablation/current_code/event_off/preview.mp4": {
+      "sha256": "868c25da131fdea3db297951c60828b08491b7ab8b3b0e91fd9d487b71221a71",
+      "bytes": 2017649
+    },
+    "fixed_ball_ablation/current_code/event_off/robot_a.npz": {
+      "sha256": "085be30c8599e09503e6656e7fd68906336113a0564ee5798279288ac492f9ab",
+      "bytes": 144944
+    },
+    "fixed_ball_ablation/current_code/event_off/robot_b.npz": {
+      "sha256": "e3c4c2f34176a952483188e3457531b7977098ece6e7f27fb667a50f92a3724e",
+      "bytes": 144687
+    },
+    "fixed_ball_ablation/current_code/event_off/scales.json": {
+      "sha256": "b686874922ea2f71b8aeaa91660a27ef95487a40690e34268277bc1022ee9106",
+      "bytes": 69
+    },
+    "fixed_ball_ablation/current_code/event_off/soccer_scene.xml": {
+      "sha256": "7536acf326d4613057b6b31b1b8f4cddbff6d0e95f33a118a5806487d26951ee",
+      "bytes": 50608
+    },
+    "fixed_ball_ablation/current_code/event_off/windows_a.npz": {
+      "sha256": "075327d0d102b06171228270ce0f6d7c9607aa79e49a93ea38608b8aa98041db",
+      "bytes": 626
+    },
+    "fixed_ball_ablation/current_code/event_off/windows_b.npz": {
+      "sha256": "337f3d1dfd21366662749f0ade58d6f4aa19df135d1eddae6eff05689694bed6",
+      "bytes": 701
+    },
+    "fixed_ball_ablation/current_code/event_off_aligned/ball_cones.npz": {
+      "sha256": "b608f0a9ea049d33067bdb421a0c24a0f0cdc8ee55cf454444f0de9c56fef47f",
+      "bytes": 14891
+    },
+    "fixed_ball_ablation/current_code/event_off_aligned/preview.mp4": {
+      "sha256": "e62c263281cb9649f4c2863c028c44651732f20596c7e583dc3352b0d2ef0a08",
+      "bytes": 2020520
+    },
+    "fixed_ball_ablation/current_code/event_off_aligned/robot_a.npz": {
+      "sha256": "1f015998a74cf1aead85efd1ed7a724dd2a8937d6516e069e4e7a34a387634e7",
+      "bytes": 144986
+    },
+    "fixed_ball_ablation/current_code/event_off_aligned/robot_b.npz": {
+      "sha256": "dbb7a19d8ac7e154edc835d524f6895ba79f006d01750e31aa545f660e723051",
+      "bytes": 144714
+    },
+    "fixed_ball_ablation/current_code/event_off_aligned/scales.json": {
+      "sha256": "b686874922ea2f71b8aeaa91660a27ef95487a40690e34268277bc1022ee9106",
+      "bytes": 69
+    },
+    "fixed_ball_ablation/current_code/event_off_aligned/soccer_scene.xml": {
+      "sha256": "7536acf326d4613057b6b31b1b8f4cddbff6d0e95f33a118a5806487d26951ee",
+      "bytes": 50608
+    },
+    "fixed_ball_ablation/current_code/event_on/ball_cones.npz": {
+      "sha256": "b608f0a9ea049d33067bdb421a0c24a0f0cdc8ee55cf454444f0de9c56fef47f",
+      "bytes": 14891
+    },
+    "fixed_ball_ablation/current_code/event_on/experiment.json": {
+      "sha256": "cf03cd9f1bfb91a71dcde432b5e4ff8be837834e949f3352ceef51a3abff0792",
+      "bytes": 5768
+    },
+    "fixed_ball_ablation/current_code/event_on/preview.mp4": {
+      "sha256": "f670417a964a87d26d2c112b212ffc4d5664ab04c49950143d25ed8cfbf3f9a7",
+      "bytes": 2032537
+    },
+    "fixed_ball_ablation/current_code/event_on/robot_a.npz": {
+      "sha256": "743da409369b9d784385977a62dc4c3aa47caf7b8457b2f7873ed27849f606ea",
+      "bytes": 144984
+    },
+    "fixed_ball_ablation/current_code/event_on/robot_b.npz": {
+      "sha256": "463a0bf7a394c47ffa2afd0d741c840cfecbdca36e2fc7ffa304e8f64698ec22",
+      "bytes": 144736
+    },
+    "fixed_ball_ablation/current_code/event_on/scales.json": {
+      "sha256": "b686874922ea2f71b8aeaa91660a27ef95487a40690e34268277bc1022ee9106",
+      "bytes": 69
+    },
+    "fixed_ball_ablation/current_code/event_on/soccer_scene.xml": {
+      "sha256": "7536acf326d4613057b6b31b1b8f4cddbff6d0e95f33a118a5806487d26951ee",
+      "bytes": 50608
+    },
+    "fixed_ball_ablation/current_code/event_on/windows_a.npz": {
+      "sha256": "8b8358877f8a788dde8eec271d08388e3879ed534cfc07511eea012ce06a6d8a",
+      "bytes": 722
+    },
+    "fixed_ball_ablation/current_code/event_on/windows_b.npz": {
+      "sha256": "2e3d93c097e0c073a8eff3ae778c70433815fb811a62130e2e5339e9a54cf6cf",
+      "bytes": 786
+    },
+    "fixed_ball_ablation/current_code/event_on_aligned/ball_cones.npz": {
+      "sha256": "b608f0a9ea049d33067bdb421a0c24a0f0cdc8ee55cf454444f0de9c56fef47f",
+      "bytes": 14891
+    },
+    "fixed_ball_ablation/current_code/event_on_aligned/preview.mp4": {
+      "sha256": "6b578f4c32af63658b1b84b0cce36a69dea428eab75b1ce1baa73e8289473af4",
+      "bytes": 2037525
+    },
+    "fixed_ball_ablation/current_code/event_on_aligned/robot_a.npz": {
+      "sha256": "fb0f8913c5cbf0f08b8e2004b819628b6f9d6ab4ab653988060bfc4c32b47461",
+      "bytes": 145017
+    },
+    "fixed_ball_ablation/current_code/event_on_aligned/robot_b.npz": {
+      "sha256": "82a607907788ef9814f42078a90932fd2a650c8353559b39d2b2cf933c1d5d1c",
+      "bytes": 144759
+    },
+    "fixed_ball_ablation/current_code/event_on_aligned/scales.json": {
+      "sha256": "b686874922ea2f71b8aeaa91660a27ef95487a40690e34268277bc1022ee9106",
+      "bytes": 69
+    },
+    "fixed_ball_ablation/current_code/event_on_aligned/soccer_scene.xml": {
+      "sha256": "7536acf326d4613057b6b31b1b8f4cddbff6d0e95f33a118a5806487d26951ee",
+      "bytes": 50608
+    },
+    "fixed_ball_ablation/frozen_reference/event_off/ball_cones.npz": {
+      "sha256": "b608f0a9ea049d33067bdb421a0c24a0f0cdc8ee55cf454444f0de9c56fef47f",
+      "bytes": 14891
+    },
+    "fixed_ball_ablation/frozen_reference/event_off/experiment.json": {
+      "sha256": "e1b00a8019e1b72b0e188b0cfd45357bed7d8d442faf93dceaab1495a777e33b",
+      "bytes": 3993
+    },
+    "fixed_ball_ablation/frozen_reference/event_off/preview.mp4": {
+      "sha256": "d0cc3659c9b614168da0eaa4d3a6d166cfcfce33b725c41755e84a3c54227d21",
+      "bytes": 1996092
+    },
+    "fixed_ball_ablation/frozen_reference/event_off/robot_a.npz": {
+      "sha256": "8aeabb4433048bb4d5e143e1e56dc3ed4adf468bc72f70ec3e2f59b471f9bad7",
+      "bytes": 145060
+    },
+    "fixed_ball_ablation/frozen_reference/event_off/robot_b.npz": {
+      "sha256": "441b96a384332f1a3354851db1adce578839a2dab0e5adb136d57e873b3af1c4",
+      "bytes": 144673
+    },
+    "fixed_ball_ablation/frozen_reference/event_off/scales.json": {
+      "sha256": "9373d5b185efbb005950b98d1ae2651ea70162ce8535c40be57bd05fff8702c2",
+      "bytes": 69
+    },
+    "fixed_ball_ablation/frozen_reference/event_off/soccer_scene.xml": {
+      "sha256": "7536acf326d4613057b6b31b1b8f4cddbff6d0e95f33a118a5806487d26951ee",
+      "bytes": 50608
+    },
+    "fixed_ball_ablation/frozen_reference/event_off/windows_a.npz": {
+      "sha256": "5f2d9bf1709748e0345b3a0eede06104760057fd18bb635f54b854fa8f906330",
+      "bytes": 687
+    },
+    "fixed_ball_ablation/frozen_reference/event_off/windows_b.npz": {
+      "sha256": "4599d62b966b96eb4c9d68c6630f5a5bcaeded67dfcfe280aa900bf522185b5e",
+      "bytes": 731
+    },
+    "fixed_ball_ablation/frozen_reference/event_on/ball_cones.npz": {
+      "sha256": "b608f0a9ea049d33067bdb421a0c24a0f0cdc8ee55cf454444f0de9c56fef47f",
+      "bytes": 14891
+    },
+    "fixed_ball_ablation/frozen_reference/event_on/experiment.json": {
+      "sha256": "79b31fbf1c8a1f6ee652baaa9a345ca4011201851a7bf74400d78f487c7f30a2",
+      "bytes": 3991
+    },
+    "fixed_ball_ablation/frozen_reference/event_on/preview.mp4": {
+      "sha256": "63000f0ef0e4388d61a0a062e6d13f213b498e952c3c2df21290c7dd0a289e1f",
+      "bytes": 2011414
+    },
+    "fixed_ball_ablation/frozen_reference/event_on/robot_a.npz": {
+      "sha256": "2c2e45760000fcdb8fba08f146b410bb6f4bb585989d77db05e2dbc580f86507",
+      "bytes": 145095
+    },
+    "fixed_ball_ablation/frozen_reference/event_on/robot_b.npz": {
+      "sha256": "09b32212fcc4b132428cd455b9598846ea818d1e1dd4dd535bc9b8031dd38142",
+      "bytes": 144742
+    },
+    "fixed_ball_ablation/frozen_reference/event_on/scales.json": {
+      "sha256": "9373d5b185efbb005950b98d1ae2651ea70162ce8535c40be57bd05fff8702c2",
+      "bytes": 69
+    },
+    "fixed_ball_ablation/frozen_reference/event_on/soccer_scene.xml": {
+      "sha256": "7536acf326d4613057b6b31b1b8f4cddbff6d0e95f33a118a5806487d26951ee",
+      "bytes": 50608
+    },
+    "fixed_ball_ablation/frozen_reference/event_on/windows_a.npz": {
+      "sha256": "4b374fa585279f6927233fd06333d51ee9a940ceab1e3506d4176c9c58e712c2",
+      "bytes": 770
+    },
+    "fixed_ball_ablation/frozen_reference/event_on/windows_b.npz": {
+      "sha256": "341c1046ed69118d649974930173e0e6b1a0f0bff221da01822725954469b0b6",
+      "bytes": 803
+    },
+    "fixed_ball_ablation/frozen_reference/event_on_full_recipe/ball_cones.npz": {
+      "sha256": "b608f0a9ea049d33067bdb421a0c24a0f0cdc8ee55cf454444f0de9c56fef47f",
+      "bytes": 14891
+    },
+    "fixed_ball_ablation/frozen_reference/event_on_full_recipe/experiment.json": {
+      "sha256": "a15e3e38961783a6d599494b6cd917fc571d93d6704dea7639031b6686517bd5",
+      "bytes": 4027
+    },
+    "fixed_ball_ablation/frozen_reference/event_on_full_recipe/preview.mp4": {
+      "sha256": "a4b59faee9833c5f3e3a4759f6cd95bc7389fb8d48ce65af786b998047f3e3e8",
+      "bytes": 2014816
+    },
+    "fixed_ball_ablation/frozen_reference/event_on_full_recipe/robot_a.npz": {
+      "sha256": "cc52f424e4459e84192e2222ef585bd0bab7c952ec96449f518b98f2e69506c4",
+      "bytes": 145100
+    },
+    "fixed_ball_ablation/frozen_reference/event_on_full_recipe/robot_b.npz": {
+      "sha256": "a542b6b813d6a48976ca2325c82573987b2ca864889b3567104284eb023010cd",
+      "bytes": 144734
+    },
+    "fixed_ball_ablation/frozen_reference/event_on_full_recipe/scales.json": {
+      "sha256": "9373d5b185efbb005950b98d1ae2651ea70162ce8535c40be57bd05fff8702c2",
+      "bytes": 69
+    },
+    "fixed_ball_ablation/frozen_reference/event_on_full_recipe/soccer_scene.xml": {
+      "sha256": "7536acf326d4613057b6b31b1b8f4cddbff6d0e95f33a118a5806487d26951ee",
+      "bytes": 50608
+    },
+    "fixed_ball_ablation/frozen_reference/event_on_full_recipe/windows_a.npz": {
+      "sha256": "b173494a440bfe05bb118a963a3494dbe3406af9c11d3f7c7766f73a705c169b",
+      "bytes": 536
+    },
+    "fixed_ball_ablation/frozen_reference/event_on_full_recipe/windows_b.npz": {
+      "sha256": "357e9f9b9c2cfe7b769d268e7bd7c27fae6d4f0593c6d42fd7c3b064cda0d919",
+      "bytes": 526
+    },
+    "fixed_ball_ablation.csv": {
+      "sha256": "6b8863d0f00da7e9f2be2e019fc5f1b41d7e6352ec19366a42b15e6b125b4760",
+      "bytes": 8395
+    },
+    "interaction_timeline.pdf": {
+      "sha256": "25a4cc6be748cd68afafb30917248c5fef19ff13371bf13825c1c5bad5653153",
+      "bytes": 36046
+    },
+    "interaction_timeline.png": {
+      "sha256": "fceebcc071564586842c241734b159909ec5b960c14290759784d32e3d24e57e",
+      "bytes": 689204
+    },
+    "logs/run_fixed_ball_current_code.log": {
+      "sha256": "c908906abe8c7f5a20c801bda8d2b05e0bd77eecd9d51f7e51d9192546d43df8",
+      "bytes": 2323
+    },
+    "logs/run_fixed_ball_event_ablation.log": {
+      "sha256": "7fe731c946c5b276d50829bcb619a5e44661df34974c44cc3928ccfe2296be23",
+      "bytes": 6101
+    },
+    "logs/run_fixed_ball_frozen_reference.log": {
+      "sha256": "892592eb018fcdd9f79bbb375bc7a1ae62d8c5ceea6cc115ca090ffe0859171f",
+      "bytes": 2839
+    },
+    "metric_definitions.md": {
+      "sha256": "309a188c268847208ee94ac8a2cb37739266a3981adb9bc667af004afc6e850d",
+      "bytes": 5146
+    },
+    "pipeline_dependency_audit.md": {
+      "sha256": "8232c3bf1224fd69818da7084fc42e3de1557716e871991531ce3093f5c9cc10",
+      "bytes": 8537
+    },
+    "qualitative_comparison.pdf": {
+      "sha256": "655bc696379709a63db7f0fc0ec85dff6d5b89c5999f222e61d41233b09ce58c",
+      "bytes": 740828
+    },
+    "qualitative_comparison.png": {
+      "sha256": "358e259632a2d417e0ff9dc967200e2a2deb81ad3ffb2099c0a6d01088f80f9b",
+      "bytes": 1692018
+    },
+    "threshold_sensitivity.csv": {
+      "sha256": "63073a8b9c1c6f944a19c8c2c730bb69afe92855edd04a4236b2aa805a328623",
+      "bytes": 5596
+    },
+    "transfer_chain_metrics.csv": {
+      "sha256": "c61037cd15c3694da265d5c357bce8a6f96f906a7140631c597d25bd0c56ddb4",
+      "bytes": 22429
+    }
+  }
+}

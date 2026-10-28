@@ -1,0 +1,920 @@
+{
+  "schema_version": "1.0.0",
+  "experiment": "touch_ladder_ablation",
+  "fps": 24.0,
+  "metric_scope": "Single accepted sequence; internal geometric proxies computed from prescribed ball trajectories and retargeted keypoints.",
+  "definitions": {
+    "contact": "Ball-center distances at fixed receive/kick events; surface error is abs(center distance - 0.11 m ball radius).",
+    "support_sliding": "Cumulative horizontal support-toe displacement from kick-3 through kick+1, using the opposite of the annotated kick foot.",
+    "floor_penetration_proxy": "Positive depth below the 0.012 m ankle/toe keypoint threshold; not a mesh collision or force measurement.",
+    "pelvis_jitter": "RMS second finite difference of pelvis Z times fps^2.",
+    "pass_curvature": "Path-length excess and accumulated heading change within abs(ball_x - cone_x) <= 0.55 m.",
+    "cone_clearance": "Minimum center distance minus 0.11 m ball and 0.06 m cone radii."
+  },
+  "variants": {
+    "basic_ik": {
+      "contact": {
+        "target_foot_distance_mean_m": 0.2087154121949086,
+        "target_foot_distance_p95_m": 0.49696802513249483,
+        "wrong_foot_distance_mean_m": 0.40928733692824587,
+        "contact_surface_error_mean_m": 0.1024461912313795,
+        "wrong_minus_target_margin_mean_m": 0.20057192473333735,
+        "wrong_foot_farther_fraction": 0.7692307692307693,
+        "samples": [
+          {
+            "player": "a",
+            "phase": "kick",
+            "frame": 0,
+            "foot": "right",
+            "target_distance_m": 0.3843443077286634,
+            "wrong_foot_distance_m": 0.09962651418578157,
+            "surface_error_m": 0.2743443077286634,
+            "wrong_minus_target_margin_m": -0.28471779354288185
+          },
+          {
+            "player": "b",
+            "phase": "receive",
+            "frame": 15,
+            "foot": "right",
+            "target_distance_m": 0.08574993626293904,
+            "wrong_foot_distance_m": 0.4733140948862807,
+            "surface_error_m": 0.024250063737060956,
+            "wrong_minus_target_margin_m": 0.38756415862334165
+          },
+          {
+            "player": "b",
+            "phase": "kick",
+            "frame": 21,
+            "foot": "left",
+            "target_distance_m": 0.665903601238243,
+            "wrong_foot_distance_m": 0.6043648420288846,
+            "surface_error_m": 0.555903601238243,
+            "wrong_minus_target_margin_m": -0.06153875920935836
+          },
+          {
+            "player": "a",
+            "phase": "receive",
+            "frame": 42,
+            "foot": "right",
+            "target_distance_m": 0.12312967501830081,
+            "wrong_foot_distance_m": 0.27274691804018414,
+            "surface_error_m": 0.013129675018300813,
+            "wrong_minus_target_margin_m": 0.14961724302188334
+          },
+          {
+            "player": "a",
+            "phase": "kick",
+            "frame": 45,
+            "foot": "right",
+            "target_distance_m": 0.2181620822602124,
+            "wrong_foot_distance_m": 0.10005469581206981,
+            "surface_error_m": 0.10816208226021239,
+            "wrong_minus_target_margin_m": -0.11810738644814257
+          },
+          {
+            "player": "b",
+            "phase": "receive",
+            "frame": 71,
+            "foot": "right",
+            "target_distance_m": 0.14224429259563098,
+            "wrong_foot_distance_m": 0.7609856516650747,
+            "surface_error_m": 0.03224429259563098,
+            "wrong_minus_target_margin_m": 0.6187413590694437
+          },
+          {
+            "player": "b",
+            "phase": "kick",
+            "frame": 71,
+            "foot": "right",
+            "target_distance_m": 0.14224429259563098,
+            "wrong_foot_distance_m": 0.7609856516650747,
+            "surface_error_m": 0.03224429259563098,
+            "wrong_minus_target_margin_m": 0.6187413590694437
+          },
+          {
+            "player": "a",
+            "phase": "receive",
+            "frame": 90,
+            "foot": "left",
+            "target_distance_m": 0.1718937461134571,
+            "wrong_foot_distance_m": 0.38290367556380817,
+            "surface_error_m": 0.06189374611345709,
+            "wrong_minus_target_margin_m": 0.21100992945035107
+          },
+          {
+            "player": "a",
+            "phase": "kick",
+            "frame": 90,
+            "foot": "left",
+            "target_distance_m": 0.1718937461134571,
+            "wrong_foot_distance_m": 0.38290367556380817,
+            "surface_error_m": 0.06189374611345709,
+            "wrong_minus_target_margin_m": 0.21100992945035107
+          },
+          {
+            "player": "b",
+            "phase": "receive",
+            "frame": 110,
+            "foot": "right",
+            "target_distance_m": 0.13065809251025662,
+            "wrong_foot_distance_m": 0.3604149336934272,
+            "surface_error_m": 0.020658092510256618,
+            "wrong_minus_target_margin_m": 0.22975684118317058
+          },
+          {
+            "player": "b",
+            "phase": "kick",
+            "frame": 110,
+            "foot": "right",
+            "target_distance_m": 0.13065809251025662,
+            "wrong_foot_distance_m": 0.3604149336934272,
+            "surface_error_m": 0.020658092510256618,
+            "wrong_minus_target_margin_m": 0.22975684118317058
+          },
+          {
+            "player": "a",
+            "phase": "receive",
+            "frame": 132,
+            "foot": "left",
+            "target_distance_m": 0.17320924679338187,
+            "wrong_foot_distance_m": 0.38100989663468837,
+            "surface_error_m": 0.06320924679338187,
+            "wrong_minus_target_margin_m": 0.2078006498413065
+          },
+          {
+            "player": "a",
+            "phase": "kick",
+            "frame": 132,
+            "foot": "left",
+            "target_distance_m": 0.17320924679338187,
+            "wrong_foot_distance_m": 0.38100989663468837,
+            "surface_error_m": 0.06320924679338187,
+            "wrong_minus_target_margin_m": 0.2078006498413065
+          }
+        ]
+      },
+      "robot_motion": {
+        "support_foot_sliding_mean_m_per_event": 0.10989054200316493,
+        "support_foot_sliding_p95_m_per_event": 0.1829368195991248,
+        "floor_penetration_proxy_mean_m": 0.00014023145839644262,
+        "floor_penetration_proxy_max_m": 0.012938032933789912,
+        "floor_penetration_proxy_fraction": 0.0234375,
+        "pelvis_vertical_acceleration_rms_m_per_s2": 6.517395200106103
+      },
+      "passes": {
+        "pass_curvature_path_excess_mean": 0.0,
+        "pass_heading_change_mean_deg": 1.8155666306687575e-13,
+        "cone_center_clearance_min_m": 0.03792214823031251,
+        "cone_surface_clearance_min_m": -0.1320778517696875,
+        "lane_crossing_error_mean_m": 0.7037901835271482,
+        "contact_foot_lane_error_mean_m": 0.6440176431434578,
+        "samples": [
+          {
+            "pass": 1,
+            "start_frame": 0,
+            "end_frame": 15,
+            "lane_index": 3,
+            "lane_y_m": -0.25,
+            "crossing_y_m": 0.3146100918451945,
+            "crossing_error_m": 0.5646100918451945,
+            "cone_center_clearance_m": 0.19748823841774038,
+            "cone_surface_clearance_m": 0.027488238417740382
+          },
+          {
+            "pass": 2,
+            "start_frame": 21,
+            "end_frame": 42,
+            "lane_index": 4,
+            "lane_y_m": -0.75,
+            "crossing_y_m": -0.2405513260099623,
+            "crossing_error_m": 0.5094486739900377,
+            "cone_center_clearance_m": 0.2349023536248168,
+            "cone_surface_clearance_m": 0.06490235362481679
+          },
+          {
+            "pass": 3,
+            "start_frame": 45,
+            "end_frame": 71,
+            "lane_index": 5,
+            "lane_y_m": -1.25,
+            "crossing_y_m": -0.34663849863512763,
+            "crossing_error_m": 0.9033615013648724,
+            "cone_center_clearance_m": 0.1533875901796828,
+            "cone_surface_clearance_m": -0.01661240982031721
+          },
+          {
+            "pass": 4,
+            "start_frame": 71,
+            "end_frame": 90,
+            "lane_index": 4,
+            "lane_y_m": -0.75,
+            "crossing_y_m": 0.009679890776935368,
+            "crossing_error_m": 0.7596798907769353,
+            "cone_center_clearance_m": 0.03792214823031251,
+            "cone_surface_clearance_m": -0.1320778517696875
+          },
+          {
+            "pass": 5,
+            "start_frame": 90,
+            "end_frame": 110,
+            "lane_index": 3,
+            "lane_y_m": -0.25,
+            "crossing_y_m": 0.4541310235857964,
+            "crossing_error_m": 0.7041310235857964,
+            "cone_center_clearance_m": 0.04633070558560537,
+            "cone_surface_clearance_m": -0.12366929441439463
+          },
+          {
+            "pass": 6,
+            "start_frame": 110,
+            "end_frame": 132,
+            "lane_index": 2,
+            "lane_y_m": 0.25,
+            "crossing_y_m": 1.0315099196000532,
+            "crossing_error_m": 0.7815099196000532,
+            "cone_center_clearance_m": 0.06290526821910282,
+            "cone_surface_clearance_m": -0.10709473178089718
+          }
+        ]
+      }
+    },
+    "support": {
+      "contact": {
+        "target_foot_distance_mean_m": 0.20923166555044242,
+        "target_foot_distance_p95_m": 0.4964763102516679,
+        "wrong_foot_distance_mean_m": 0.40824742837808603,
+        "contact_surface_error_mean_m": 0.1026203739414535,
+        "wrong_minus_target_margin_mean_m": 0.19901576282764358,
+        "wrong_foot_farther_fraction": 0.7692307692307693,
+        "samples": [
+          {
+            "player": "a",
+            "phase": "kick",
+            "frame": 0,
+            "foot": "right",
+            "target_distance_m": 0.3847487034729205,
+            "wrong_foot_distance_m": 0.10024885280021385,
+            "surface_error_m": 0.2747487034729205,
+            "wrong_minus_target_margin_m": -0.28449985067270667
+          },
+          {
+            "player": "b",
+            "phase": "receive",
+            "frame": 15,
+            "foot": "right",
+            "target_distance_m": 0.08797339545842818,
+            "wrong_foot_distance_m": 0.4732748081259869,
+            "surface_error_m": 0.02202660454157182,
+            "wrong_minus_target_margin_m": 0.3853014126675587
+          },
+          {
+            "player": "b",
+            "phase": "kick",
+            "frame": 21,
+            "foot": "left",
+            "target_distance_m": 0.6640677204197899,
+            "wrong_foot_distance_m": 0.6101894115372604,
+            "surface_error_m": 0.5540677204197899,
+            "wrong_minus_target_margin_m": -0.053878308882529535
+          },
+          {
+            "player": "a",
+            "phase": "receive",
+            "frame": 42,
+            "foot": "right",
+            "target_distance_m": 0.12407952644174848,
+            "wrong_foot_distance_m": 0.2724900414454643,
+            "surface_error_m": 0.01407952644174848,
+            "wrong_minus_target_margin_m": 0.14841051500371583
+          },
+          {
+            "player": "a",
+            "phase": "kick",
+            "frame": 45,
+            "foot": "right",
+            "target_distance_m": 0.22096695378797832,
+            "wrong_foot_distance_m": 0.09467873700110042,
+            "surface_error_m": 0.11096695378797831,
+            "wrong_minus_target_margin_m": -0.1262882167868779
+          },
+          {
+            "player": "b",
+            "phase": "receive",
+            "frame": 71,
+            "foot": "right",
+            "target_distance_m": 0.14239813671370477,
+            "wrong_foot_distance_m": 0.7605660564739171,
+            "surface_error_m": 0.03239813671370477,
+            "wrong_minus_target_margin_m": 0.6181679197602123
+          },
+          {
+            "player": "b",
+            "phase": "kick",
+            "frame": 71,
+            "foot": "right",
+            "target_distance_m": 0.14239813671370477,
+            "wrong_foot_distance_m": 0.7605660564739171,
+            "surface_error_m": 0.03239813671370477,
+            "wrong_minus_target_margin_m": 0.6181679197602123
+          },
+          {
+            "player": "a",
+            "phase": "receive",
+            "frame": 90,
+            "foot": "left",
+            "target_distance_m": 0.1722984430538446,
+            "wrong_foot_distance_m": 0.3830204581008996,
+            "surface_error_m": 0.06229844305384459,
+            "wrong_minus_target_margin_m": 0.21072201504705498
+          },
+          {
+            "player": "a",
+            "phase": "kick",
+            "frame": 90,
+            "foot": "left",
+            "target_distance_m": 0.1722984430538446,
+            "wrong_foot_distance_m": 0.3830204581008996,
+            "surface_error_m": 0.06229844305384459,
+            "wrong_minus_target_margin_m": 0.21072201504705498
+          },
+          {
+            "player": "b",
+            "phase": "receive",
+            "frame": 110,
+            "foot": "right",
+            "target_distance_m": 0.1311582985491036,
+            "wrong_foot_distance_m": 0.3604744710777834,
+            "surface_error_m": 0.021158298549103602,
+            "wrong_minus_target_margin_m": 0.2293161725286798
+          },
+          {
+            "player": "b",
+            "phase": "kick",
+            "frame": 110,
+            "foot": "right",
+            "target_distance_m": 0.1311582985491036,
+            "wrong_foot_distance_m": 0.3604744710777834,
+            "surface_error_m": 0.021158298549103602,
+            "wrong_minus_target_margin_m": 0.2293161725286798
+          },
+          {
+            "player": "a",
+            "phase": "receive",
+            "frame": 132,
+            "foot": "left",
+            "target_distance_m": 0.17323279797079008,
+            "wrong_foot_distance_m": 0.3741063733499461,
+            "surface_error_m": 0.06323279797079008,
+            "wrong_minus_target_margin_m": 0.20087357537915604
+          },
+          {
+            "player": "a",
+            "phase": "kick",
+            "frame": 132,
+            "foot": "left",
+            "target_distance_m": 0.17323279797079008,
+            "wrong_foot_distance_m": 0.3741063733499461,
+            "surface_error_m": 0.06323279797079008,
+            "wrong_minus_target_margin_m": 0.20087357537915604
+          }
+        ]
+      },
+      "robot_motion": {
+        "support_foot_sliding_mean_m_per_event": 0.10602806018073803,
+        "support_foot_sliding_p95_m_per_event": 0.18229026476463733,
+        "floor_penetration_proxy_mean_m": 0.0001274633854236735,
+        "floor_penetration_proxy_max_m": 0.013097442457071996,
+        "floor_penetration_proxy_fraction": 0.021701388888888888,
+        "pelvis_vertical_acceleration_rms_m_per_s2": 6.491472942884592
+      },
+      "passes": {
+        "pass_curvature_path_excess_mean": 0.0,
+        "pass_heading_change_mean_deg": 1.8155666306687575e-13,
+        "cone_center_clearance_min_m": 0.03792214823031251,
+        "cone_surface_clearance_min_m": -0.1320778517696875,
+        "lane_crossing_error_mean_m": 0.7037901835271482,
+        "contact_foot_lane_error_mean_m": 0.6440807514127078,
+        "samples": [
+          {
+            "pass": 1,
+            "start_frame": 0,
+            "end_frame": 15,
+            "lane_index": 3,
+            "lane_y_m": -0.25,
+            "crossing_y_m": 0.3146100918451945,
+            "crossing_error_m": 0.5646100918451945,
+            "cone_center_clearance_m": 0.19748823841774038,
+            "cone_surface_clearance_m": 0.027488238417740382
+          },
+          {
+            "pass": 2,
+            "start_frame": 21,
+            "end_frame": 42,
+            "lane_index": 4,
+            "lane_y_m": -0.75,
+            "crossing_y_m": -0.2405513260099623,
+            "crossing_error_m": 0.5094486739900377,
+            "cone_center_clearance_m": 0.2349023536248168,
+            "cone_surface_clearance_m": 0.06490235362481679
+          },
+          {
+            "pass": 3,
+            "start_frame": 45,
+            "end_frame": 71,
+            "lane_index": 5,
+            "lane_y_m": -1.25,
+            "crossing_y_m": -0.34663849863512763,
+            "crossing_error_m": 0.9033615013648724,
+            "cone_center_clearance_m": 0.1533875901796828,
+            "cone_surface_clearance_m": -0.01661240982031721
+          },
+          {
+            "pass": 4,
+            "start_frame": 71,
+            "end_frame": 90,
+            "lane_index": 4,
+            "lane_y_m": -0.75,
+            "crossing_y_m": 0.009679890776935368,
+            "crossing_error_m": 0.7596798907769353,
+            "cone_center_clearance_m": 0.03792214823031251,
+            "cone_surface_clearance_m": -0.1320778517696875
+          },
+          {
+            "pass": 5,
+            "start_frame": 90,
+            "end_frame": 110,
+            "lane_index": 3,
+            "lane_y_m": -0.25,
+            "crossing_y_m": 0.4541310235857964,
+            "crossing_error_m": 0.7041310235857964,
+            "cone_center_clearance_m": 0.04633070558560537,
+            "cone_surface_clearance_m": -0.12366929441439463
+          },
+          {
+            "pass": 6,
+            "start_frame": 110,
+            "end_frame": 132,
+            "lane_index": 2,
+            "lane_y_m": 0.25,
+            "crossing_y_m": 1.0315099196000532,
+            "crossing_error_m": 0.7815099196000532,
+            "cone_center_clearance_m": 0.06290526821910282,
+            "cone_surface_clearance_m": -0.10709473178089718
+          }
+        ]
+      }
+    },
+    "event_semantics": {
+      "contact": {
+        "target_foot_distance_mean_m": 0.2008648911615339,
+        "target_foot_distance_p95_m": 0.5007591327685882,
+        "wrong_foot_distance_mean_m": 0.41530175249722395,
+        "contact_surface_error_mean_m": 0.09406082307537181,
+        "wrong_minus_target_margin_mean_m": 0.21443686133569015,
+        "wrong_foot_farther_fraction": 0.7692307692307693,
+        "samples": [
+          {
+            "player": "a",
+            "phase": "kick",
+            "frame": 0,
+            "foot": "right",
+            "target_distance_m": 0.3991011234385592,
+            "wrong_foot_distance_m": 0.10368452047375018,
+            "surface_error_m": 0.2891011234385592,
+            "wrong_minus_target_margin_m": -0.295416602964809
+          },
+          {
+            "player": "b",
+            "phase": "receive",
+            "frame": 15,
+            "foot": "right",
+            "target_distance_m": 0.0892264425600534,
+            "wrong_foot_distance_m": 0.4661219186096414,
+            "surface_error_m": 0.020773557439946605,
+            "wrong_minus_target_margin_m": 0.376895476049588
+          },
+          {
+            "player": "b",
+            "phase": "kick",
+            "frame": 21,
+            "foot": "left",
+            "target_distance_m": 0.6532461467636326,
+            "wrong_foot_distance_m": 0.6097559250138195,
+            "surface_error_m": 0.5432461467636326,
+            "wrong_minus_target_margin_m": -0.043490221749813096
+          },
+          {
+            "player": "a",
+            "phase": "receive",
+            "frame": 42,
+            "foot": "right",
+            "target_distance_m": 0.13053791127607176,
+            "wrong_foot_distance_m": 0.2727012768898874,
+            "surface_error_m": 0.020537911276071755,
+            "wrong_minus_target_margin_m": 0.14216336561381562
+          },
+          {
+            "player": "a",
+            "phase": "kick",
+            "frame": 45,
+            "foot": "right",
+            "target_distance_m": 0.22480061355853925,
+            "wrong_foot_distance_m": 0.10794085509079575,
+            "surface_error_m": 0.11480061355853925,
+            "wrong_minus_target_margin_m": -0.1168597584677435
+          },
+          {
+            "player": "b",
+            "phase": "receive",
+            "frame": 71,
+            "foot": "right",
+            "target_distance_m": 0.1211946630215465,
+            "wrong_foot_distance_m": 0.7697486860971963,
+            "surface_error_m": 0.011194663021546494,
+            "wrong_minus_target_margin_m": 0.6485540230756498
+          },
+          {
+            "player": "b",
+            "phase": "kick",
+            "frame": 71,
+            "foot": "right",
+            "target_distance_m": 0.1211946630215465,
+            "wrong_foot_distance_m": 0.7697486860971963,
+            "surface_error_m": 0.011194663021546494,
+            "wrong_minus_target_margin_m": 0.6485540230756498
+          },
+          {
+            "player": "a",
+            "phase": "receive",
+            "frame": 90,
+            "foot": "left",
+            "target_distance_m": 0.15401224493211738,
+            "wrong_foot_distance_m": 0.3852371015526432,
+            "surface_error_m": 0.044012244932117375,
+            "wrong_minus_target_margin_m": 0.2312248566205258
+          },
+          {
+            "player": "a",
+            "phase": "kick",
+            "frame": 90,
+            "foot": "left",
+            "target_distance_m": 0.15401224493211738,
+            "wrong_foot_distance_m": 0.3852371015526432,
+            "surface_error_m": 0.044012244932117375,
+            "wrong_minus_target_margin_m": 0.2312248566205258
+          },
+          {
+            "player": "b",
+            "phase": "receive",
+            "frame": 110,
+            "foot": "right",
+            "target_distance_m": 0.11695223856085359,
+            "wrong_foot_distance_m": 0.37407078556210227,
+            "surface_error_m": 0.006952238560853585,
+            "wrong_minus_target_margin_m": 0.2571185470012487
+          },
+          {
+            "player": "b",
+            "phase": "kick",
+            "frame": 110,
+            "foot": "right",
+            "target_distance_m": 0.11695223856085359,
+            "wrong_foot_distance_m": 0.37407078556210227,
+            "surface_error_m": 0.006952238560853585,
+            "wrong_minus_target_margin_m": 0.2571185470012487
+          },
+          {
+            "player": "a",
+            "phase": "receive",
+            "frame": 132,
+            "foot": "left",
+            "target_distance_m": 0.16500652723702458,
+            "wrong_foot_distance_m": 0.39030256998106727,
+            "surface_error_m": 0.05500652723702458,
+            "wrong_minus_target_margin_m": 0.2252960427440427
+          },
+          {
+            "player": "a",
+            "phase": "kick",
+            "frame": 132,
+            "foot": "left",
+            "target_distance_m": 0.16500652723702458,
+            "wrong_foot_distance_m": 0.39030256998106727,
+            "surface_error_m": 0.05500652723702458,
+            "wrong_minus_target_margin_m": 0.2252960427440427
+          }
+        ]
+      },
+      "robot_motion": {
+        "support_foot_sliding_mean_m_per_event": 0.07163137865051718,
+        "support_foot_sliding_p95_m_per_event": 0.11286199014343008,
+        "floor_penetration_proxy_mean_m": 9.98847150509759e-05,
+        "floor_penetration_proxy_max_m": 0.015651426613951903,
+        "floor_penetration_proxy_fraction": 0.019965277777777776,
+        "pelvis_vertical_acceleration_rms_m_per_s2": 7.043359096532999
+      },
+      "passes": {
+        "pass_curvature_path_excess_mean": 0.0,
+        "pass_heading_change_mean_deg": 1.8155666306687575e-13,
+        "cone_center_clearance_min_m": 0.03792214823031251,
+        "cone_surface_clearance_min_m": -0.1320778517696875,
+        "lane_crossing_error_mean_m": 0.7037901835271482,
+        "contact_foot_lane_error_mean_m": 0.6474678630309624,
+        "samples": [
+          {
+            "pass": 1,
+            "start_frame": 0,
+            "end_frame": 15,
+            "lane_index": 3,
+            "lane_y_m": -0.25,
+            "crossing_y_m": 0.3146100918451945,
+            "crossing_error_m": 0.5646100918451945,
+            "cone_center_clearance_m": 0.19748823841774038,
+            "cone_surface_clearance_m": 0.027488238417740382
+          },
+          {
+            "pass": 2,
+            "start_frame": 21,
+            "end_frame": 42,
+            "lane_index": 4,
+            "lane_y_m": -0.75,
+            "crossing_y_m": -0.2405513260099623,
+            "crossing_error_m": 0.5094486739900377,
+            "cone_center_clearance_m": 0.2349023536248168,
+            "cone_surface_clearance_m": 0.06490235362481679
+          },
+          {
+            "pass": 3,
+            "start_frame": 45,
+            "end_frame": 71,
+            "lane_index": 5,
+            "lane_y_m": -1.25,
+            "crossing_y_m": -0.34663849863512763,
+            "crossing_error_m": 0.9033615013648724,
+            "cone_center_clearance_m": 0.1533875901796828,
+            "cone_surface_clearance_m": -0.01661240982031721
+          },
+          {
+            "pass": 4,
+            "start_frame": 71,
+            "end_frame": 90,
+            "lane_index": 4,
+            "lane_y_m": -0.75,
+            "crossing_y_m": 0.009679890776935368,
+            "crossing_error_m": 0.7596798907769353,
+            "cone_center_clearance_m": 0.03792214823031251,
+            "cone_surface_clearance_m": -0.1320778517696875
+          },
+          {
+            "pass": 5,
+            "start_frame": 90,
+            "end_frame": 110,
+            "lane_index": 3,
+            "lane_y_m": -0.25,
+            "crossing_y_m": 0.4541310235857964,
+            "crossing_error_m": 0.7041310235857964,
+            "cone_center_clearance_m": 0.04633070558560537,
+            "cone_surface_clearance_m": -0.12366929441439463
+          },
+          {
+            "pass": 6,
+            "start_frame": 110,
+            "end_frame": 132,
+            "lane_index": 2,
+            "lane_y_m": 0.25,
+            "crossing_y_m": 1.0315099196000532,
+            "crossing_error_m": 0.7815099196000532,
+            "cone_center_clearance_m": 0.06290526821910282,
+            "cone_surface_clearance_m": -0.10709473178089718
+          }
+        ]
+      }
+    },
+    "full": {
+      "contact": {
+        "target_foot_distance_mean_m": 0.08976116421661093,
+        "target_foot_distance_p95_m": 0.11326753856727131,
+        "wrong_foot_distance_mean_m": 0.4862014152412207,
+        "contact_surface_error_mean_m": 0.021953274245147012,
+        "wrong_minus_target_margin_mean_m": 0.3964402510246097,
+        "wrong_foot_farther_fraction": 1.0,
+        "samples": [
+          {
+            "player": "a",
+            "phase": "kick",
+            "frame": 0,
+            "foot": "right",
+            "target_distance_m": 0.12114385000142659,
+            "wrong_foot_distance_m": 0.38349983958366546,
+            "surface_error_m": 0.011143850001426592,
+            "wrong_minus_target_margin_m": 0.2623559895822389
+          },
+          {
+            "player": "b",
+            "phase": "receive",
+            "frame": 15,
+            "foot": "right",
+            "target_distance_m": 0.1080166642778345,
+            "wrong_foot_distance_m": 0.47933275885342697,
+            "surface_error_m": 0.001983335722165497,
+            "wrong_minus_target_margin_m": 0.37131609457559245
+          },
+          {
+            "player": "b",
+            "phase": "kick",
+            "frame": 21,
+            "foot": "left",
+            "target_distance_m": 0.09510437487820042,
+            "wrong_foot_distance_m": 0.5386697100996916,
+            "surface_error_m": 0.01489562512179958,
+            "wrong_minus_target_margin_m": 0.4435653352214911
+          },
+          {
+            "player": "a",
+            "phase": "receive",
+            "frame": 42,
+            "foot": "right",
+            "target_distance_m": 0.08189064812503286,
+            "wrong_foot_distance_m": 0.33934988771075913,
+            "surface_error_m": 0.028109351874967145,
+            "wrong_minus_target_margin_m": 0.25745923958572625
+          },
+          {
+            "player": "a",
+            "phase": "kick",
+            "frame": 45,
+            "foot": "right",
+            "target_distance_m": 0.10056718337092857,
+            "wrong_foot_distance_m": 0.3138074071947972,
+            "surface_error_m": 0.00943281662907143,
+            "wrong_minus_target_margin_m": 0.21324022382386865
+          },
+          {
+            "player": "b",
+            "phase": "receive",
+            "frame": 71,
+            "foot": "right",
+            "target_distance_m": 0.08906846791323811,
+            "wrong_foot_distance_m": 0.7922603984236279,
+            "surface_error_m": 0.020931532086761892,
+            "wrong_minus_target_margin_m": 0.7031919305103899
+          },
+          {
+            "player": "b",
+            "phase": "kick",
+            "frame": 71,
+            "foot": "right",
+            "target_distance_m": 0.08906846791323811,
+            "wrong_foot_distance_m": 0.7922603984236279,
+            "surface_error_m": 0.020931532086761892,
+            "wrong_minus_target_margin_m": 0.7031919305103899
+          },
+          {
+            "player": "a",
+            "phase": "receive",
+            "frame": 90,
+            "foot": "left",
+            "target_distance_m": 0.07843526742736452,
+            "wrong_foot_distance_m": 0.47110898575881627,
+            "surface_error_m": 0.03156473257263548,
+            "wrong_minus_target_margin_m": 0.39267371833145176
+          },
+          {
+            "player": "a",
+            "phase": "kick",
+            "frame": 90,
+            "foot": "left",
+            "target_distance_m": 0.07843526742736452,
+            "wrong_foot_distance_m": 0.47110898575881627,
+            "surface_error_m": 0.03156473257263548,
+            "wrong_minus_target_margin_m": 0.39267371833145176
+          },
+          {
+            "player": "b",
+            "phase": "receive",
+            "frame": 110,
+            "foot": "right",
+            "target_distance_m": 0.08309665870483023,
+            "wrong_foot_distance_m": 0.4340181183267191,
+            "surface_error_m": 0.026903341295169775,
+            "wrong_minus_target_margin_m": 0.35092145962188886
+          },
+          {
+            "player": "b",
+            "phase": "kick",
+            "frame": 110,
+            "foot": "right",
+            "target_distance_m": 0.08309665870483023,
+            "wrong_foot_distance_m": 0.4340181183267191,
+            "surface_error_m": 0.026903341295169775,
+            "wrong_minus_target_margin_m": 0.35092145962188886
+          },
+          {
+            "player": "a",
+            "phase": "receive",
+            "frame": 132,
+            "foot": "left",
+            "target_distance_m": 0.0794858130358267,
+            "wrong_foot_distance_m": 0.4355918948376007,
+            "surface_error_m": 0.030514186964173295,
+            "wrong_minus_target_margin_m": 0.356106081801774
+          },
+          {
+            "player": "a",
+            "phase": "kick",
+            "frame": 132,
+            "foot": "left",
+            "target_distance_m": 0.0794858130358267,
+            "wrong_foot_distance_m": 0.4355918948376007,
+            "surface_error_m": 0.030514186964173295,
+            "wrong_minus_target_margin_m": 0.356106081801774
+          }
+        ]
+      },
+      "robot_motion": {
+        "support_foot_sliding_mean_m_per_event": 0.09635784226917463,
+        "support_foot_sliding_p95_m_per_event": 0.1790552244729532,
+        "floor_penetration_proxy_mean_m": 0.0001583040311258515,
+        "floor_penetration_proxy_max_m": 0.013547731983952194,
+        "floor_penetration_proxy_fraction": 0.0234375,
+        "pelvis_vertical_acceleration_rms_m_per_s2": 7.2127603960833815
+      },
+      "passes": {
+        "pass_curvature_path_excess_mean": 3.700743415417188e-17,
+        "pass_heading_change_mean_deg": 2.1607893367192767e-13,
+        "cone_center_clearance_min_m": 0.18520481140315279,
+        "cone_surface_clearance_min_m": 0.015204811403152788,
+        "lane_crossing_error_mean_m": 0.01544962979891365,
+        "contact_foot_lane_error_mean_m": 0.2244474277814296,
+        "samples": [
+          {
+            "pass": 1,
+            "start_frame": 0,
+            "end_frame": 15,
+            "lane_index": 3,
+            "lane_y_m": -0.25,
+            "crossing_y_m": -0.2826885347623808,
+            "crossing_error_m": 0.032688534762380816,
+            "cone_center_clearance_m": 0.22099313924094183,
+            "cone_surface_clearance_m": 0.05099313924094183
+          },
+          {
+            "pass": 2,
+            "start_frame": 21,
+            "end_frame": 42,
+            "lane_index": 4,
+            "lane_y_m": -0.75,
+            "crossing_y_m": -0.75,
+            "crossing_error_m": 0.0,
+            "cone_center_clearance_m": 0.2500191597512979,
+            "cone_surface_clearance_m": 0.08001915975129792
+          },
+          {
+            "pass": 3,
+            "start_frame": 45,
+            "end_frame": 71,
+            "lane_index": 5,
+            "lane_y_m": -1.25,
+            "crossing_y_m": -1.189990755968899,
+            "crossing_error_m": 0.06000924403110108,
+            "cone_center_clearance_m": 0.18520481140315279,
+            "cone_surface_clearance_m": 0.015204811403152788
+          },
+          {
+            "pass": 4,
+            "start_frame": 71,
+            "end_frame": 90,
+            "lane_index": 4,
+            "lane_y_m": -0.75,
+            "crossing_y_m": -0.75,
+            "crossing_error_m": 0.0,
+            "cone_center_clearance_m": 0.260147550770762,
+            "cone_surface_clearance_m": 0.09014755077076203
+          },
+          {
+            "pass": 5,
+            "start_frame": 90,
+            "end_frame": 110,
+            "lane_index": 3,
+            "lane_y_m": -0.25,
+            "crossing_y_m": -0.25,
+            "crossing_error_m": 0.0,
+            "cone_center_clearance_m": 0.26424443216460886,
+            "cone_surface_clearance_m": 0.09424443216460887
+          },
+          {
+            "pass": 6,
+            "start_frame": 110,
+            "end_frame": 132,
+            "lane_index": 2,
+            "lane_y_m": 0.25,
+            "crossing_y_m": 0.25,
+            "crossing_error_m": 0.0,
+            "cone_center_clearance_m": 0.2569637212238064,
+            "cone_surface_clearance_m": 0.08696372122380641
+          }
+        ]
+      }
+    }
+  }
+}

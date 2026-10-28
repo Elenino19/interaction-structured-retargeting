@@ -1,0 +1,11 @@
+\begin{tabular}{llrrrrrrrrrr}
+\toprule
+Variant & Method & Contact F1 ↑ & Onset Error [frames] ↓ & Palm Distance [cm] ↓ & Semantic JPE [cm] ↓ & Root Error [cm] ↓ & Joint Jerk [rad/s³] ↓ & Root Jerk [m/s³] ↓ & Hand Pen. [cm] ↓ & Foot Pen. [cm] ↓ & Foot Slide p95 [cm/s] ↓ \\
+\midrule
+J0 & Independent IK & 0.946 & 1.500 & 1.574 & 7.019 & 3.598 & 22.689 & 62.846 & 9.108 & 0.000 & 115.413 \\
+J1 & + Object Contact & 0.965 & 0.500 & 0.951 & 8.744 & 3.882 & 11.051 & 65.025 & 9.358 & 0.000 & 107.105 \\
+J2 & + Phase-Aware Coupling & 0.965 & 0.500 & 0.951 & 8.743 & 3.880 & 11.023 & 65.216 & 9.373 & 0.000 & 107.032 \\
+J3 & + Geometry / Gait & 0.740 & 12.500 & 4.524 & 9.748 & 5.450 & 156.832 & 155.768 & 0.000 & 1.240 & 85.345 \\
+J4 & Full v41 Components & 0.728 & 13.500 & 5.000 & 9.610 & 4.900 & 148.569 & 161.450 & 0.000 & 1.406 & 70.259 \\
+\bottomrule
+\end{tabular}

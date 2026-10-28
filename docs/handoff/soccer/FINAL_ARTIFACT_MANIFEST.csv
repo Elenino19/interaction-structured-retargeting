@@ -1,0 +1,26 @@
+role,path,sha256,bytes,redistributable,notes
+frozen_robot_a,data/exports/touch_ladder_demo/g1/robot_a.npz,ef5277f2db390ef8119a3bcc1fe21f801e8b72e4a3843fd3b2fa9a3b9f80d96b,144986,yes,Accepted Full joints/root/keypoints. Do not overwrite. Scale 0.9470989763.
+frozen_robot_b,data/exports/touch_ladder_demo/g1/robot_b.npz,eb5646a331064c83772351a74cc3dc951618ee69ff00e4130ebe6c212a54568b,144667,yes,Accepted Full. Scale 0.9246479386.
+frozen_scales,data/exports/touch_ladder_demo/g1/scales.json,9373d5b185efbb005950b98d1ae2651ea70162ce8535c40be57bd05fff8702c2,69,yes,Matches the two NPZ scales.
+frozen_ball,data/exports/touch_ladder_demo/ball_cones.npz,b608f0a9ea049d33067bdb421a0c24a0f0cdc8ee55cf454444f0de9c56fef47f,14891,yes,straight_gap_pass. 144 frames. Post-IK synthesis.
+frozen_events,data/exports/touch_ladder_demo/ball_cones.json,cad51d649d353ad0918834fb0f03c89aafdbb1fbdb8c42b6d25f60be85bb2156,2080,yes,7 contacts; 6 receive + 7 kick; supplied labels.
+prepared_human_motion,data/exports/touch_ladder_demo/smplx_joints.npz,f03a8c5bb6e3e658c92b6ac7dc3915754100c07ef5cbfb010fc149cdb0ae3b4b,391214,yes_with_caveat,"GVHMR-derived joints. Redistributable as derived research output only if GVHMR/SMPL-X terms allow; do not describe as mocap."
+accepted_demo,data/exports/touch_ladder_demo/comparison/current_hop_timed_lateral.mp4,c904d2ed28760466df36261f35f6fd281049faf9618a1f266c51cad3dd46039e,2009964,yes,Canonical Full render. 960x720 24fps 144 frames.
+accepted_demo_alias,data/exports/touch_ladder_demo/g1_ball_cones_preview.mp4,c904d2ed28760466df36261f35f6fd281049faf9618a1f266c51cad3dd46039e,2009964,yes,Byte-identical to the canonical demo.
+accepted_demo_paper_copy,data/exports/touch_ladder_demo/paper_eval/videos/full.mp4,c904d2ed28760466df36261f35f6fd281049faf9618a1f266c51cad3dd46039e,2009964,yes,Byte-identical.
+paper_summary,data/exports/touch_ladder_demo/paper_eval/summary.csv,962421cc6710d5f13bb15a8b85a9021451758e4d9e48571a00ab465dbef9af18,1384,yes,basic_ik / support / event_semantics / full.
+receive_kick_summary,data/exports/touch_ladder_demo/paper_eval/receive_kick_summary.csv,67bd21c579ee949a0463a4c12300ba21464c6427de53b625ab75947ac5dfe86f,2048,yes,
+fixed_ball_ablation,data/exports/touch_ladder_demo/paper_eval/event_coordination_extension/fixed_ball_ablation.csv,6b8863d0f00da7e9f2be2e019fc5f1b41d7e6352ec19366a42b15e6b125b4760,8395,yes,Event IK ON/OFF on frozen ball.
+object_aware_comparison,data/exports/touch_ladder_demo/paper_eval/object_aware_comparison/event_chain_comparison.csv,bc65a46ef594eb016775c77323eea19fbdf9b7e51a24dd41a5ab9e121cdf4966,6539,yes,Includes independent object-aware rows.
+frozen_inputs_record,data/exports/touch_ladder_demo/paper_eval/frozen_inputs.json,, ,yes,Records the four accepted hashes.
+robot_events_figure,data/exports/touch_ladder_demo/paper_eval/submission_package/fig_robot_events.png,d0eea859acf7a74e00a4075a4dc01b9c1e10c6fd098b5201fc7a59ada8525dac,838318,yes,No source frames.
+timeline_figure,data/exports/touch_ladder_demo/paper_eval/submission_package/fig_interaction_timeline.png,26f9a6f42567d4c73d1b17ce0e28cbc7aaeb4488ba58f50300fbc339bc9d5293,210528,yes,
+results_card,data/exports/touch_ladder_demo/paper_eval/submission_package/fig_results_reuse.png,38cc40f4bbcb646fd05fda60bb6458a56b8730cdc48e0ae557740e78a5d4b60b,204536,yes,
+event_metadata,data/exports/touch_ladder_demo/paper_eval/submission_package/event_metadata.json,e7a20d488b48a46443ef1bd2d2e4e0a59136d5ba34d1247468ed8076d0a65d7b,6477,yes,24 fps identity mapping; original time 203+i/24.
+source_to_robot_figure,data/exports/touch_ladder_demo/paper_eval/submission_package/local_only/fig_source_to_robot.png,,1965155,no,Contains source frames. Local review only.
+source_robot_side_by_side,data/exports/touch_ladder_demo/paper_eval/submission_package/local_only/source_robot_side_by_side.mp4,,2412891,no,Contains source video.
+source_clip,data/clips/touch_ladder_demo_source.mp4,40b7e859a9b02790bf3ec930a7d113c08c8b8eb30c8f7ac8594a5cc5231bd601,1403937,no,Packed 203-209 s. No redistribution permission.
+prep_json,data/clips/touch_ladder_demo_prep.json,5931785e52678d66a32030cd2294b035633744912274eb9327d33197177f4411,1166,yes_metadata_only,Records private source path. Strip the absolute path before a public commit if desired.
+web_demo_copy,release_handoff/soccer/public_export/soccer_full_demo_web.mp4,3d5fcef1a8500c2a591f6a5a51661f01a1b482bb9cc95b4e6e0f8482af6c7801,317435,yes,CRF 28 display encode. Not a new scientific result.
+render_camera,scripts/render_g1_soccer.py,6344b56e73bc9e3ae9de04ab067a3f2d2105733eba406402e13892c3bdca08f2,8872,yes,"distance 4.4; azimuth 75; elevation -24; 960x720; fps 24. No stadium mesh."
+ik_script,scripts/retarget_dual_g1_soccer.py,168c7035286a5103d6e66f9b505be39e1f3971347d0fc1a31fbf6dab8be10c73,46743,yes,Optional ball_contact defaults off. Do not treat a fresh run as the accepted Full.

@@ -1,0 +1,202 @@
+{
+  "schema_version": "1.0.0",
+  "experiment": "object_aware_comparison",
+  "created_at": "2026-10-24T16:43:24.717997+00:00",
+  "frozen_inputs_unchanged": {
+    "accepted_preview": true,
+    "accepted_robot_a": true,
+    "accepted_robot_b": true,
+    "accepted_ball": true
+  },
+  "headline": "No cross-agent coupling exists in the accepted solver (L_A + L_B separable; probe deltas = 0). Full is computationally equivalent to two independent solvers; an independent solver with an explicit object term beats Full on all foot-ball geometry metrics and ties on all actor/foot/order/chain metrics.",
+  "claim_boundary": "Single-sequence kinematic analysis; prescribed object path; no physics, no task success.",
+  "scripts": [
+    "scripts/check_objective_separability.py",
+    "scripts/run_independent_object_aware_baseline.py",
+    "scripts/evaluate_event_chain.py (COMPARISON entries)",
+    "scripts/retarget_dual_g1_soccer.py (optional ball_contact term, default off)",
+    "logs/build_comparison.py"
+  ],
+  "artifacts": {
+    "REPRODUCE.md": {
+      "sha256": "30c3c1ce3faa83fd084048f0b1dd7b476d0b06e9df5eab2e80860e8014774d14",
+      "bytes": 2236
+    },
+    "dependency_audit.md": {
+      "sha256": "4357ed741cf493cd41af3e1a8d7dc352792a659aa07aa526cedd1ed3ae649727",
+      "bytes": 5210
+    },
+    "event_chain_comparison.csv": {
+      "sha256": "bc65a46ef594eb016775c77323eea19fbdf9b7e51a24dd41a5ab9e121cdf4966",
+      "bytes": 6539
+    },
+    "event_chain_metrics.json": {
+      "sha256": "189d5bcabdafcbde6346cd08a0d591494a963d9fe425637ab0f0272791bed16a",
+      "bytes": 449888
+    },
+    "event_chain_summary.csv": {
+      "sha256": "ba85c0124a487564d480e2dd739b8764e6484f506994484e1d8c084365532634",
+      "bytes": 7931
+    },
+    "event_metrics.csv": {
+      "sha256": "75b6f3abb94b118497205151af36374ff083ee57a1e4287503d0897a00446d12",
+      "bytes": 36834
+    },
+    "fixed_ball_ablation.csv": {
+      "sha256": "e8e47842b5f45e3d30ac869f8a755b612216536e7a4ee2e702187c44bf80736c",
+      "bytes": 4980
+    },
+    "independent_object_aware/obj_w100_event_on/ball_cones.npz": {
+      "sha256": "b608f0a9ea049d33067bdb421a0c24a0f0cdc8ee55cf454444f0de9c56fef47f",
+      "bytes": 14891
+    },
+    "independent_object_aware/obj_w100_event_on/experiment.json": {
+      "sha256": "cbc7b6ff245d56304f39b27ff5422ecc794427f10e3b39daa70de35ab6ab6afd",
+      "bytes": 737
+    },
+    "independent_object_aware/obj_w100_event_on/preview.mp4": {
+      "sha256": "ae3b2ebe96388e916fbe23fd04deaa48f19187e51ab719cd6f61c8b69626cbd7",
+      "bytes": 2011573
+    },
+    "independent_object_aware/obj_w100_event_on/robot_a.npz": {
+      "sha256": "974c6ae6ecadf58c9b999d5e630719f5d2099e35390a5ad3a3d505aeb7a239d8",
+      "bytes": 145076
+    },
+    "independent_object_aware/obj_w100_event_on/robot_b.npz": {
+      "sha256": "1fb746c49a3c9f4d8e819c07356022d04c7685beee4f56abe55c72e5dbb57d5e",
+      "bytes": 144736
+    },
+    "independent_object_aware/obj_w100_event_on/scales.json": {
+      "sha256": "9373d5b185efbb005950b98d1ae2651ea70162ce8535c40be57bd05fff8702c2",
+      "bytes": 69
+    },
+    "independent_object_aware/obj_w100_event_on/soccer_scene.xml": {
+      "sha256": "7536acf326d4613057b6b31b1b8f4cddbff6d0e95f33a118a5806487d26951ee",
+      "bytes": 50608
+    },
+    "independent_object_aware/obj_w10_event_on/ball_cones.npz": {
+      "sha256": "b608f0a9ea049d33067bdb421a0c24a0f0cdc8ee55cf454444f0de9c56fef47f",
+      "bytes": 14891
+    },
+    "independent_object_aware/obj_w10_event_on/experiment.json": {
+      "sha256": "6c285c33c28c62dac75a992bd7f01f4d8164f1a22d396ad305fdabab00805903",
+      "bytes": 735
+    },
+    "independent_object_aware/obj_w10_event_on/preview.mp4": {
+      "sha256": "d8d7bd49951cad082e6c44a021d96e84757499b0ad8d836cfd8c5c8fecf493c5",
+      "bytes": 2013818
+    },
+    "independent_object_aware/obj_w10_event_on/robot_a.npz": {
+      "sha256": "6f713e439be068de95915f6b7f629dad80c9eb205bc6b3d44052466777e0802a",
+      "bytes": 145115
+    },
+    "independent_object_aware/obj_w10_event_on/robot_b.npz": {
+      "sha256": "5172e0a7e34ff73e9edc6e1a118f5656578d41d58c40dcc116af11d7141319eb",
+      "bytes": 144774
+    },
+    "independent_object_aware/obj_w10_event_on/scales.json": {
+      "sha256": "9373d5b185efbb005950b98d1ae2651ea70162ce8535c40be57bd05fff8702c2",
+      "bytes": 69
+    },
+    "independent_object_aware/obj_w10_event_on/soccer_scene.xml": {
+      "sha256": "7536acf326d4613057b6b31b1b8f4cddbff6d0e95f33a118a5806487d26951ee",
+      "bytes": 50608
+    },
+    "independent_object_aware/obj_w30_event_off/ball_cones.npz": {
+      "sha256": "b608f0a9ea049d33067bdb421a0c24a0f0cdc8ee55cf454444f0de9c56fef47f",
+      "bytes": 14891
+    },
+    "independent_object_aware/obj_w30_event_off/experiment.json": {
+      "sha256": "40992834ca51c0edde44d056dbee1d890585dcb2b1264f98c028bcea1ab0906f",
+      "bytes": 737
+    },
+    "independent_object_aware/obj_w30_event_off/preview.mp4": {
+      "sha256": "4b04b9003565db839bab729ef7d26d9dbbd1c5bda359065628d86f2f41bf2a75",
+      "bytes": 1993716
+    },
+    "independent_object_aware/obj_w30_event_off/robot_a.npz": {
+      "sha256": "46c441d81d5bb865ff52324724660e1645b1f5ced057a6d43a653ba36bec3f51",
+      "bytes": 145058
+    },
+    "independent_object_aware/obj_w30_event_off/robot_b.npz": {
+      "sha256": "64fbd1bcbf6a96474fb31926f1d9b3bfe2f26919746aaf5810c98641409a064d",
+      "bytes": 144679
+    },
+    "independent_object_aware/obj_w30_event_off/scales.json": {
+      "sha256": "9373d5b185efbb005950b98d1ae2651ea70162ce8535c40be57bd05fff8702c2",
+      "bytes": 69
+    },
+    "independent_object_aware/obj_w30_event_off/soccer_scene.xml": {
+      "sha256": "7536acf326d4613057b6b31b1b8f4cddbff6d0e95f33a118a5806487d26951ee",
+      "bytes": 50608
+    },
+    "independent_object_aware/obj_w30_event_on/ball_cones.npz": {
+      "sha256": "b608f0a9ea049d33067bdb421a0c24a0f0cdc8ee55cf454444f0de9c56fef47f",
+      "bytes": 14891
+    },
+    "independent_object_aware/obj_w30_event_on/experiment.json": {
+      "sha256": "29759be18f49f395c0bab13fd8da576c3219d2390edab2e147d818bca03d00a7",
+      "bytes": 735
+    },
+    "independent_object_aware/obj_w30_event_on/preview.mp4": {
+      "sha256": "0298e1bda54ed8e2fc0602ebfb761146c2704e2366f8c0abd7b0f12eea64d3ae",
+      "bytes": 2012736
+    },
+    "independent_object_aware/obj_w30_event_on/robot_a.npz": {
+      "sha256": "0d0ba15571fa7106682cb5eab777217bbbe3a6ce4407b1e0ca8307c550cece96",
+      "bytes": 145072
+    },
+    "independent_object_aware/obj_w30_event_on/robot_b.npz": {
+      "sha256": "d168514fab9b780321dc2bf96d681ca1518c40151ad43fbf2701dba59033ca95",
+      "bytes": 144722
+    },
+    "independent_object_aware/obj_w30_event_on/scales.json": {
+      "sha256": "9373d5b185efbb005950b98d1ae2651ea70162ce8535c40be57bd05fff8702c2",
+      "bytes": 69
+    },
+    "independent_object_aware/obj_w30_event_on/soccer_scene.xml": {
+      "sha256": "7536acf326d4613057b6b31b1b8f4cddbff6d0e95f33a118a5806487d26951ee",
+      "bytes": 50608
+    },
+    "logs/build_comparison.py": {
+      "sha256": "a7701f0a74fbc2855041a13752afa0238fb8643b058dce956014c07aa2545c2f",
+      "bytes": 6048
+    },
+    "logs/run_independent_object_aware_baseline.log": {
+      "sha256": "9af44eca36804f3123d8d80fe2b09fdb14219f38248c8a2091138133f3f9f4a1",
+      "bytes": 2932
+    },
+    "metric_sensitivity.csv": {
+      "sha256": "894fa5427b83ac168fbcdad31a86811897b0d4a6c9a73b4ce93cf582e45fdb65",
+      "bytes": 4402
+    },
+    "novelty_assessment.md": {
+      "sha256": "29c3aaf5429fdae144ea06753d2931c4a11de932518e793234a6b7b7496a195d",
+      "bytes": 7408
+    },
+    "objective_separability.md": {
+      "sha256": "04229f8da964be49c59114e6b49b0a1fe3040718649f688eb11fc1fa4b1f6a5d",
+      "bytes": 3953
+    },
+    "proposed_extension.md": {
+      "sha256": "b5ff2129d5b8c7da653303a96d93e64d723fa09a210f9f0624d2f0b5c0acb3e7",
+      "bytes": 6014
+    },
+    "separability_probe.json": {
+      "sha256": "fcbf6d70afa4dfc2c6d216c79312e924b0e1289f18a552a86cd3a39e8c1dba4f",
+      "bytes": 1462
+    },
+    "strong_baseline_feasibility.md": {
+      "sha256": "3963389a7b506c4cb901512ffbcc605f54df02e60fba9316e1dce355dfbf5422",
+      "bytes": 5207
+    },
+    "threshold_sensitivity.csv": {
+      "sha256": "e5f71c4cb815aa22eaaedd1e47565d380b4cbc7acc10d511c2187489431efaf8",
+      "bytes": 3748
+    },
+    "transfer_chain_metrics.csv": {
+      "sha256": "db3575502df9404d54331f55ed9883d031b6ba6a5a042e6452bc1ae00ad5d902",
+      "bytes": 15640
+    }
+  }
+}

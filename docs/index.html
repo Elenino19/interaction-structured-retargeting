@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interaction-Structured Motion Retargeting</title>
+  <meta name="description" content="Kinematic retargeting for two humanoids. Join EXT-JC and a soccer sequential-interaction case study.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <p class="kicker">Humanoid motion · local project page</p>
+      <h1>Interaction-Structured Motion Retargeting for Multi-Party Humanoid–Object Interactions</h1>
+      <p class="lede">Buwen Zhang. Draft v6.2. This page is local and unpublished.</p>
+      <p class="lede">Two studies, one question: how an explicit interaction state becomes kinematic reference motion for a pair of Unitree G1 humanoids.</p>
+      <nav>
+        <a href="#overview">Overview</a>
+        <a href="#join">Join</a>
+        <a href="#soccer">Soccer</a>
+        <a href="#results">Results</a>
+        <a href="#links">Paper and code</a>
+        <a href="#citation">Citation</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="abstract">
+      <div class="wrap">
+        <h2>Abstract</h2>
+        <p>Collaborative contact is not two independent poses standing near an object. On six CORE4D carry clips we retarget both people onto 29-DoF humanoids while the object pose stays an input. The final coupled method, EXT-JC, adds a joint-contact product to an object-aware objective and then repairs frames where clearance smoothing drives the hand into the object. Frozen v41 remains the visual baseline. It is not relabeled as EXT-JC.</p>
+        <p>A second study takes one 144-frame passing drill. Each humanoid is solved alone from a supplied actor, foot, and time annotation. The ball is written afterward. That case study specifies an interaction. It does not jointly optimize the two robots, and it does not discover the events.</p>
+        <p>All released motions are kinematic references. They are not dynamically stable controllers, motion-capture ground truth, or real-robot executions.</p>
+      </div>
+    </section>
+
+    <section id="overview">
+      <div class="wrap">
+        <h2>Method overview</h2>
+        <div class="grid two">
+          <article class="card">
+            <p class="tag">Join · coupled</p>
+            <h3>EXT-JC w10 + repair</h3>
+            <p>Palmar anchors on the object, a per-robot geometry stack, then <code>L<sub>JC</sub> = mean (1 − s1 s2)</code> on source joint-carry frames, weight 10. A separable surrogate uses <code>(s1 + s2) / 2</code> with the same repair. Cold-start J4 is an ablation, not the frozen v41 reference.</p>
+          </article>
+          <article class="card">
+            <p class="tag">Soccer · sequential</p>
+            <h3>Independent IK, then the ball</h3>
+            <p>Two Adam solves that never read each other. Event windows set the active foot and a kick-velocity term. <code>snap_ball_to_g1_feet</code> places the ball on the annotation and rolls it through the cone lanes. Rerunning the current script does not reproduce the frozen joints.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="join">
+      <div class="wrap">
+        <h2>Join</h2>
+        <p>Six CORE4D-Real clips, action <em>join</em>, obstacle <em>box</em>, sequences 018, 019, 020, 108, 109, and 110. Train/dev 018/019/108, validation 020, test 109/110.</p>
+        <p>The comparison videos are not on this page. They contain the CORE4D box, and that geometry is not cleared for redistribution. The quantitative table is the bundled repair note, not a guessed manuscript figure.</p>
+        <div class="pending">Join demo media: withheld pending a license decision on CORE4D-derived renders. Code and numeric tables are in the repository under <code>join/</code> and <code>evaluation/join/</code>.</div>
+      </div>
+    </section>
+
+    <section id="soccer">
+      <div class="wrap">
+        <h2>Soccer</h2>
+        <p>Frozen Full, 144 frames at 24 fps. Kinematic reference, prescribed ball, supplied labels. Not physical football dynamics.</p>
+        <figure>
+          <video controls preload="metadata" poster="media/fig_robot_events.png">
+            <source src="media/soccer_full_demo_web.mp4" type="video/mp4">
+          </video>
+          <figcaption>Display encode of the accepted MuJoCo preview. Robot and ball trajectories are unchanged. SHA-256 3d5fcef1…c7801.</figcaption>
+        </figure>
+        <div class="grid two">
+          <figure>
+            <img src="media/fig_robot_events.png" alt="Six robot-only frames of the frozen soccer sequence">
+            <figcaption>Robot-only frames. No source-video pixels.</figcaption>
+          </figure>
+          <figure>
+            <img src="media/fig_interaction_timeline.png" alt="Timeline of supplied receive and kick labels">
+            <figcaption>Actor, foot, and transfer arrows. The labels were supplied, not discovered.</figcaption>
+          </figure>
+        </div>
+        <figure>
+          <img src="media/fig_results_reuse.png" alt="Metric card for the single soccer sequence">
+          <figcaption>13/13 and 6/6 are annotation-consistent kinematic checks on one sequence.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="results">
+      <div class="wrap">
+        <h2>Main quantitative findings</h2>
+        <h3>Join, Draft v6.2 Table I</h3>
+        <p>Repaired EXT-JC versus the repaired separable surrogate. On the five takes other than 018, geometry-valid coverage goes from 79.8% to 88.3%, and the mean longest valid span from 16.8 to 28.2 frames. Held-out 109/110 are 81.1% versus 75.7%. Take 018 does not beat the surrogate (88.3% versus 96.7%). Fig. 2 is withheld because it shows the CORE4D box.</p>
+        <h3>Frozen v41 visual baseline</h3>
+        <p>Six-sequence contact F1 mean 0.827 is a release-table statistic for the visual baseline. Draft v6.2 does not use it as the coupling result. Foot penetration remains large.</p>
+        <h3>Soccer Frozen Full</h3>
+        <p>13 interaction events: 6 receives, 7 kicks, 6 transfer chains. Fig. 4 in the manuscript also shows source-video frames; those frames are not on this page.</p>
+        <table>
+          <thead><tr><th>Check</th><th>Result</th></tr></thead>
+          <tbody>
+            <tr><td>Active limb</td><td>13/13</td></tr>
+            <tr><td>Role chain</td><td>6/6</td></tr>
+            <tr><td>Mesh-gated chain at 5 cm</td><td>3/6</td></tr>
+            <tr><td>Timing, receive / kick</td><td>0.17 / 0.57 frames</td></tr>
+          </tbody>
+        </table>
+        <p>Manuscript Table I was checked against the bundled CSV. The PDF itself stays outside this repository.</p>
+      </div>
+    </section>
+
+    <section id="links">
+      <div class="wrap">
+        <h2>Paper and code</h2>
+        <p><a href="#">Paper PDF (pending)</a></p>
+        <p><a href="#">Code repository (pending — this page is local and has not been published)</a></p>
+        <p>GitHub Pages is not enabled. Open this file from the <code>docs/</code> directory of the local release.</p>
+      </div>
+    </section>
+
+    <section id="citation">
+      <div class="wrap">
+        <h2>Citation and acknowledgments</h2>
+        <p>Sole paper author and sole developer of the original code: Buwen Zhang. <code>CITATION.cff</code> cites that name. No affiliation, email, ORCID, venue, or DOI is listed. If a venue requires double-blind review, do not publish this page with the name on it.</p>
+        <p>Dataset: Liu, Zhang, Xing, Tang, Yang, Yi. CORE4D: A 4D Human-Object-Human Interaction Dataset for Collaborative Object REarrangement. CVPR 2025.</p>
+        <p>Robot geometry: Unitree G1 description (<code>unitree_ros</code>). The local checkout did not contain a LICENSE file; meshes are not redistributed here.</p>
+        <p>Soccer preprocessing, when mentioned: GVHMR, two independent static-camera runs. Research use only. Weights are not included.</p>
+        <p>There is no pitch model to acknowledge. The scientific scene is a MuJoCo grid, five cones, and a ball.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      Local academic page for review. Not deployed. No project license selected.
+    </div>
+  </footer>
+</body>
+</html>

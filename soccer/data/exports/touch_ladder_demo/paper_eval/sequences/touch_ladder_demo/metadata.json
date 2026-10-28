@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "sequence_id": "touch_ladder_demo",
+  "source_metadata": {
+    "sample_id": "touch_ladder_demo",
+    "task": "touch_ladder_first_touch_return",
+    "role": "local_demo_only",
+    "redistribute": false,
+    "source": {
+      "path": "$HOME/\u89c6\u9891/\u5fae\u4fe1\u89c6\u98912026-09-20_002217_403.mp4",
+      "attribution": "7MLC / MZC CONTROLLO training video (WeChat forward)",
+      "license": "not granted for dataset release",
+      "start_s": 203.0,
+      "end_s": 209.0,
+      "note": "Near-end touch ladder, 3:23-3:29. Local demo only."
+    },
+    "contacts": {
+      "description": "Near-end ladder: gap N2-N3, gap N1-N2, outside N1, back through N1-N2, then adjacent gaps."
+    },
+    "crops": {
+      "player_a": "data/clips/touch_ladder_demo_player_a.mp4",
+      "player_b": "data/clips/touch_ladder_demo_player_b.mp4",
+      "player_a_id": "left",
+      "player_b_id": "right"
+    },
+    "prep": {
+      "n_frames": 144,
+      "fps": 24.0,
+      "source_wh": [
+        960,
+        544
+      ],
+      "player_a_crop_wh": [
+        420,
+        544
+      ],
+      "player_b_crop_wh": [
+        420,
+        544
+      ],
+      "player_a_mean_height_px": 292.43747329711914,
+      "player_b_mean_height_px": 333.2546165254381
+    },
+    "label_type": "gvhmr_pseudo_label_not_mocap"
+  },
+  "source_video_packaged": false,
+  "source_video_packaging_reason": "Redistribution permission not granted.",
+  "preprocessing_metadata": "data/clips/touch_ladder_demo_prep.json",
+  "event_annotations": "data/exports/touch_ladder_demo/paper_eval/sequences/touch_ladder_demo/events.json",
+  "variants": {
+    "basic_ik": {
+      "robot_a": "data/exports/touch_ladder_demo/experiments/ablation/basic_ik/robot_a.npz",
+      "robot_b": "data/exports/touch_ladder_demo/experiments/ablation/basic_ik/robot_b.npz",
+      "ball_cones": "data/exports/touch_ladder_demo/experiments/ablation/basic_ik/ball_cones.npz",
+      "preview": "data/exports/touch_ladder_demo/experiments/ablation/basic_ik/preview.mp4"
+    },
+    "support": {
+      "robot_a": "data/exports/touch_ladder_demo/experiments/ablation/support/robot_a.npz",
+      "robot_b": "data/exports/touch_ladder_demo/experiments/ablation/support/robot_b.npz",
+      "ball_cones": "data/exports/touch_ladder_demo/experiments/ablation/support/ball_cones.npz",
+      "preview": "data/exports/touch_ladder_demo/experiments/ablation/support/preview.mp4"
+    },
+    "event_semantics": {
+      "robot_a": "data/exports/touch_ladder_demo/experiments/ablation/event_semantics/robot_a.npz",
+      "robot_b": "data/exports/touch_ladder_demo/experiments/ablation/event_semantics/robot_b.npz",
+      "ball_cones": "data/exports/touch_ladder_demo/experiments/ablation/event_semantics/ball_cones.npz",
+      "preview": "data/exports/touch_ladder_demo/experiments/ablation/event_semantics/preview.mp4"
+    },
+    "full": {
+      "robot_a": "data/exports/touch_ladder_demo/experiments/ablation/full/robot_a.npz",
+      "robot_b": "data/exports/touch_ladder_demo/experiments/ablation/full/robot_b.npz",
+      "ball_cones": "data/exports/touch_ladder_demo/experiments/ablation/full/ball_cones.npz",
+      "preview": "data/exports/touch_ladder_demo/experiments/ablation/full/preview.mp4"
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "review_date": "2026-10-04",
+  "result": "no_additional_sequence_accepted",
+  "license_evidence_limitation": "Mixkit/Pexels license labels come from source_audit.json. No license text, download receipt, or source-page snapshot is stored locally, so legal provenance cannot be independently re-verified offline.",
+  "criteria": {
+    "clear_research_or_redistribution_permission": true,
+    "continuous_two_person_soccer_interaction": true,
+    "both_players_full_body_visible": true,
+    "approximate_minimum_player_height_px": 250,
+    "ball_and_foot_contact_readable": true,
+    "compatible_with_ground_pass_receive_kick_evaluation": true
+  },
+  "quantitatively_rescreened_candidates": [
+    {
+      "id": "mixkit-43486",
+      "license": "Mixkit Stock Video Free License",
+      "license_evidence": "manifest_label_only_no_local_license_snapshot",
+      "local_path": "data/raw/mixkit/mixkit_43486_720.mp4",
+      "sampled_frames": 12,
+      "frames_with_two_person_detections": 12,
+      "median_two_largest_person_heights_px": [254.49386596679688, 240.68002319335938],
+      "decision": "rejected",
+      "reason": "Closest candidate, but the second player is below the 250 px gate and the sequence is mainly aerial juggling. It has no ground-pass lane/cone task compatible with the current Full correction and would require a different interaction model."
+    },
+    {
+      "id": "mixkit-2927",
+      "license": "Mixkit Stock Video Free License",
+      "license_evidence": "manifest_label_only_no_local_license_snapshot",
+      "local_path": "data/raw/mixkit/mixkit_2927_720.mp4",
+      "sampled_frames": 12,
+      "frames_with_two_person_detections": 10,
+      "median_two_largest_person_heights_px": [598.316162109375, 154.5565948486328],
+      "decision": "rejected",
+      "reason": "Ground passing is present, but the far player is only about 155 px tall and is not detected in two of twelve review frames; the near player is very large and intermittently cropped."
+    },
+    {
+      "id": "mixkit-43517",
+      "license": "Mixkit Stock Video Free License",
+      "license_evidence": "manifest_label_only_no_local_license_snapshot",
+      "local_path": "$HOME/two_person_video_candidates/mixkit_43517_two_soccer_players_juggling_720p.mp4",
+      "sampled_frames": 12,
+      "frames_with_two_person_detections": 12,
+      "median_two_largest_person_heights_px": [162.49154663085938, 70.75933837890625],
+      "decision": "rejected",
+      "reason": "Both players are far below the pixel-height requirement."
+    }
+  ],
+  "qualitatively_rescreened_candidates": [
+    {
+      "ids": ["mixkit-44460", "mixkit-44461", "mixkit-2290", "pexels-6077072"],
+      "decision": "rejected",
+      "reason": "Local files are basketball/non-soccer interactions despite generic two-person training filenames."
+    },
+    {
+      "ids": ["mixkit-2920", "mixkit-43484", "mixkit-43483", "mixkit-43485"],
+      "decision": "rejected",
+      "reason": "Foot/leg close-ups or incomplete bodies; unsuitable for full-body GVHMR."
+    },
+    {
+      "ids": ["mixkit-43482", "mixkit-43481", "mixkit-43499", "mixkit-43480", "mixkit-4576", "mixkit-767", "mixkit-2914"],
+      "decision": "rejected",
+      "reason": "Multiple players, occlusion, distant subjects, or no continuous readable two-person receive/kick chain."
+    }
+  ],
+  "blocked_candidates": [
+    {
+      "id": "soccertrack-v2",
+      "reason": "Gated download requires HF_TOKEN; no authorized local sequence is available."
+    },
+    {
+      "id": "muvs-20708683",
+      "reason": "The audit says CC BY 4.0, but the local MUVS README says 'License: TO BE ADDED'; fail closed until authoritative license evidence is archived."
+    },
+    {
+      "id": "7mlc-touch-ladder-demo-other-windows",
+      "reason": "Same unlicensed source and same participants; additional windows would not provide independent licensed sequences and cannot be redistributed."
+    }
+  ],
+  "conclusion": "No additional sequence passed both legal and technical gates. No duplicated window or unsuitable clip was reported as an independent sequence. Multi-sequence variance and generalization remain unavailable."
+}

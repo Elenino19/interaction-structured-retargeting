@@ -1,0 +1,268 @@
+{
+  "schema_version": "1.0.0",
+  "sequence_id": "touch_ladder_demo",
+  "temporal_alignment": {
+    "original_fps": 24.0,
+    "packed_clip_fps": 24.0,
+    "robot_preview_fps": 24.0,
+    "n_frames": 144,
+    "frame_rate_conversion": "none",
+    "index_rule": "Pipeline frame i equals packed-clip frame i equals frozen-robot frame i. Original-video time is 203.0 + i/24 seconds (clip 203\u2013209 s).",
+    "clip_start_s": 203.0,
+    "clip_end_s": 209.0
+  },
+  "figure_events": [
+    {
+      "id": "e00_kick",
+      "frame": 0,
+      "kind": "kick",
+      "player": "a",
+      "foot": "right",
+      "title": "A right-foot kick",
+      "subtitle": "Opening send  A\u2192B",
+      "role": "sender"
+    },
+    {
+      "id": "e01_recv",
+      "frame": 15,
+      "kind": "receive",
+      "player": "b",
+      "foot": "right",
+      "title": "B right-foot receive",
+      "subtitle": "Transfer arrival",
+      "role": "receiver"
+    },
+    {
+      "id": "e01_kick",
+      "frame": 21,
+      "kind": "kick",
+      "player": "b",
+      "foot": "left",
+      "title": "B left-foot kick",
+      "subtitle": "Limb-role switch",
+      "role": "sender"
+    },
+    {
+      "id": "pass2_lane",
+      "frame": 26,
+      "kind": "transfer",
+      "player": null,
+      "foot": null,
+      "title": "Pass in the lane",
+      "subtitle": "B\u2192A transfer",
+      "role": "ball"
+    },
+    {
+      "id": "e02_recv",
+      "frame": 42,
+      "kind": "receive",
+      "player": "a",
+      "foot": "right",
+      "title": "A right-foot receive",
+      "subtitle": "Actor-role switch",
+      "role": "receiver"
+    },
+    {
+      "id": "e02_kick",
+      "frame": 45,
+      "kind": "kick",
+      "player": "a",
+      "foot": "right",
+      "title": "A right-foot kick",
+      "subtitle": "Same-foot redirect",
+      "role": "sender"
+    }
+  ],
+  "all_annotated_events": [
+    {
+      "event_id": "e00_kick",
+      "phase": "kick",
+      "player": "a",
+      "foot": "right",
+      "pipeline_frame": 0,
+      "time_s": 0.0,
+      "original_time_s": 203.0
+    },
+    {
+      "event_id": "e01_recv",
+      "phase": "receive",
+      "player": "b",
+      "foot": "right",
+      "pipeline_frame": 15,
+      "time_s": 0.625,
+      "original_time_s": 203.625
+    },
+    {
+      "event_id": "e01_kick",
+      "phase": "kick",
+      "player": "b",
+      "foot": "left",
+      "pipeline_frame": 21,
+      "time_s": 0.875,
+      "original_time_s": 203.875
+    },
+    {
+      "event_id": "e02_recv",
+      "phase": "receive",
+      "player": "a",
+      "foot": "right",
+      "pipeline_frame": 42,
+      "time_s": 1.75,
+      "original_time_s": 204.75
+    },
+    {
+      "event_id": "e02_kick",
+      "phase": "kick",
+      "player": "a",
+      "foot": "right",
+      "pipeline_frame": 45,
+      "time_s": 1.875,
+      "original_time_s": 204.875
+    },
+    {
+      "event_id": "e03_recv",
+      "phase": "receive",
+      "player": "b",
+      "foot": "right",
+      "pipeline_frame": 71,
+      "time_s": 2.9583333333333335,
+      "original_time_s": 205.95833333333334
+    },
+    {
+      "event_id": "e03_kick",
+      "phase": "kick",
+      "player": "b",
+      "foot": "right",
+      "pipeline_frame": 71,
+      "time_s": 2.9583333333333335,
+      "original_time_s": 205.95833333333334
+    },
+    {
+      "event_id": "e04_recv",
+      "phase": "receive",
+      "player": "a",
+      "foot": "left",
+      "pipeline_frame": 90,
+      "time_s": 3.75,
+      "original_time_s": 206.75
+    },
+    {
+      "event_id": "e04_kick",
+      "phase": "kick",
+      "player": "a",
+      "foot": "left",
+      "pipeline_frame": 90,
+      "time_s": 3.75,
+      "original_time_s": 206.75
+    },
+    {
+      "event_id": "e05_recv",
+      "phase": "receive",
+      "player": "b",
+      "foot": "right",
+      "pipeline_frame": 110,
+      "time_s": 4.583333333333333,
+      "original_time_s": 207.58333333333334
+    },
+    {
+      "event_id": "e05_kick",
+      "phase": "kick",
+      "player": "b",
+      "foot": "right",
+      "pipeline_frame": 110,
+      "time_s": 4.583333333333333,
+      "original_time_s": 207.58333333333334
+    },
+    {
+      "event_id": "e06_recv",
+      "phase": "receive",
+      "player": "a",
+      "foot": "left",
+      "pipeline_frame": 132,
+      "time_s": 5.5,
+      "original_time_s": 208.5
+    },
+    {
+      "event_id": "e06_kick",
+      "phase": "kick",
+      "player": "a",
+      "foot": "left",
+      "pipeline_frame": 132,
+      "time_s": 5.5,
+      "original_time_s": 208.5
+    }
+  ],
+  "transfer_pairs": [
+    {
+      "pair_id": "p1",
+      "sender": "a",
+      "sender_foot": "right",
+      "kick_frame": 0,
+      "receiver": "b",
+      "receiver_foot": "right",
+      "receive_frame": 15,
+      "direction": "A\u2192B"
+    },
+    {
+      "pair_id": "p2",
+      "sender": "b",
+      "sender_foot": "left",
+      "kick_frame": 21,
+      "receiver": "a",
+      "receiver_foot": "right",
+      "receive_frame": 42,
+      "direction": "B\u2192A"
+    },
+    {
+      "pair_id": "p3",
+      "sender": "a",
+      "sender_foot": "right",
+      "kick_frame": 45,
+      "receiver": "b",
+      "receiver_foot": "right",
+      "receive_frame": 71,
+      "direction": "A\u2192B"
+    },
+    {
+      "pair_id": "p4",
+      "sender": "b",
+      "sender_foot": "right",
+      "kick_frame": 71,
+      "receiver": "a",
+      "receiver_foot": "left",
+      "receive_frame": 90,
+      "direction": "B\u2192A"
+    },
+    {
+      "pair_id": "p5",
+      "sender": "a",
+      "sender_foot": "left",
+      "kick_frame": 90,
+      "receiver": "b",
+      "receiver_foot": "right",
+      "receive_frame": 110,
+      "direction": "A\u2192B"
+    },
+    {
+      "pair_id": "p6",
+      "sender": "b",
+      "sender_foot": "right",
+      "kick_frame": 110,
+      "receiver": "a",
+      "receiver_foot": "left",
+      "receive_frame": 132,
+      "direction": "B\u2192A"
+    }
+  ],
+  "source_redistribution": false,
+  "frozen_hashes": {
+    "accepted_preview": "c904d2ed28760466df36261f35f6fd281049faf9618a1f266c51cad3dd46039e",
+    "accepted_robot_a": "ef5277f2db390ef8119a3bcc1fe21f801e8b72e4a3843fd3b2fa9a3b9f80d96b",
+    "accepted_robot_b": "eb5646a331064c83772351a74cc3dc951618ee69ff00e4130ebe6c212a54568b",
+    "accepted_ball": "b608f0a9ea049d33067bdb421a0c24a0f0cdc8ee55cf454444f0de9c56fef47f",
+    "source_clip": "40b7e859a9b02790bf3ec930a7d113c08c8b8eb30c8f7ac8594a5cc5231bd601",
+    "contacts": "cad51d649d353ad0918834fb0f03c89aafdbb1fbdb8c42b6d25f60be85bb2156"
+  },
+  "frozen_hash_check": "passed",
+  "ik_rerun": false
+}

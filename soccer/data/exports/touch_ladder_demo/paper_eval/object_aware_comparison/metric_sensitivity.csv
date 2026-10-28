@@ -1,0 +1,26 @@
+metric,range_over_7_frozen_reference_variants,range_over_all_14_variants,class
+correct_actor_receive,1..1,1..1,"specification-determined: invariant across all 7 IK solvers sharing the frozen ball + stationed reference; changes only when ball generation or stationing changes (basic_ik, current_code)"
+correct_actor_kick,1..1,1..1,"specification-determined: invariant across all 7 IK solvers sharing the frozen ball + stationed reference; changes only when ball generation or stationing changes (basic_ik, current_code)"
+correct_foot_receive,1..1,0.8333..1,"specification-determined: invariant across all 7 IK solvers sharing the frozen ball + stationed reference; changes only when ball generation or stationing changes (basic_ik, current_code)"
+correct_foot_kick,1..1,0.5714..1,"specification-determined: invariant across all 7 IK solvers sharing the frozen ball + stationed reference; changes only when ball generation or stationing changes (basic_ik, current_code)"
+actor_and_foot_4way_receive,1..1,0.8333..1,"specification-determined: invariant across all 7 IK solvers sharing the frozen ball + stationed reference; changes only when ball generation or stationing changes (basic_ik, current_code)"
+actor_and_foot_4way_kick,1..1,0.5714..1,"specification-determined: invariant across all 7 IK solvers sharing the frozen ball + stationed reference; changes only when ball generation or stationing changes (basic_ik, current_code)"
+source_consistent_kick_before_receive,1..1,1..1,"specification-determined: invariant across all 7 IK solvers sharing the frozen ball + stationed reference; changes only when ball generation or stationing changes (basic_ik, current_code)"
+timing_error_receive_frames,0.1667..0.8333,0..2.667,solver-sensitive: varies across IK solvers on the same frozen ball + reference
+timing_error_kick_frames,0.2857..0.5714,0.2857..1.857,solver-sensitive: varies across IK solvers on the same frozen ball + reference
+event_chain_role_only,1..1,0.5..1,"specification-determined: invariant across all 7 IK solvers sharing the frozen ball + stationed reference; changes only when ball generation or stationing changes (basic_ik, current_code)"
+event_chain_center_gated_tau0.05,1..1,0..1,"specification-determined: invariant across all 7 IK solvers sharing the frozen ball + stationed reference; changes only when ball generation or stationing changes (basic_ik, current_code)"
+event_chain_mesh_gated_tau0.05,0.1667..1,0..1,solver-sensitive: varies across IK solvers on the same frozen ball + reference
+event_chain_mesh_gated_tau0.08,1..1,0..1,"specification-determined: invariant across all 7 IK solvers sharing the frozen ball + stationed reference; changes only when ball generation or stationing changes (basic_ik, current_code)"
+geometry_abs_surface_deviation_m,9.856e-05..0.02804,9.856e-05..0.3187,solver-sensitive: varies across IK solvers on the same frozen ball + reference
+geometry_signed_surface_deviation_m,-0.02138..5.367e-05,-0.02138..0.3187,solver-sensitive: varies across IK solvers on the same frozen ball + reference
+penetration_abs_mesh_gap_m,0.01936..0.04746,0.01936..0.2945,solver-sensitive: varies across IK solvers on the same frozen ball + reference
+penetration_signed_mesh_gap_m,-0.04368..-0.01936,-0.04368..0.2895,solver-sensitive: varies across IK solvers on the same frozen ball + reference
+penetration_mesh_events_of_13,12..13,2..13,solver-sensitive: varies across IK solvers on the same frozen ball + reference
+penetration_toe_center_inside_of_13,4..12,0..12,solver-sensitive: varies across IK solvers on the same frozen ball + reference
+floor_mesh_penetration_max_m,0.02256..0.02699,0.01971..0.02699,solver-sensitive: varies across IK solvers on the same frozen ball + reference
+support_foot_displacement_m,0.4356..0.4682,0.4356..0.7466,solver-sensitive: varies across IK solvers on the same frozen ball + reference
+root_jerk_rms_m_s3,436.5..842.5,259.2..842.5,solver-sensitive: varies across IK solvers on the same frozen ball + reference
+joint_jerk_rms_rad_s3,585.4..1533,407.7..1533,solver-sensitive: varies across IK solvers on the same frozen ball + reference
+kick_foot_velocity_rmse_m_s,0.1844..0.9358,0.1437..0.9358,solver-sensitive: varies across IK solvers on the same frozen ball + reference
+kick_foot_peak_speed_m_s,3.518..4.179,3.518..4.737,solver-sensitive: varies across IK solvers on the same frozen ball + reference

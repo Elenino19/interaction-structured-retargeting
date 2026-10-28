@@ -1,0 +1,139 @@
+:root {
+  --ink: #1c2430;
+  --muted: #5c6770;
+  --paper: #f6f3ee;
+  --card: #fffcf8;
+  --line: #e2d9cc;
+  --accent: #0e3b48;
+  --accent-2: #8c4a2f;
+  --max: 880px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: "Iowan Old Style", Palatino, "Palatino Linotype", Georgia, serif;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+a { color: var(--accent); }
+
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 1.25rem; }
+
+header.hero {
+  background: var(--accent);
+  color: #f6f3ee;
+  padding: 3.2rem 0 2.4rem;
+}
+
+header.hero a { color: #f3d7c4; }
+
+.kicker {
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-family: system-ui, sans-serif;
+  font-size: 0.72rem;
+  margin: 0 0 0.8rem;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1.15;
+  margin: 0 0 1rem;
+}
+
+.lede { font-size: 1.15rem; margin: 0; max-width: 40rem; }
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.1rem;
+  margin-top: 1.6rem;
+  font-family: system-ui, sans-serif;
+  font-size: 0.92rem;
+}
+
+main section { padding: 2.2rem 0; border-bottom: 1px solid var(--line); }
+
+h2 {
+  font-size: 1.45rem;
+  font-weight: 500;
+  margin: 0 0 0.8rem;
+}
+
+h3 { font-size: 1.1rem; font-weight: 600; margin: 1.2rem 0 0.4rem; }
+
+.grid { display: grid; gap: 1rem; }
+
+@media (min-width: 720px) {
+  .grid.two { grid-template-columns: 1fr 1fr; }
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+}
+
+.card p:last-child { margin-bottom: 0; }
+
+.tag {
+  font-family: system-ui, sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+  margin: 0 0 0.35rem;
+}
+
+figure { margin: 1rem 0; }
+
+img, video { width: 100%; height: auto; border-radius: 10px; background: #ddd; }
+
+figcaption {
+  font-family: system-ui, sans-serif;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 0.45rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: system-ui, sans-serif;
+  font-size: 0.92rem;
+  background: var(--card);
+}
+
+th, td { text-align: left; padding: 0.45rem 0.5rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+
+th { font-weight: 600; }
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.86em;
+}
+
+.pending {
+  font-family: system-ui, sans-serif;
+  font-size: 0.95rem;
+  background: #fff6ea;
+  border: 1px solid #ead7b8;
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+}
+
+footer {
+  padding: 2rem 0 3rem;
+  color: var(--muted);
+  font-family: system-ui, sans-serif;
+  font-size: 0.88rem;
+}

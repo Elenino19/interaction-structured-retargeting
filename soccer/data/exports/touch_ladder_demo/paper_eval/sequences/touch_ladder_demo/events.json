@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "source": "data/exports/touch_ladder_demo/ball_cones.json",
+  "contacts": [
+    {
+      "frame": 0,
+      "player": "a",
+      "side": "left",
+      "kick_side": "right",
+      "kick_frame": 0,
+      "foot_alpha": 1.0,
+      "ball_foot_gap_px": 10.61315115150241,
+      "score": 0.08610927275071491,
+      "note": "Video starts on the first kick: support/ball side is left, kick foot is right."
+    },
+    {
+      "frame": 15,
+      "player": "b",
+      "side": "right",
+      "kick_side": "left",
+      "kick_frame": 21,
+      "foot_alpha": 1.0,
+      "ball_foot_gap_px": 4.843705696073503,
+      "score": 0.17112429201763515
+    },
+    {
+      "frame": 42,
+      "player": "a",
+      "side": "right",
+      "kick_side": "right",
+      "kick_frame": 45,
+      "foot_alpha": 1.0,
+      "ball_foot_gap_px": 6.625716872738011,
+      "score": 0.1311352121628075,
+      "note": "The right foot receives and carries the touch into the right-foot kick three frames later."
+    },
+    {
+      "frame": 71,
+      "player": "b",
+      "side": "right",
+      "kick_side": "right",
+      "kick_frame": 71,
+      "foot_alpha": 1.0,
+      "ball_foot_gap_px": 29.79081434717977,
+      "score": 0.0324772183263673
+    },
+    {
+      "frame": 90,
+      "player": "a",
+      "side": "left",
+      "kick_side": "left",
+      "kick_frame": 90,
+      "foot_alpha": 1.0,
+      "ball_foot_gap_px": 11.05119295126994,
+      "score": 0.08297933690412128
+    },
+    {
+      "frame": 110,
+      "player": "b",
+      "side": "right",
+      "kick_side": "right",
+      "kick_frame": 110,
+      "foot_alpha": 0.9812228024511307,
+      "ball_foot_gap_px": 2.597512023175955,
+      "score": 0.2779698840637036
+    },
+    {
+      "frame": 132,
+      "player": "a",
+      "side": "left",
+      "kick_side": "left",
+      "kick_frame": 132,
+      "foot_alpha": 1.0,
+      "ball_foot_gap_px": 8.10236027986898,
+      "score": 0.10986161492768269
+    }
+  ]
+}

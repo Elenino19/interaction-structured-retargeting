@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+title: >-
+  Interaction-Structured Motion Retargeting for Multi-Party
+  Humanoid–Object Interactions
+message: >-
+  If you use this software, cite Buwen Zhang, sole author of the original
+  project code. Third-party code, data, models, and assets keep their own
+  licenses. No project license, DOI, release date, or publication venue is
+  declared. Do not add preferred-citation until the paper is published.
+type: software
+authors:
+  - given-names: Buwen
+    family-names: Zhang
+abstract: >-
+  Kinematic retargeting for two Unitree G1 humanoids. Join studies a coupled
+  joint-contact objective (EXT-JC) with a documented smoothing repair on six
+  CORE4D carry clips. Soccer is a single-sequence case study of independent
+  event-conditioned inverse kinematics and a post-IK ball. Frozen v41 is a
+  visual baseline, not EXT-JC. Soccer does not jointly optimize the two robots.
+keywords:
+  - humanoid retargeting
+  - multi-party interaction
+  - kinematic reference
+# license: omitted. MIT is a candidate for original code and is not approved.
+# repository URL, affiliation, email, ORCID, DOI, and date-released: omitted.
+# preferred-citation: add only after publication, using AUTHORS_APPROVAL.md.

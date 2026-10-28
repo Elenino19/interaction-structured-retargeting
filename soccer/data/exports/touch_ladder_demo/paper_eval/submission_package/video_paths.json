@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "ik_rerun": false,
+  "source_redistribution": false,
+  "temporal_alignment": {
+    "frame_rate_conversion": "none",
+    "fps": 24.0,
+    "n_frames": 144,
+    "index_rule": "frame i in packed source clip = frame i in frozen robot preview = original time 203 + i/24 s"
+  },
+  "frozen_full_preview": {
+    "path": "data/exports/touch_ladder_demo/comparison/current_hop_timed_lateral.mp4",
+    "canonical_copy": "data/exports/touch_ladder_demo/g1_ball_cones_preview.mp4",
+    "paper_eval_copy": "data/exports/touch_ladder_demo/paper_eval/videos/full.mp4",
+    "sha256": "c904d2ed28760466df36261f35f6fd281049faf9618a1f266c51cad3dd46039e",
+    "include_in_paper_bundle": true
+  },
+  "ablation_comparison": {
+    "path": "data/exports/touch_ladder_demo/paper_eval/videos/comparison_2x2.mp4",
+    "include_in_paper_bundle": true
+  },
+  "source_clip_local_only": {
+    "path": "data/clips/touch_ladder_demo_source.mp4",
+    "original": "$SOCCER_SOURCE_VIDEO",
+    "start_s": 203.0,
+    "end_s": 209.0,
+    "sha256": "40b7e859a9b02790bf3ec930a7d113c08c8b8eb30c8f7ac8594a5cc5231bd601",
+    "include_in_paper_bundle": false
+  },
+  "source_robot_side_by_side_local_only": {
+    "path": "data/exports/touch_ladder_demo/paper_eval/submission_package/local_only/source_robot_side_by_side.mp4",
+    "include_in_paper_bundle": false,
+    "note": "hstack of packed source and frozen Full; labels 24 fps; not for redistribution"
+  }
+}

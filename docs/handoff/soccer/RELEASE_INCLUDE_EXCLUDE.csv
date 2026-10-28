@@ -1,0 +1,31 @@
+item,decision,reason
+scripts/*.py,include,Method and evaluation. Strip or parameterize absolute $HOME paths before publication.
+tests/*.py,include,No private data.
+docs/*.md,include,Claim language should stay consistent with KNOWN_LIMITATIONS.md.
+README.md,include_after_edit,Current README points at local videos. Integration Agent should add the license boundary and not imply the source clip is in the repo.
+release_handoff/soccer/,include,This handoff.
+release_handoff/soccer/public_export/,include,Sanitized display copies. No source pixels.
+data/exports/touch_ladder_demo/g1/robot_a.npz,include,Frozen Full.
+data/exports/touch_ladder_demo/g1/robot_b.npz,include,Frozen Full.
+data/exports/touch_ladder_demo/g1/scales.json,include,
+data/exports/touch_ladder_demo/ball_cones.npz,include,Frozen ball.
+data/exports/touch_ladder_demo/ball_cones.json,include,Frozen annotations.
+data/exports/touch_ladder_demo/smplx_joints.npz,include_with_caveat,Derived GVHMR joints. State the upstream licenses. Not mocap.
+data/exports/touch_ladder_demo/comparison/current_hop_timed_lateral.mp4,include,Accepted robot-only render.
+data/exports/touch_ladder_demo/paper_eval/,include_selective,"Include summary CSV/JSON, event_coordination_extension reports, object_aware_comparison reports, submission_package figures that have no source frames. Exclude local_only/."
+data/exports/touch_ladder_demo/g1/archive/,exclude,Historical IK attempts. Not the accepted result. Large and confusing.
+data/exports/touch_ladder_demo/experiments/ablation/,include_selective,Variant NPZ and metrics are useful. Previews are robot-only and may be included. Do not present them as the accepted Full.
+data/clips/touch_ladder_demo_source.mp4,exclude,No redistribution permission.
+data/clips/touch_ladder_demo_player_a.mp4,exclude,Derived from the source video.
+data/clips/touch_ladder_demo_player_b.mp4,exclude,Derived from the source video.
+data/clips/touch_ladder_demo_prep.json,include_redacted,Remove the absolute private video path or keep it only in a local untracked file.
+data/gvhmr/,exclude,GVHMR checkpoints and results.pt. Large and separately licensed.
+data/raw/,exclude,Unrelated downloads. Not the accepted sequence. .gitignore already excludes them.
+data/review/,exclude,Review frames from other videos.
+data/exports/touch_ladder_demo/paper_eval/submission_package/local_only/,exclude,Source frames.
+.gitignore,include,Already excludes clips, gvhmr, raw, exports, checkpoints. Integration Agent must force-add the specific frozen NPZ and robot video if those directories stay ignored.
+.tools/,exclude,Local gh binary.
+.venv/ and third_party/,exclude,Not present as the project venv; do not copy CORE4D or GVHMR trees.
+.git/,exclude,Do not nest this git history inside the unified release.
+__pycache__/,exclude,
+No Sketchfab asset,exclude,None exists. Do not download one during integration.

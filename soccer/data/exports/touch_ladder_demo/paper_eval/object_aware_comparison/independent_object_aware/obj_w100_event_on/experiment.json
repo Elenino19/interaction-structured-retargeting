@@ -1,0 +1,23 @@
+{
+  "variant": "obj_w100_event_on",
+  "event_ik": true,
+  "ball_term_weight": 100.0,
+  "ball_term_distance_m": 0.11,
+  "ball_term_frames": "this robot's annotated receive and kick frames only",
+  "reference": "accepted Full IK target keypoints (shared verbatim)",
+  "ball": {
+    "sha256": "b608f0a9ea049d33067bdb421a0c24a0f0cdc8ee55cf454444f0de9c56fef47f",
+    "note": "frozen Full ball, verbatim"
+  },
+  "ik_config": {
+    "iterations": 340,
+    "learning_rate": 0.04,
+    "nominal_pelvis_height": 0.793,
+    "keypoint_weight": 1.0,
+    "root_regularization_weight": 0.35,
+    "velocity_weight": 0.035,
+    "acceleration_weight": 0.08
+  },
+  "communication_between_robots": "none",
+  "created_at": "2026-10-24T16:37:25.863154+00:00"
+}

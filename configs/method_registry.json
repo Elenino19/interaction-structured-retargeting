@@ -1,0 +1,24 @@
+{
+  "paper_title": "Interaction-Structured Motion Retargeting for Multi-Party Humanoid–Object Interactions",
+  "manuscript": "Draft v6.2 was checked outside this tree. Table I matches evaluation/join/postprocess_metrics.csv. Fig. 2 and the source half of Fig. 4 are not bundled.",
+  "join": {
+    "setting": "Six CORE4D-Real clips, action join, obstacle box, obs0: 20231108/018,019,020,108,109,110. Two Unitree G1 29-DoF robots. Object pose is an input.",
+    "split": {"train_dev": ["018", "019", "108"], "val": ["020"], "test": ["109", "110"]},
+    "methods": [
+      {"id": "A", "name": "Independent IK", "role": "Historical per-person IK and the J0 ablation. Not the strong baseline."},
+      {"id": "B", "name": "Frozen v41", "role": "Visually accepted Join reference. J4 component stack, warm-started. Not EXT-JC. Inter-robot clearance term is inactive on these takes."},
+      {"id": "C", "name": "OA-Independent", "role": "Strong independent baseline. Same J4 objective and budget as v41, one robot at a time."},
+      {"id": "D", "name": "Separable contact surrogate", "role": "Same as EXT-JC except the product s1*s2 is replaced by (s1+s2)/2, weight 10, then the same smoothing repair as F."},
+      {"id": "E", "name": "EXT-JC w10 unrepaired", "role": "J4 plus L_JC = mean_t (1 - s1*s2) on source joint-carry frames, weight 10. Not the final visual result."},
+      {"id": "F", "name": "EXT-JC w10 + smoothing repair", "role": "Final coupled Join method. E, then the frozen clearance smoothing recipe, then ext_jc_postprocess.py. The loss is not changed."}
+    ],
+    "do_not_conflate": ["cold-start J4", "frozen v41", "unrepaired EXT-JC", "repaired EXT-JC"],
+    "final_numbers": "evaluation/join/postprocess_metrics.csv rows ext_repaired. Do not replace them with the unrepaired n=5 row in paper_ready_results_table.csv."
+  },
+  "soccer": {
+    "setting": "One 144-frame, 24 fps sequence. Two independent G1 solves. Ball synthesized after IK.",
+    "method": "Frozen Full: event-conditioned independent Adam IK (accepted run: 340 iterations, lr 0.04) plus post-IK snap_ball_to_g1_feet.",
+    "not_claimed": ["cross-agent joint optimization", "EXT-JC", "automatic event discovery", "physics", "mocap", "real-robot execution"],
+    "reproduction_limit": "The current retarget_dual_g1_soccer.py default is 260 iterations and its stationing code has changed since 2026-10-01. Rerunning it does not reproduce the frozen NPZ."
+  }
+}

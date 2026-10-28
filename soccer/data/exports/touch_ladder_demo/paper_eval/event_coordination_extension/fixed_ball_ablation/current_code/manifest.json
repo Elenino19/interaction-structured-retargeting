@@ -1,0 +1,361 @@
+{
+  "schema_version": "1.1.0",
+  "experiment": "touch_ladder_fixed_ball_event_ik_ablation",
+  "stationing": "current_code",
+  "primary_order": [
+    "event_off",
+    "event_on",
+    "event_on_full_recipe"
+  ],
+  "iterations": 340,
+  "frozen_ball_sha256": "b608f0a9ea049d33067bdb421a0c24a0f0cdc8ee55cf454444f0de9c56fef47f",
+  "variants": {
+    "event_off": {
+      "variant": "event_off",
+      "stationing": "current_code",
+      "label": "Event IK OFF",
+      "event_foot_role_windows": false,
+      "event_loss_terms": false,
+      "event_plant_mask_only": false,
+      "soccer_weights": {
+        "support_plant": 6.0,
+        "support_floor": 6.0,
+        "kick_velocity": 0.0,
+        "event_keypoint_boost": false,
+        "event_smooth_relaxation": false
+      },
+      "ik_config": {
+        "iterations": 340,
+        "learning_rate": 0.04,
+        "nominal_pelvis_height": 0.793,
+        "keypoint_weight": 1.0,
+        "root_regularization_weight": 0.35,
+        "velocity_weight": 0.035,
+        "acceleration_weight": 0.08
+      },
+      "reference": "current-code station_pair_on_ladder reference rebuilt from smplx_joints.npz",
+      "ball": {
+        "path": "soccer/data/exports/touch_ladder_demo/ball_cones.npz",
+        "sha256": "b608f0a9ea049d33067bdb421a0c24a0f0cdc8ee55cf454444f0de9c56fef47f",
+        "note": "Frozen Full ball copied verbatim; never re-snapped."
+      },
+      "initialisation": "Deterministic: joint-limit midpoints, zero root delta, shoulder yaw; the accepted Full joint solution is never loaded as a start point.",
+      "iterations": 340,
+      "provenance": "fresh_340_iteration_fixed_ball_run",
+      "per_player": {
+        "a": {
+          "kick_window_frames": 0,
+          "plant_nonzero_frames": 37,
+          "final_loss": 0.023369116933279102,
+          "best_loss": 0.02307092476530292
+        },
+        "b": {
+          "kick_window_frames": 0,
+          "plant_nonzero_frames": 46,
+          "final_loss": 0.016485584118868413,
+          "best_loss": 0.01621450885895803
+        }
+      },
+      "elapsed_s_this_invocation": 15.91020847699997,
+      "created_at": "2026-10-22T14:10:36.599416+00:00",
+      "inputs": {
+        "joints": "soccer/data/exports/touch_ladder_demo/smplx_joints.npz",
+        "joints_sha256": "f03a8c5bb6e3e658c92b6ac7dc3915754100c07ef5cbfb010fc149cdb0ae3b4b",
+        "contacts": "soccer/data/exports/touch_ladder_demo/ball_cones.json",
+        "contacts_sha256": "cad51d649d353ad0918834fb0f03c89aafdbb1fbdb8c42b6d25f60be85bb2156",
+        "accepted_g1_sha256_read_only": {
+          "robot_a.npz": "ef5277f2db390ef8119a3bcc1fe21f801e8b72e4a3843fd3b2fa9a3b9f80d96b",
+          "robot_b.npz": "eb5646a331064c83772351a74cc3dc951618ee69ff00e4130ebe6c212a54568b"
+        }
+      },
+      "reproduction_check": {
+        "raw_vs_accepted_g1": {
+          "robot_a.npz": {
+            "target_keypoints": {
+              "shape_match": true,
+              "max_abs_diff": 0.7809345694231202,
+              "mean_abs_diff": 0.09178316784485825
+            },
+            "joint_positions": {
+              "shape_match": true,
+              "max_abs_diff": 0.6924929726838188,
+              "mean_abs_diff": 0.032846581257380936
+            },
+            "root_translation": {
+              "shape_match": true,
+              "max_abs_diff": 0.7862859294695959,
+              "mean_abs_diff": 0.09705036682428068
+            },
+            "root_yaw": {
+              "shape_match": true,
+              "max_abs_diff": 0.18367194792659025,
+              "mean_abs_diff": 0.009033268290004455
+            },
+            "robot_keypoints": {
+              "shape_match": true,
+              "max_abs_diff": 0.8052028201066297,
+              "mean_abs_diff": 0.09595032218621265
+            }
+          },
+          "robot_b.npz": {
+            "target_keypoints": {
+              "shape_match": true,
+              "max_abs_diff": 0.7007021558818873,
+              "mean_abs_diff": 0.07432936905766364
+            },
+            "joint_positions": {
+              "shape_match": true,
+              "max_abs_diff": 0.5125419364478367,
+              "mean_abs_diff": 0.036709975856863516
+            },
+            "root_translation": {
+              "shape_match": true,
+              "max_abs_diff": 0.697554391163091,
+              "mean_abs_diff": 0.07845298934264149
+            },
+            "root_yaw": {
+              "shape_match": true,
+              "max_abs_diff": 0.08821944971949769,
+              "mean_abs_diff": 0.007535669640299879
+            },
+            "robot_keypoints": {
+              "shape_match": true,
+              "max_abs_diff": 0.6975547728115898,
+              "mean_abs_diff": 0.07772609102610274
+            }
+          }
+        },
+        "aligned_vs_accepted_g1": {
+          "robot_a.npz": {
+            "target_keypoints": {
+              "shape_match": true,
+              "max_abs_diff": 0.7809345694231202,
+              "mean_abs_diff": 0.09186605658823452
+            },
+            "joint_positions": {
+              "shape_match": true,
+              "max_abs_diff": 0.6924929726838188,
+              "mean_abs_diff": 0.032846581257380936
+            },
+            "root_translation": {
+              "shape_match": true,
+              "max_abs_diff": 0.7862859294695959,
+              "mean_abs_diff": 0.09712974444408413
+            },
+            "root_yaw": {
+              "shape_match": true,
+              "max_abs_diff": 0.18367194792659025,
+              "mean_abs_diff": 0.009033268290004455
+            },
+            "robot_keypoints": {
+              "shape_match": true,
+              "max_abs_diff": 0.8052028201066297,
+              "mean_abs_diff": 0.09603699599477257
+            }
+          },
+          "robot_b.npz": {
+            "target_keypoints": {
+              "shape_match": true,
+              "max_abs_diff": 0.7007021558818873,
+              "mean_abs_diff": 0.07492683585122425
+            },
+            "joint_positions": {
+              "shape_match": true,
+              "max_abs_diff": 0.5125419364478367,
+              "mean_abs_diff": 0.036709975856863516
+            },
+            "root_translation": {
+              "shape_match": true,
+              "max_abs_diff": 0.697554391163091,
+              "mean_abs_diff": 0.07905045613620211
+            },
+            "root_yaw": {
+              "shape_match": true,
+              "max_abs_diff": 0.08821944971949769,
+              "mean_abs_diff": 0.007535669640299879
+            },
+            "robot_keypoints": {
+              "shape_match": true,
+              "max_abs_diff": 0.6975547728115898,
+              "mean_abs_diff": 0.07832355781966337
+            }
+          }
+        }
+      }
+    },
+    "event_on": {
+      "variant": "event_on",
+      "stationing": "current_code",
+      "label": "Event IK ON",
+      "event_foot_role_windows": true,
+      "event_loss_terms": true,
+      "event_plant_mask_only": false,
+      "soccer_weights": {
+        "support_plant": 6.0,
+        "support_floor": 6.0,
+        "kick_velocity": 24.0,
+        "event_keypoint_boost": true,
+        "event_smooth_relaxation": true
+      },
+      "ik_config": {
+        "iterations": 340,
+        "learning_rate": 0.04,
+        "nominal_pelvis_height": 0.793,
+        "keypoint_weight": 1.0,
+        "root_regularization_weight": 0.35,
+        "velocity_weight": 0.035,
+        "acceleration_weight": 0.08
+      },
+      "reference": "current-code station_pair_on_ladder reference rebuilt from smplx_joints.npz",
+      "ball": {
+        "path": "soccer/data/exports/touch_ladder_demo/ball_cones.npz",
+        "sha256": "b608f0a9ea049d33067bdb421a0c24a0f0cdc8ee55cf454444f0de9c56fef47f",
+        "note": "Frozen Full ball copied verbatim; never re-snapped."
+      },
+      "initialisation": "Deterministic: joint-limit midpoints, zero root delta, shoulder yaw; the accepted Full joint solution is never loaded as a start point.",
+      "iterations": 340,
+      "provenance": "fresh_340_iteration_fixed_ball_run",
+      "per_player": {
+        "a": {
+          "kick_window_frames": 36,
+          "plant_nonzero_frames": 51,
+          "final_loss": 0.054774792471772436,
+          "best_loss": 0.054774792471772436
+        },
+        "b": {
+          "kick_window_frames": 33,
+          "plant_nonzero_frames": 59,
+          "final_loss": 0.03769893562709284,
+          "best_loss": 0.03769893562709284
+        }
+      },
+      "elapsed_s_this_invocation": 13.559757192000006,
+      "created_at": "2026-10-22T14:10:50.159865+00:00",
+      "inputs": {
+        "joints": "soccer/data/exports/touch_ladder_demo/smplx_joints.npz",
+        "joints_sha256": "f03a8c5bb6e3e658c92b6ac7dc3915754100c07ef5cbfb010fc149cdb0ae3b4b",
+        "contacts": "soccer/data/exports/touch_ladder_demo/ball_cones.json",
+        "contacts_sha256": "cad51d649d353ad0918834fb0f03c89aafdbb1fbdb8c42b6d25f60be85bb2156",
+        "accepted_g1_sha256_read_only": {
+          "robot_a.npz": "ef5277f2db390ef8119a3bcc1fe21f801e8b72e4a3843fd3b2fa9a3b9f80d96b",
+          "robot_b.npz": "eb5646a331064c83772351a74cc3dc951618ee69ff00e4130ebe6c212a54568b"
+        }
+      },
+      "reproduction_check": {
+        "raw_vs_accepted_g1": {
+          "robot_a.npz": {
+            "target_keypoints": {
+              "shape_match": true,
+              "max_abs_diff": 0.7809345694231202,
+              "mean_abs_diff": 0.09178316784485825
+            },
+            "joint_positions": {
+              "shape_match": true,
+              "max_abs_diff": 0.770779447167097,
+              "mean_abs_diff": 0.017380158199100142
+            },
+            "root_translation": {
+              "shape_match": true,
+              "max_abs_diff": 0.7590022994575711,
+              "mean_abs_diff": 0.09226691634893978
+            },
+            "root_yaw": {
+              "shape_match": true,
+              "max_abs_diff": 0.16499818563951774,
+              "mean_abs_diff": 0.004835202420942454
+            },
+            "robot_keypoints": {
+              "shape_match": true,
+              "max_abs_diff": 0.8187355493556802,
+              "mean_abs_diff": 0.09314337906122296
+            }
+          },
+          "robot_b.npz": {
+            "target_keypoints": {
+              "shape_match": true,
+              "max_abs_diff": 0.7007021558818873,
+              "mean_abs_diff": 0.07432936905766364
+            },
+            "joint_positions": {
+              "shape_match": true,
+              "max_abs_diff": 1.0011921752907118,
+              "mean_abs_diff": 0.023075044773068803
+            },
+            "root_translation": {
+              "shape_match": true,
+              "max_abs_diff": 0.6975743523626721,
+              "mean_abs_diff": 0.0751614884319563
+            },
+            "root_yaw": {
+              "shape_match": true,
+              "max_abs_diff": 0.05294296325849146,
+              "mean_abs_diff": 0.0034498832300421233
+            },
+            "robot_keypoints": {
+              "shape_match": true,
+              "max_abs_diff": 0.6975747082075514,
+              "mean_abs_diff": 0.07563497060298727
+            }
+          }
+        },
+        "aligned_vs_accepted_g1": {
+          "robot_a.npz": {
+            "target_keypoints": {
+              "shape_match": true,
+              "max_abs_diff": 0.7809345694231202,
+              "mean_abs_diff": 0.0916662690686414
+            },
+            "joint_positions": {
+              "shape_match": true,
+              "max_abs_diff": 0.770779447167097,
+              "mean_abs_diff": 0.017380158199100142
+            },
+            "root_translation": {
+              "shape_match": true,
+              "max_abs_diff": 0.7590022994575711,
+              "mean_abs_diff": 0.0920419399470259
+            },
+            "root_yaw": {
+              "shape_match": true,
+              "max_abs_diff": 0.16499818563951774,
+              "mean_abs_diff": 0.004835202420942454
+            },
+            "robot_keypoints": {
+              "shape_match": true,
+              "max_abs_diff": 0.8187355493556802,
+              "mean_abs_diff": 0.0929681645595083
+            }
+          },
+          "robot_b.npz": {
+            "target_keypoints": {
+              "shape_match": true,
+              "max_abs_diff": 0.7007021558818873,
+              "mean_abs_diff": 0.07490716645724077
+            },
+            "joint_positions": {
+              "shape_match": true,
+              "max_abs_diff": 1.0011921752907118,
+              "mean_abs_diff": 0.023075044773068803
+            },
+            "root_translation": {
+              "shape_match": true,
+              "max_abs_diff": 0.6975743523626721,
+              "mean_abs_diff": 0.07571551057169029
+            },
+            "root_yaw": {
+              "shape_match": true,
+              "max_abs_diff": 0.05294296325849146,
+              "mean_abs_diff": 0.0034498832300421233
+            },
+            "robot_keypoints": {
+              "shape_match": true,
+              "max_abs_diff": 0.6975747082075514,
+              "mean_abs_diff": 0.07620409304399657
+            }
+          }
+        }
+      }
+    }
+  },
+  "claim_boundary": "Single-sequence controlled kinematic comparison on a prescribed, event/scene-conditioned ball path. The shared reference carries event-timed stationing and event-frame foot grounding, so the comparison isolates event-conditioned IK refinement (foot-role windows, event loss terms, event plant mask), not all event information. Not physics, not task success."
+}

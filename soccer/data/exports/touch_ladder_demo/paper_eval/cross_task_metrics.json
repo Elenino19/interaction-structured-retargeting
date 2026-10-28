@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0.0",
+  "units": {
+    "interaction_distance": "m",
+    "interaction_timing": "frames and s",
+    "geometry": "m",
+    "smoothness_root": "m/s^3",
+    "smoothness_joint": "rad/s^3"
+  },
+  "categories": {
+    "basic_ik": {
+      "interaction_distance": 0.2087154121949086,
+      "interaction_timing_frames": 0.5384615384615384,
+      "geometry_floor_penetration_max_m": 0.012938032933789912,
+      "geometry_cone_surface_clearance_min_m": -0.1320778517696875,
+      "smoothness_root_jerk_rms_m_per_s3": 259.6312019326244,
+      "smoothness_joint_jerk_rms_rad_per_s3": 407.6957217398562
+    },
+    "support": {
+      "interaction_distance": 0.20923166555044242,
+      "interaction_timing_frames": 0.5384615384615384,
+      "geometry_floor_penetration_max_m": 0.013097442457071996,
+      "geometry_cone_surface_clearance_min_m": -0.1320778517696875,
+      "smoothness_root_jerk_rms_m_per_s3": 259.19346050187704,
+      "smoothness_joint_jerk_rms_rad_per_s3": 507.5641244873297
+    },
+    "event_semantics": {
+      "interaction_distance": 0.2008648911615339,
+      "interaction_timing_frames": 0.6923076923076923,
+      "geometry_floor_penetration_max_m": 0.015651426613951903,
+      "geometry_cone_surface_clearance_min_m": -0.1320778517696875,
+      "smoothness_root_jerk_rms_m_per_s3": 395.38123912410043,
+      "smoothness_joint_jerk_rms_rad_per_s3": 1086.826333556823
+    },
+    "full": {
+      "interaction_distance": 0.08976116421661093,
+      "interaction_timing_frames": 0.38461538461538464,
+      "geometry_floor_penetration_max_m": 0.013547731983952194,
+      "geometry_cone_surface_clearance_min_m": 0.015204811403152788,
+      "smoothness_root_jerk_rms_m_per_s3": 784.3240509518538,
+      "smoothness_joint_jerk_rms_rad_per_s3": 1241.5896103258328
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0.0",
+  "experiment": "touch_ladder_ablation",
+  "variants": {
+    "basic_ik": {
+      "label": "Basic IK",
+      "support": false,
+      "event_semantics": false,
+      "ball_event_correction": false,
+      "position_correction": false
+    },
+    "support": {
+      "label": "+ support",
+      "support": true,
+      "event_semantics": false,
+      "ball_event_correction": false,
+      "position_correction": false
+    },
+    "event_semantics": {
+      "label": "+ event semantics",
+      "support": true,
+      "event_semantics": true,
+      "ball_event_correction": false,
+      "position_correction": false
+    },
+    "full": {
+      "label": "Full",
+      "support": true,
+      "event_semantics": true,
+      "ball_event_correction": true,
+      "position_correction": true
+    }
+  },
+  "iterations": 340,
+  "comparison_video": "data/exports/touch_ladder_demo/experiments/ablation/comparison_2x2.mp4",
+  "claim_boundary": "Single-sequence internal ablation with geometric proxies; not a population benchmark or physics validation."
+}

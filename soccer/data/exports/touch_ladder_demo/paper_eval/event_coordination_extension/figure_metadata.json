@@ -1,0 +1,54 @@
+{
+  "interaction_timeline": {
+    "variants": [
+      [
+        "full",
+        "Accepted Full (frozen robots, frozen ball)"
+      ],
+      [
+        "fixed_ball/frozen_reference/event_off",
+        "Fixed ball, shared reference: event IK OFF"
+      ],
+      [
+        "fixed_ball/frozen_reference/event_on",
+        "Fixed ball, shared reference: event IK ON"
+      ]
+    ],
+    "frames": 144
+  },
+  "qualitative_comparison": {
+    "variants": [
+      [
+        "fixed_ball/frozen_reference/event_off",
+        "Event IK OFF"
+      ],
+      [
+        "fixed_ball/frozen_reference/event_on",
+        "Event IK ON"
+      ]
+    ],
+    "events": [
+      [
+        "e01_kick",
+        21,
+        "f21: B left-foot kick"
+      ],
+      [
+        "e02_recv",
+        42,
+        "f42: A right-foot receive"
+      ],
+      [
+        "e03_kick",
+        71,
+        "f71: B right-foot touch"
+      ],
+      [
+        "e05_kick",
+        110,
+        "f110: B right-foot touch"
+      ]
+    ],
+    "note": "Selected frames; not aggregate scores. Rendered G1 previews only; no source video frames."
+  }
+}

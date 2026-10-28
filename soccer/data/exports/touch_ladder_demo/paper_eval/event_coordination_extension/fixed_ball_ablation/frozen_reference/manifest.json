@@ -1,0 +1,366 @@
+{
+  "schema_version": "1.1.0",
+  "experiment": "touch_ladder_fixed_ball_event_ik_ablation",
+  "stationing": "frozen_reference",
+  "primary_order": [
+    "event_off",
+    "event_on",
+    "event_on_full_recipe"
+  ],
+  "iterations": 340,
+  "frozen_ball_sha256": "b608f0a9ea049d33067bdb421a0c24a0f0cdc8ee55cf454444f0de9c56fef47f",
+  "variants": {
+    "event_off": {
+      "variant": "event_off",
+      "stationing": "frozen_reference",
+      "label": "Event IK OFF",
+      "event_foot_role_windows": false,
+      "event_loss_terms": false,
+      "event_plant_mask_only": false,
+      "soccer_weights": {
+        "support_plant": 6.0,
+        "support_floor": 6.0,
+        "kick_velocity": 0.0,
+        "event_keypoint_boost": false,
+        "event_smooth_relaxation": false
+      },
+      "ik_config": {
+        "iterations": 340,
+        "learning_rate": 0.04,
+        "nominal_pelvis_height": 0.793,
+        "keypoint_weight": 1.0,
+        "root_regularization_weight": 0.35,
+        "velocity_weight": 0.035,
+        "acceleration_weight": 0.08
+      },
+      "reference": "accepted Full IK target keypoints (g1/robot_*.npz::target_keypoints), shared verbatim",
+      "ball": {
+        "path": "soccer/data/exports/touch_ladder_demo/ball_cones.npz",
+        "sha256": "b608f0a9ea049d33067bdb421a0c24a0f0cdc8ee55cf454444f0de9c56fef47f",
+        "note": "Frozen Full ball copied verbatim; never re-snapped."
+      },
+      "initialisation": "Deterministic: joint-limit midpoints, zero root delta, shoulder yaw; the accepted Full joint solution is never loaded as a start point.",
+      "iterations": 340,
+      "provenance": "fresh_340_iteration_fixed_ball_run",
+      "per_player": {
+        "a": {
+          "kick_window_frames": 0,
+          "plant_nonzero_frames": 50,
+          "final_loss": 0.023302539416785433,
+          "best_loss": 0.023178269091341602
+        },
+        "b": {
+          "kick_window_frames": 0,
+          "plant_nonzero_frames": 55,
+          "final_loss": 0.01740525736432302,
+          "best_loss": 0.016932627961691784
+        }
+      },
+      "elapsed_s_this_invocation": 16.874491172000035,
+      "created_at": "2026-10-22T14:09:43.948493+00:00",
+      "inputs": {
+        "joints": "soccer/data/exports/touch_ladder_demo/smplx_joints.npz",
+        "joints_sha256": "f03a8c5bb6e3e658c92b6ac7dc3915754100c07ef5cbfb010fc149cdb0ae3b4b",
+        "contacts": "soccer/data/exports/touch_ladder_demo/ball_cones.json",
+        "contacts_sha256": "cad51d649d353ad0918834fb0f03c89aafdbb1fbdb8c42b6d25f60be85bb2156",
+        "accepted_g1_sha256_read_only": {
+          "robot_a.npz": "ef5277f2db390ef8119a3bcc1fe21f801e8b72e4a3843fd3b2fa9a3b9f80d96b",
+          "robot_b.npz": "eb5646a331064c83772351a74cc3dc951618ee69ff00e4130ebe6c212a54568b"
+        }
+      },
+      "reproduction_check": {
+        "raw_vs_accepted_g1": {
+          "robot_a.npz": {
+            "target_keypoints": {
+              "shape_match": true,
+              "max_abs_diff": 0.0,
+              "mean_abs_diff": 0.0
+            },
+            "joint_positions": {
+              "shape_match": true,
+              "max_abs_diff": 0.7364207905175306,
+              "mean_abs_diff": 0.03220958910948094
+            },
+            "root_translation": {
+              "shape_match": true,
+              "max_abs_diff": 0.09993133076029759,
+              "mean_abs_diff": 0.006829971492556416
+            },
+            "root_yaw": {
+              "shape_match": true,
+              "max_abs_diff": 0.1849219285180268,
+              "mean_abs_diff": 0.009098904729566669
+            },
+            "robot_keypoints": {
+              "shape_match": true,
+              "max_abs_diff": 0.11049690818096436,
+              "mean_abs_diff": 0.005796640467492199
+            }
+          },
+          "robot_b.npz": {
+            "target_keypoints": {
+              "shape_match": true,
+              "max_abs_diff": 0.0,
+              "mean_abs_diff": 0.0
+            },
+            "joint_positions": {
+              "shape_match": true,
+              "max_abs_diff": 0.500840710684157,
+              "mean_abs_diff": 0.0392734994175917
+            },
+            "root_translation": {
+              "shape_match": true,
+              "max_abs_diff": 0.0979277541913035,
+              "mean_abs_diff": 0.006282181441756986
+            },
+            "root_yaw": {
+              "shape_match": true,
+              "max_abs_diff": 0.0885957407089637,
+              "mean_abs_diff": 0.007924464209705948
+            },
+            "robot_keypoints": {
+              "shape_match": true,
+              "max_abs_diff": 0.10074816012993337,
+              "mean_abs_diff": 0.005264819713329622
+            }
+          }
+        }
+      }
+    },
+    "event_on": {
+      "variant": "event_on",
+      "stationing": "frozen_reference",
+      "label": "Event IK ON",
+      "event_foot_role_windows": true,
+      "event_loss_terms": true,
+      "event_plant_mask_only": false,
+      "soccer_weights": {
+        "support_plant": 6.0,
+        "support_floor": 6.0,
+        "kick_velocity": 24.0,
+        "event_keypoint_boost": true,
+        "event_smooth_relaxation": true
+      },
+      "ik_config": {
+        "iterations": 340,
+        "learning_rate": 0.04,
+        "nominal_pelvis_height": 0.793,
+        "keypoint_weight": 1.0,
+        "root_regularization_weight": 0.35,
+        "velocity_weight": 0.035,
+        "acceleration_weight": 0.08
+      },
+      "reference": "accepted Full IK target keypoints (g1/robot_*.npz::target_keypoints), shared verbatim",
+      "ball": {
+        "path": "soccer/data/exports/touch_ladder_demo/ball_cones.npz",
+        "sha256": "b608f0a9ea049d33067bdb421a0c24a0f0cdc8ee55cf454444f0de9c56fef47f",
+        "note": "Frozen Full ball copied verbatim; never re-snapped."
+      },
+      "initialisation": "Deterministic: joint-limit midpoints, zero root delta, shoulder yaw; the accepted Full joint solution is never loaded as a start point.",
+      "iterations": 340,
+      "provenance": "fresh_340_iteration_fixed_ball_run",
+      "per_player": {
+        "a": {
+          "kick_window_frames": 36,
+          "plant_nonzero_frames": 61,
+          "final_loss": 0.0507268966701542,
+          "best_loss": 0.0507268966701542
+        },
+        "b": {
+          "kick_window_frames": 33,
+          "plant_nonzero_frames": 65,
+          "final_loss": 0.03642589740975677,
+          "best_loss": 0.03642589740975677
+        }
+      },
+      "elapsed_s_this_invocation": 8.942185304000077,
+      "created_at": "2026-10-22T14:09:52.891405+00:00",
+      "inputs": {
+        "joints": "soccer/data/exports/touch_ladder_demo/smplx_joints.npz",
+        "joints_sha256": "f03a8c5bb6e3e658c92b6ac7dc3915754100c07ef5cbfb010fc149cdb0ae3b4b",
+        "contacts": "soccer/data/exports/touch_ladder_demo/ball_cones.json",
+        "contacts_sha256": "cad51d649d353ad0918834fb0f03c89aafdbb1fbdb8c42b6d25f60be85bb2156",
+        "accepted_g1_sha256_read_only": {
+          "robot_a.npz": "ef5277f2db390ef8119a3bcc1fe21f801e8b72e4a3843fd3b2fa9a3b9f80d96b",
+          "robot_b.npz": "eb5646a331064c83772351a74cc3dc951618ee69ff00e4130ebe6c212a54568b"
+        }
+      },
+      "reproduction_check": {
+        "raw_vs_accepted_g1": {
+          "robot_a.npz": {
+            "target_keypoints": {
+              "shape_match": true,
+              "max_abs_diff": 0.0,
+              "mean_abs_diff": 0.0
+            },
+            "joint_positions": {
+              "shape_match": true,
+              "max_abs_diff": 0.6319872020130856,
+              "mean_abs_diff": 0.01443419148371786
+            },
+            "root_translation": {
+              "shape_match": true,
+              "max_abs_diff": 0.04763530085217593,
+              "mean_abs_diff": 0.002535095259666433
+            },
+            "root_yaw": {
+              "shape_match": true,
+              "max_abs_diff": 0.08231146888465479,
+              "mean_abs_diff": 0.004029674955604451
+            },
+            "robot_keypoints": {
+              "shape_match": true,
+              "max_abs_diff": 0.0972792060720471,
+              "mean_abs_diff": 0.0029332809979820927
+            }
+          },
+          "robot_b.npz": {
+            "target_keypoints": {
+              "shape_match": true,
+              "max_abs_diff": 0.0,
+              "mean_abs_diff": 0.0
+            },
+            "joint_positions": {
+              "shape_match": true,
+              "max_abs_diff": 1.0089900881421834,
+              "mean_abs_diff": 0.022676324961394812
+            },
+            "root_translation": {
+              "shape_match": true,
+              "max_abs_diff": 0.05945985544385268,
+              "mean_abs_diff": 0.002733155137999035
+            },
+            "root_yaw": {
+              "shape_match": true,
+              "max_abs_diff": 0.037069168504584304,
+              "mean_abs_diff": 0.00316956742355627
+            },
+            "robot_keypoints": {
+              "shape_match": true,
+              "max_abs_diff": 0.14039122248617653,
+              "mean_abs_diff": 0.0031810103498346237
+            }
+          }
+        }
+      }
+    },
+    "event_on_full_recipe": {
+      "variant": "event_on_full_recipe",
+      "stationing": "frozen_reference",
+      "label": "Event IK ON (accepted recipe)",
+      "event_foot_role_windows": true,
+      "event_loss_terms": true,
+      "event_plant_mask_only": true,
+      "soccer_weights": {
+        "support_plant": 6.0,
+        "support_floor": 6.0,
+        "kick_velocity": 24.0,
+        "event_keypoint_boost": true,
+        "event_smooth_relaxation": true
+      },
+      "ik_config": {
+        "iterations": 340,
+        "learning_rate": 0.04,
+        "nominal_pelvis_height": 0.793,
+        "keypoint_weight": 1.0,
+        "root_regularization_weight": 0.35,
+        "velocity_weight": 0.035,
+        "acceleration_weight": 0.08
+      },
+      "reference": "accepted Full IK target keypoints (g1/robot_*.npz::target_keypoints), shared verbatim",
+      "ball": {
+        "path": "soccer/data/exports/touch_ladder_demo/ball_cones.npz",
+        "sha256": "b608f0a9ea049d33067bdb421a0c24a0f0cdc8ee55cf454444f0de9c56fef47f",
+        "note": "Frozen Full ball copied verbatim; never re-snapped."
+      },
+      "initialisation": "Deterministic: joint-limit midpoints, zero root delta, shoulder yaw; the accepted Full joint solution is never loaded as a start point.",
+      "iterations": 340,
+      "provenance": "fresh_340_iteration_fixed_ball_run",
+      "per_player": {
+        "a": {
+          "kick_window_frames": 36,
+          "plant_nonzero_frames": 19,
+          "final_loss": 0.05294914858405804,
+          "best_loss": 0.0507390389086664
+        },
+        "b": {
+          "kick_window_frames": 33,
+          "plant_nonzero_frames": 19,
+          "final_loss": 0.03572573035375556,
+          "best_loss": 0.035655062902636134
+        }
+      },
+      "elapsed_s_this_invocation": 9.963683805999835,
+      "created_at": "2026-10-22T14:10:02.855692+00:00",
+      "inputs": {
+        "joints": "soccer/data/exports/touch_ladder_demo/smplx_joints.npz",
+        "joints_sha256": "f03a8c5bb6e3e658c92b6ac7dc3915754100c07ef5cbfb010fc149cdb0ae3b4b",
+        "contacts": "soccer/data/exports/touch_ladder_demo/ball_cones.json",
+        "contacts_sha256": "cad51d649d353ad0918834fb0f03c89aafdbb1fbdb8c42b6d25f60be85bb2156",
+        "accepted_g1_sha256_read_only": {
+          "robot_a.npz": "ef5277f2db390ef8119a3bcc1fe21f801e8b72e4a3843fd3b2fa9a3b9f80d96b",
+          "robot_b.npz": "eb5646a331064c83772351a74cc3dc951618ee69ff00e4130ebe6c212a54568b"
+        }
+      },
+      "reproduction_check": {
+        "raw_vs_accepted_g1": {
+          "robot_a.npz": {
+            "target_keypoints": {
+              "shape_match": true,
+              "max_abs_diff": 0.0,
+              "mean_abs_diff": 0.0
+            },
+            "joint_positions": {
+              "shape_match": true,
+              "max_abs_diff": 0.6706469440727126,
+              "mean_abs_diff": 0.013245027728024494
+            },
+            "root_translation": {
+              "shape_match": true,
+              "max_abs_diff": 0.05149377488532725,
+              "mean_abs_diff": 0.0025014938534484495
+            },
+            "root_yaw": {
+              "shape_match": true,
+              "max_abs_diff": 0.07668110812643475,
+              "mean_abs_diff": 0.003649330103532014
+            },
+            "robot_keypoints": {
+              "shape_match": true,
+              "max_abs_diff": 0.11044740335810332,
+              "mean_abs_diff": 0.002661960959132113
+            }
+          },
+          "robot_b.npz": {
+            "target_keypoints": {
+              "shape_match": true,
+              "max_abs_diff": 0.0,
+              "mean_abs_diff": 0.0
+            },
+            "joint_positions": {
+              "shape_match": true,
+              "max_abs_diff": 1.0074142192612872,
+              "mean_abs_diff": 0.017458612720971968
+            },
+            "root_translation": {
+              "shape_match": true,
+              "max_abs_diff": 0.05761814159427442,
+              "mean_abs_diff": 0.0024885355910806584
+            },
+            "root_yaw": {
+              "shape_match": true,
+              "max_abs_diff": 0.045121748468370804,
+              "mean_abs_diff": 0.0024539282109363614
+            },
+            "robot_keypoints": {
+              "shape_match": true,
+              "max_abs_diff": 0.13930064286524435,
+              "mean_abs_diff": 0.0025605230750875697
+            }
+          }
+        }
+      }
+    }
+  },
+  "claim_boundary": "Single-sequence controlled kinematic comparison on a prescribed, event/scene-conditioned ball path. The shared reference carries event-timed stationing and event-frame foot grounding, so the comparison isolates event-conditioned IK refinement (foot-role windows, event loss terms, event plant mask), not all event information. Not physics, not task success."
+}

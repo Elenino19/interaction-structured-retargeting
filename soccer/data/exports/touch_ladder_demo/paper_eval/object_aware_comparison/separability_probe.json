@@ -1,0 +1,38 @@
+{
+  "perturbation": "B source joints: N(0,0.05 m) noise + 0.4 m lateral shift",
+  "stationing_station_pair_on_ladder": {
+    "robot_a_targets_max_abs_change": 0.0,
+    "robot_a_plant_max_abs_change": 0.0,
+    "uses_other_robot": false,
+    "note": "Only n = min(len_a, len_b) is shared; the per-player plan reads events + lane geometry."
+  },
+  "event_windows_contact_windows": {
+    "kick_max_abs_change": 0.0,
+    "plant_max_abs_change": 0.0,
+    "uses_other_robot": false
+  },
+  "ik_retarget_soccer": {
+    "iterations": 60,
+    "robot_a_joint_max_abs_change": 0.0,
+    "robot_a_root_max_abs_change": 0.0,
+    "uses_other_robot": false,
+    "note": "Signature takes one robot's targets; the loss has no term referencing the other robot or the ball."
+  },
+  "post_ik_align_second_pass_stations": {
+    "robot_a_root_max_abs_change": 0.0,
+    "robot_a_keypoints_max_abs_change": 0.0,
+    "uses_other_robot": false,
+    "note": "A's offset uses A's f0 right toe; B's offset uses B's f15/f21 toes."
+  },
+  "ball_snap_ball_to_g1_feet": {
+    "resnap_of_frozen_robots_reproduces_frozen_ball_max_abs": 0.0,
+    "ball_max_abs_change_when_B_perturbed": 0.09853105012379071,
+    "frames_changed": [
+      46,
+      143
+    ],
+    "n_frames_changed": 98,
+    "uses_other_robot": true,
+    "note": "Each waypoint reads the toucher's toe/ankle AND the other robot's pelvis (direction); cone X is the mean of both roots. Robots never receive feedback from the ball."
+  }
+}

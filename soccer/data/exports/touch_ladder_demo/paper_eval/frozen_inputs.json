@@ -1,0 +1,19 @@
+{
+  "accepted_preview": {
+    "path": "data/exports/touch_ladder_demo/comparison/current_hop_timed_lateral.mp4",
+    "sha256": "c904d2ed28760466df36261f35f6fd281049faf9618a1f266c51cad3dd46039e"
+  },
+  "accepted_robot_a": {
+    "path": "data/exports/touch_ladder_demo/g1/robot_a.npz",
+    "sha256": "ef5277f2db390ef8119a3bcc1fe21f801e8b72e4a3843fd3b2fa9a3b9f80d96b"
+  },
+  "accepted_robot_b": {
+    "path": "data/exports/touch_ladder_demo/g1/robot_b.npz",
+    "sha256": "eb5646a331064c83772351a74cc3dc951618ee69ff00e4130ebe6c212a54568b"
+  },
+  "accepted_ball": {
+    "path": "data/exports/touch_ladder_demo/ball_cones.npz",
+    "sha256": "b608f0a9ea049d33067bdb421a0c24a0f0cdc8ee55cf454444f0de9c56fef47f"
+  },
+  "paper_metrics": "data/exports/touch_ladder_demo/paper_eval/sequences/touch_ladder_demo/metrics.json"
+}

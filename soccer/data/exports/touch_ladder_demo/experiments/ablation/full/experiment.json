@@ -1,0 +1,18 @@
+{
+  "variant": "full",
+  "label": "Full",
+  "support": true,
+  "event_semantics": true,
+  "ball_event_correction": true,
+  "position_correction": true,
+  "iterations": 340,
+  "provenance": "accepted_canonical_copy",
+  "created_at": "2026-10-03T16:05:14.964798+00:00",
+  "elapsed_s_this_invocation": 0.008554730000469135,
+  "inputs": {
+    "joints": "soccer/data/exports/touch_ladder_demo/smplx_joints.npz",
+    "joints_sha256": "f03a8c5bb6e3e658c92b6ac7dc3915754100c07ef5cbfb010fc149cdb0ae3b4b",
+    "contacts": "soccer/data/exports/touch_ladder_demo/ball_cones.json",
+    "contacts_sha256": "cad51d649d353ad0918834fb0f03c89aafdbb1fbdb8c42b6d25f60be85bb2156"
+  }
+}

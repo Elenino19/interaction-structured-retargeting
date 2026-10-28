@@ -1,0 +1,55 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "core4d-dual-retarget"
+version = "0.1.0"
+description = "Object-mediated CORE4D retargeting for dual humanoids"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "numpy>=1.24,<3",
+  "scipy>=1.10",
+  "trimesh>=4.0",
+  "typer>=0.12",
+  "rich>=13",
+  "pydantic>=2",
+  "remotezip>=0.12",
+  "requests>=2.31",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8",
+  "ruff>=0.6",
+]
+torch = [
+  "torch>=2.1",
+  "pytorch-kinematics>=0.7",
+]
+visualization = [
+  "matplotlib>=3.8",
+  "imageio>=2.34",
+  "imageio-ffmpeg>=0.5",
+]
+simulation = [
+  "mujoco>=3.2",
+  "PyOpenGL>=3.1.10",
+]
+
+[project.scripts]
+core4d-retarget = "core4d_dual_retarget.cli:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/core4d_dual_retarget"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint.per-file-ignores]
+"src/core4d_dual_retarget/cli.py" = ["B008"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "source_video_included": false,
+  "source_video_note": "The human source is intentionally excluded because redistribution permission is not granted.",
+  "videos": {
+    "comparison_2x2": {
+      "source": "data/exports/touch_ladder_demo/experiments/ablation/comparison_2x2.mp4",
+      "path": "data/exports/touch_ladder_demo/paper_eval/videos/comparison_2x2.mp4",
+      "sha256": "c332a3eb2d4c82196ebca80798c2db67fec3a4fcede5790016ffa57f23292110"
+    },
+    "basic_ik": {
+      "source": "data/exports/touch_ladder_demo/experiments/ablation/basic_ik/preview.mp4",
+      "path": "data/exports/touch_ladder_demo/paper_eval/videos/basic_ik.mp4",
+      "sha256": "3ef28a7db0732ae2bcd8954a3394b9469f8c441b5d9f68a9f6ff6e5aecf3f771"
+    },
+    "support": {
+      "source": "data/exports/touch_ladder_demo/experiments/ablation/support/preview.mp4",
+      "path": "data/exports/touch_ladder_demo/paper_eval/videos/support.mp4",
+      "sha256": "478abac79a8efd321596fdc87fc99373fe4e90997703ba38e6b24635067f9397"
+    },
+    "event_semantics": {
+      "source": "data/exports/touch_ladder_demo/experiments/ablation/event_semantics/preview.mp4",
+      "path": "data/exports/touch_ladder_demo/paper_eval/videos/event_semantics.mp4",
+      "sha256": "c258cf4a79112304825e528c0cd1ea164dfb0f274306feb0f4a55c6f21d763d0"
+    },
+    "full": {
+      "source": "data/exports/touch_ladder_demo/experiments/ablation/full/preview.mp4",
+      "path": "data/exports/touch_ladder_demo/paper_eval/videos/full.mp4",
+      "sha256": "c904d2ed28760466df36261f35f6fd281049faf9618a1f266c51cad3dd46039e"
+    }
+  }
+}

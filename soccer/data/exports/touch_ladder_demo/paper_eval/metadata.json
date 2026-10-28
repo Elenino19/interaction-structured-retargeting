@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "status": "frozen_single_sequence_paper_evaluation",
+  "created_on": "2026-10-04",
+  "sequence_count": 1,
+  "sequence_ids": [
+    "touch_ladder_demo"
+  ],
+  "methods": [
+    "basic_ik",
+    "support",
+    "event_semantics",
+    "full"
+  ],
+  "additional_sequence_status": "none_passed_legal_and_technical_gates",
+  "source_redistribution": false,
+  "source_in_paper_video_bundle": false,
+  "primary_outputs": {
+    "report": "data/exports/touch_ladder_demo/paper_eval/REPORT.md",
+    "summary": "data/exports/touch_ladder_demo/paper_eval/summary.csv",
+    "aggregate": "data/exports/touch_ladder_demo/paper_eval/aggregate.csv",
+    "receive_kick": "data/exports/touch_ladder_demo/paper_eval/receive_kick_summary.csv",
+    "motion_geometry": "data/exports/touch_ladder_demo/paper_eval/motion_geometry_summary.csv",
+    "metrics": "data/exports/touch_ladder_demo/paper_eval/sequences/touch_ladder_demo/metrics.json",
+    "cross_task": "data/exports/touch_ladder_demo/paper_eval/cross_task_metrics.json",
+    "figure": "data/exports/touch_ladder_demo/paper_eval/figures/soccer_ablation_qualitative.png",
+    "video": "data/exports/touch_ladder_demo/paper_eval/videos/comparison_2x2.mp4",
+    "position_ablation": "data/exports/touch_ladder_demo/paper_eval/position_ablation/summary.csv",
+    "data_search": "data/exports/touch_ladder_demo/paper_eval/data_search_report.json",
+    "task_brief_provenance": "data/exports/touch_ladder_demo/paper_eval/task_brief_provenance.json",
+    "submission_package": "data/exports/touch_ladder_demo/paper_eval/submission_package"
+  },
+  "claim_boundary": "One-sequence kinematic and geometric proof-of-concept using monocular pseudo-labels and prescribed ball trajectories; no statistical significance, physical contact simulation, metric shared-world reconstruction, or real-robot execution claim."
+}
