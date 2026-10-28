@@ -30,7 +30,7 @@ This audit is conservative. It does not choose a license. Unresolved items stay 
 - Stamping MIT or Apache-2.0 on this repository before approval
 - Vendoring `third_party/unitree_ros` without the upstream license file
 - Replacing missing meshes or motions with primitive shapes and calling the run a reproduction
-- Publishing Join mp4 files that contain the box
+- Publishing Join renders other than the three 018 files in `figures/join/`
 - Adding a stadium model and describing it as part of the accepted soccer experiment
 
 ## Own-code status
@@ -54,4 +54,4 @@ The private repository may remain without a `LICENSE` until that approval is exp
 
 ## Manuscript
 
-Draft v6.2 is the current reference and is not frozen. Later wording, formatting, citation, and figure-number edits follow `PAPER_VERSION_SYNC.md`. The PDF was read from a copy kept outside this tree. It is not a file in the proposed commit. `PAPER_CLAIM_TRACEABILITY.csv` maps Table I, the abstract aggregates, and Figs. 1–4. Fig. 2 and the source-video half of Fig. 4 stay out. The sentence that an earlier 018 ladder moved bilateral anchor error from 18.28 cm to 8.94 cm is untraced in the bundled tables.
+Draft v6.2 is the current reference and is not frozen. Later wording, formatting, citation, and figure-number edits follow `PAPER_VERSION_SYNC.md`. The PDF was read from a copy kept outside this tree. It is not a file in the proposed commit. `PAPER_CLAIM_TRACEABILITY.csv` maps Table I, the abstract aggregates, and Figs. 1–4. The 018 comparison videos are in `figures/join/`. The source-video half of Fig. 4 stays out. The sentence that an earlier 018 ladder moved bilateral anchor error from 18.28 cm to 8.94 cm is untraced in the bundled tables.

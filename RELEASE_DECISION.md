@@ -16,7 +16,7 @@ Local integration is complete. This directory is a reviewable academic tree. It 
 
 - A project `LICENSE`. MIT is only a candidate. Buwen Zhang is the sole paper author and the sole developer of the original code. Third-party materials stay under their own licenses. Do not add `LICENSE` until MIT is explicitly approved.
 - Affiliation, email, ORCID, venue, DOI, paper URL, and repository URL. The checked PDF still prints an anonymous byline and was not edited.
-- Fig. 2 and the source-video half of Fig. 4. Table I itself is mapped. Draft v6.2 may still change; `PAPER_VERSION_SYNC.md` says what to update.
+- The source-video half of Fig. 4. The 018 Join comparison videos are in `figures/join/`. Table I itself is mapped. Draft v6.2 may still change; `PAPER_VERSION_SYNC.md` says what to update.
 - The 18.28 cm to 8.94 cm bilateral-anchor sentence. It is not in the bundled tables.
 - Public redistribution of CORE4D data, G1 meshes, GVHMR weights, the soccer source video, Join demo videos, or `smplx_joints.npz`. The joint file is **pending**, not cleared.
 - A claim that Level 3 reproduces frozen v41, repaired EXT-JC, or Soccer Full bit for bit.
@@ -38,7 +38,7 @@ Do not treat silence as a yes.
 
 Author metadata for a private repository is in place: Buwen Zhang is the sole paper author and the sole developer of the original code. Git has not been initialized. A private repository named `interaction-structured-retargeting` is the intended target. Do not create it, and do not commit, until the staged snapshot is explicitly approved. Visibility must stay private. GitHub Pages stays off.
 
-Leave `smplx_joints.npz` out. Do not add a `LICENSE` until the ownership checks pass. Do not add `join/data/core4d`, `join/third_party`, Join mp4 files, GVHMR weights, or the source video. Do not enable GitHub Pages. If the venue is double-blind, do not publish the page in `docs/` with the author name.
+Leave `smplx_joints.npz` out. Do not add a `LICENSE` until the ownership checks pass. Do not add `join/data/core4d`, `join/third_party`, GVHMR weights, or the source video. The only Join renders in the tree are the three 018 files under `figures/join/`. Do not enable GitHub Pages. If the venue is double-blind, do not publish the page in `docs/` with the author name.
 
 Public release is **not** approved.
 

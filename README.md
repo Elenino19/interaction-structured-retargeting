@@ -89,7 +89,7 @@ The manuscript states three aggregates of this table, excluding 018 from the fir
 
 018 does not beat the surrogate on coverage. 109 does not beat it on span. Those exceptions are in Table I.
 
-Fig. 2 is the 018 v41 versus repaired EXT-JC rendering. It is not in this tree because the frames contain the CORE4D box. Fig. 3 plots the Table I series; the plot image is not bundled, and the numbers are.
+Fig. 2 is the 018 v41 versus repaired EXT-JC rendering. The side-by-side comparison and the two separate 018 clips are in `figures/join/`. Other takes are not included. The paper figure is arranged top and bottom; the bundled comparison is side by side. Fig. 3 plots the Table I series; the plot image is not bundled, and the numbers are.
 
 Frozen v41 remains the visual baseline (Fig. 2, top). Its six-take contact F1 mean of 0.827 is in `evaluation/join/v41_tables/join_six_sequence_aggregate.md`. Draft v6.2 does not use that F1 as the coupling result. Foot penetration on v41 stays large (mean of maxima 5.019 cm).
 
@@ -167,13 +167,13 @@ Join tests import the rubber-hand mesh at collection time. Point `UNITREE_G1_ROO
 | GVHMR code and checkpoints, YOLO, SMPL-X model | No | Research / non-commercial or registration terms. Set `GVHMR_ROOT` |
 | Soccer source video | No | Permission was not granted. Level 4 cannot be run from this repo |
 | `smplx_joints.npz` | No. Pending | Derived SMPL-X joints. Author approval was conditional. Upstream redistribution is unresolved. `docs/smplx_joints_provenance.md` |
-| Join mp4 demos | No | They contain the CORE4D box |
+| Join 018 renders | Yes, three files | `figures/join/`. Other takes and the raw CORE4D data are not included |
 
 Do not replace a missing dataset with a synthetic stand-in and treat the output as a reproduction of the paper.
 
 ## Reproduction levels
 
-1. **Replay what is legally in the tree.** Soccer NPZ and the robot-only preview. Join playback waits on a private bundle and is not cleared for public upload.
+1. **Replay what is in the tree.** Soccer NPZ and the robot-only preview. Join 018 renders are in `figures/join/`. The Join trajectory files for a full metric replay are still not bundled.
 2. **Recompute metrics from frozen files.** Possible once CORE4D and the G1 description are local. Write to a new directory. The numbers to cite are the CSVs already here.
 3. **Rerun optimization.** Documented, not claimed as bit-exact. Join Level 3 depends on earlier v20 and v40 warm starts. Soccer Level 3 from prepared joints will differ from the frozen NPZ. Soccer Level 4 needs the source video, GVHMR, and SMPL-X.
 
@@ -185,7 +185,9 @@ The project page under `docs/` uses the sanitized Soccer encode and three robot-
 
 `soccer/data/exports/touch_ladder_demo/comparison/current_hop_timed_lateral.mp4`
 
-Label it as kinematic reference motion with a prescribed ball, 144 frames, 24 fps. It is not physical football. Join comparison videos are withheld.
+Label it as kinematic reference motion with a prescribed ball, 144 frames, 24 fps. It is not physical football.
+
+The Join 018 comparison is `figures/join/018_v41_vs_ext_repaired.mp4`. Frozen v41 alone is `figures/join/018_clearance_v41.mp4`. Repaired EXT-JC alone is `figures/join/demo_018_ext_jc_repaired.mp4`.
 
 ## Citation
 
@@ -213,7 +215,7 @@ Soccer human motion, when the method text mentions recovery: GVHMR (Shen et al.,
 - Cone spacing (0.50 m) and the player gap (2.8 m) are scene choices.
 - Both source checkouts had no git commits, so this release cannot cite an upstream revision hash.
 - Draft v6.2 is the current manuscript reference and may still change in wording, formatting, citations, and figure numbers. `PAPER_VERSION_SYNC.md` says which of those edits touch the README. Frozen numbers are not rewritten to match a later draft.
-- Draft v6.2 Table I matches the repaired Join CSV. Fig. 2 and the source-video half of Fig. 4 are not in this tree.
+- Draft v6.2 Table I matches the repaired Join CSV. The 018 comparison videos are in `figures/join/`. The source-video half of Fig. 4 is not in this tree.
 - One manuscript sentence, bilateral anchor error from 18.28 cm to 8.94 cm on an earlier 018 ladder, is not in the bundled tables. It is left untraced rather than reassigned.
 
 ## Layout
